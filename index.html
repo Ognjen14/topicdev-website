@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TopicDev - high-quality apps for Windows and Android</title>
+  <meta name="description" content="TopicDev makes carefully crafted, native apps for Windows, Android and Android TV: Makimedia, Reroll, MD Editor, Topic Finance and the C++ and Python Learning Guides.">
+  <meta name="theme-color" content="#004A7E">
+  <link rel="canonical" href="https://topicdev.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TopicDev">
+  <meta property="og:title" content="TopicDev - high-quality apps for Windows and Android">
+  <meta property="og:description" content="Carefully crafted, native apps for Windows, Android and Android TV.">
+  <meta property="og:url" content="https://topicdev.com/">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="home.css?v=5">
+</head>
+<body class="home">
+
+<svg class="ill-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="ill-acc" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" class="st-acc-hi"/><stop offset="1" class="st-acc"/></linearGradient>
+    <linearGradient id="ill-ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-ink-hi"/><stop offset="1" class="st-ink"/></linearGradient>
+    <linearGradient id="ill-mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-mid"/><stop offset="1" class="st-mid-lo"/></linearGradient>
+    <linearGradient id="ill-paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-paper"/><stop offset="1" class="st-paper-lo"/></linearGradient>
+    <radialGradient id="ill-blob" cx="0.5" cy="0.42" r="0.62"><stop offset="0" class="st-blob-hi"/><stop offset="1" class="st-blob"/></radialGradient>
+    <linearGradient id="k-fin-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6F66D6"/><stop offset="1" stop-color="#262059"/></linearGradient>
+    <linearGradient id="k-maki-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F25252"/><stop offset="1" stop-color="#8E1414"/></linearGradient>
+    <linearGradient id="k-reroll-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3A67"/><stop offset="1" stop-color="#E25149"/></linearGradient>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/topicdev-mark-76.png" width="38" height="38" alt="">
+      <span>TOPIC<span class="brand-dev">DEV</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="#apps">Apps</a>
+      <a href="#values">How we build</a>
+      <a href="#about">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="#apps">See the apps</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="ico i-menu icon-open" aria-hidden="true"></span><span class="ico i-close icon-close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="studio-hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">TopicDev</p>
+        <h1>An independent studio for <em>native, high-quality apps.</em></h1>
+        <p class="lead">We design and build apps for Windows, Android and Android TV, in native C++ with Qt 6 and QML. That means apps that open fast and run smoothly, a design made for each screen, and careful testing on real devices before anything ships.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#apps">
+            <span class="ico i-devices" aria-hidden="true"></span>
+            <span><small>Browse all</small><strong>Our apps</strong></span>
+          </a>
+          <a class="btn" href="https://play.google.com/store/apps/dev?id=6943416935116197981" target="_blank" rel="noopener">
+            <span class="ico i-google-play" aria-hidden="true"></span>
+            <span><small>Find us on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>C++</strong><span>with Qt 6 and QML</span></li>
+          <li><strong>3</strong><span>platforms</span></li>
+          <li><strong>6</strong><span>apps so far</span></li>
+        </ul>
+      </div>
+      <svg class="art studio-art" viewBox="0 0 600 500" role="group" aria-label="The six TopicDev apps around the studio">
+        <path class="blob" d="M118 66C230-2 424 8 512 98c82 82 72 232-10 312-90 82-322 82-412-10C8 318 18 136 118 66Z"/>
+        <ellipse class="floor" cx="300" cy="486" rx="230" ry="11"/>
+        <path class="link" d="M300 250L150 108"/>
+        <path class="link" d="M300 250L455 108"/>
+        <path class="link" d="M300 250L106 262"/>
+        <path class="link" d="M300 250L500 262"/>
+        <path class="link" d="M300 250L175 400"/>
+        <path class="link" d="M300 250L430 400"/>
+        <circle class="hub-signal" r="4.5"><animateMotion dur="2.6s" begin="0s" repeatCount="indefinite" path="M300 250L150 108"/></circle>
+        <circle class="hub-signal" r="4.5"><animateMotion dur="2.6s" begin="0.45s" repeatCount="indefinite" path="M300 250L455 108"/></circle>
+        <circle class="hub-signal" r="4.5"><animateMotion dur="2.6s" begin="0.9s" repeatCount="indefinite" path="M300 250L500 262"/></circle>
+        <circle class="hub-signal" r="4.5"><animateMotion dur="2.6s" begin="1.35s" repeatCount="indefinite" path="M300 250L430 400"/></circle>
+        <circle class="hub-signal" r="4.5"><animateMotion dur="2.6s" begin="1.8s" repeatCount="indefinite" path="M300 250L175 400"/></circle>
+        <circle class="hub-signal" r="4.5"><animateMotion dur="2.6s" begin="2.25s" repeatCount="indefinite" path="M300 250L106 262"/></circle>
+        <circle class="orbit spin" cx="300" cy="250" r="74"/>
+        <circle class="hub-ping" cx="300" cy="250" r="56"/>
+        <clipPath id="hub-clip"><circle cx="300" cy="250" r="50"/></clipPath>
+        <circle class="hub" cx="300" cy="250" r="56"/>
+        <circle fill="#FFFFFF" cx="300" cy="250" r="50"/>
+        <image href="assets/topicdev-mark-192.png" x="261" y="214" width="78" height="78" clip-path="url(#hub-clip)"/>
+
+        <a href="https://makimedia.org/" target="_blank" rel="noopener" aria-label="Makimedia, opens makimedia.org">
+          <g class="bob">
+            <g class="sat">
+              <rect class="halo" x="76" y="46" width="148" height="134" rx="14"/>
+              <rect class="ink" x="85" y="55" width="130" height="86" rx="10"/>
+              <rect fill="url(#k-maki-g)" x="93" y="63" width="114" height="62" rx="5"/>
+              <rect class="shine" x="99" y="68" width="60" height="4" rx="2"/>
+              <g class="k-pulse">
+                <circle class="k-white" cx="150" cy="94" r="15"/>
+                <path class="k-maki" d="M145 85v18l14-9Z"/>
+              </g>
+              <rect class="k-soft k-line" x="99" y="116" width="40" height="3" rx="1.5"/>
+              <rect class="ink" x="140" y="141" width="20" height="9"/>
+              <rect class="ink" x="120" y="149" width="60" height="6" rx="3"/>
+              <text class="cap" x="150" y="174" text-anchor="middle">Makimedia</text>
+            </g>
+          </g>
+        </a>
+
+        <a href="reroll/" aria-label="Reroll">
+          <g class="bob late">
+            <g class="sat">
+              <rect class="halo" x="398" y="40" width="118" height="140" rx="14"/>
+              <rect class="mid" x="408" y="54" width="62" height="86" rx="8" transform="rotate(-10 439 97)"/>
+              <rect class="k-dark" x="426" y="48" width="68" height="92" rx="8"/>
+              <rect fill="url(#k-reroll-g)" x="432" y="54" width="56" height="50" rx="5"/>
+              <circle class="k-soft" cx="474" cy="66" r="5"/>
+              <path class="ink-soft" d="M432 104v-6l16-14 10 8 14-12 16 14v10Z"/>
+              <rect class="k-reroll k-line" x="432" y="110" width="22" height="6" rx="3"/>
+              <rect class="k-soft k-line" x="432" y="121" width="44" height="4" rx="2"/>
+              <circle class="k-reroll" cx="494" cy="134" r="15"/>
+              <g class="k-spin"><path class="stroke-paper thin" d="M487 132a7.5 7.5 0 0 1 13-4M501 136a7.5 7.5 0 0 1-13 4"/></g>
+              <text class="cap" x="460" y="174" text-anchor="middle">Reroll</text>
+            </g>
+          </g>
+        </a>
+
+        <a href="md-editor/" aria-label="MD Editor">
+          <g class="bob late3">
+            <g class="sat">
+              <rect class="halo" x="42" y="206" width="128" height="128" rx="14"/>
+              <rect class="paper" x="50" y="215" width="112" height="88" rx="8"/>
+              <rect class="line" x="105" y="223" width="2" height="72" rx="1"/>
+              <text class="k-md k-mono" x="58" y="240" font-size="12">#</text>
+              <rect class="line k-line" x="70" y="232" width="28" height="6" rx="3"/>
+              <rect class="line k-line" x="58" y="248" width="40" height="5" rx="2.5"/>
+              <text class="k-md k-mono" x="58" y="268" font-size="11">-</text>
+              <rect class="line k-line" x="68" y="262" width="30" height="5" rx="2.5"/>
+              <text class="k-md k-mono" x="58" y="282" font-size="11">-</text>
+              <rect class="line k-line" x="68" y="276" width="24" height="5" rx="2.5"/>
+              <rect class="k-md k-line" x="114" y="230" width="38" height="8" rx="2"/>
+              <rect class="line k-line" x="114" y="246" width="40" height="5" rx="2.5"/>
+              <circle class="k-md" cx="117" cy="262" r="2.5"/>
+              <rect class="line k-line" x="122" y="260" width="30" height="5" rx="2.5"/>
+              <circle class="k-md" cx="117" cy="276" r="2.5"/>
+              <rect class="line k-line" x="122" y="274" width="24" height="5" rx="2.5"/>
+              <text class="cap" x="106" y="324" text-anchor="middle">MD Editor</text>
+            </g>
+          </g>
+        </a>
+
+        <a href="topic-finance/" aria-label="Topic Finance">
+          <g class="bob late2">
+            <g class="sat">
+              <rect class="halo" x="450" y="194" width="100" height="152" rx="14"/>
+              <rect class="ink" x="462" y="203" width="76" height="118" rx="12"/>
+              <rect fill="url(#k-fin-g)" x="470" y="214" width="60" height="34" rx="6"/>
+              <rect class="k-soft" x="475" y="219" width="22" height="3" rx="1.5"/>
+              <rect class="k-white" x="475" y="226" width="34" height="6" rx="3"/>
+              <path class="stroke-paper thin" d="M475 243l9-5 8 2 10-7 12-3"/>
+              <circle class="k-track" cx="486" cy="278" r="12"/>
+              <circle class="k-ring" cx="486" cy="278" r="12" stroke-dasharray="48 28" transform="rotate(-90 486 278)"/>
+              <rect class="k-fin k-bar" x="506" y="276" width="6" height="14" rx="2"/>
+              <rect class="k-fin k-bar" x="515" y="268" width="6" height="22" rx="2"/>
+              <rect class="k-fin k-bar" x="524" y="280" width="6" height="10" rx="2"/>
+              <rect class="mid" x="470" y="300" width="60" height="5" rx="2.5"/>
+              <text class="cap" x="500" y="340" text-anchor="middle">Topic Finance</text>
+            </g>
+          </g>
+        </a>
+
+        <a href="cpp-guide/" aria-label="C++ Learning Guide">
+          <g class="bob late2">
+            <g class="sat">
+              <rect class="halo" x="102" y="354" width="146" height="124" rx="14"/>
+              <rect class="k-cpp" x="110" y="362" width="130" height="84" rx="9"/>
+              <circle class="mid" cx="121" cy="372" r="2.5"/>
+              <circle class="mid" cx="129" cy="372" r="2.5"/>
+              <circle class="mid" cx="137" cy="372" r="2.5"/>
+              <rect class="k-cyan k-line" x="120" y="386" width="26" height="5" rx="2.5"/>
+              <rect class="k-line" fill="#7FDBFF" x="150" y="386" width="40" height="5" rx="2.5"/>
+              <rect class="k-line" fill="#CCD6F6" opacity="0.55" x="130" y="398" width="58" height="5" rx="2.5"/>
+              <rect class="k-line" fill="#FFD700" x="130" y="410" width="44" height="5" rx="2.5"/>
+              <rect class="k-line" fill="#CCD6F6" opacity="0.55" x="120" y="422" width="18" height="5" rx="2.5"/>
+              <rect class="k-cyan k-blink" x="142" y="420" width="5" height="9"/>
+              <text class="k-cyan k-mono" x="230" y="437" text-anchor="end" font-size="15">C++</text>
+              <text class="cap" x="175" y="468" text-anchor="middle">C++ Guide</text>
+            </g>
+          </g>
+        </a>
+
+        <a href="python-guide/" aria-label="Python Learning Guide">
+          <g class="bob">
+            <g class="sat">
+              <rect class="halo" x="360" y="354" width="140" height="124" rx="14"/>
+              <rect fill="var(--k-py-bg)" stroke="#1D2433" stroke-width="2" x="368" y="362" width="124" height="84" rx="10"/>
+              <path class="k-py" d="M369 372a9 9 0 0 1 9-9h104a9 9 0 0 1 9 9v6H369Z"/>
+              <text class="k-py-blue k-mono" x="378" y="398" font-size="11">&gt;&gt;&gt;</text>
+              <rect class="k-py-blue k-line" x="404" y="391" width="48" height="6" rx="3"/>
+              <rect class="k-line" fill="#C0504D" opacity="0.85" x="378" y="406" width="20" height="5" rx="2.5"/>
+              <rect class="k-line" fill="var(--k-py-line)" x="404" y="405" width="62" height="6" rx="3"/>
+              <text class="k-py-blue k-mono" x="378" y="432" font-size="11">&gt;&gt;&gt;</text>
+              <rect class="k-line" fill="#D19A12" x="404" y="425" width="36" height="6" rx="3"/>
+              <text class="cap" x="430" y="468" text-anchor="middle">Python Guide</text>
+            </g>
+          </g>
+        </a>
+
+        <path class="spark" d="M300 60l3 7.5 7.5 3-7.5 3-3 7.5-3-7.5-7.5-3 7.5-3z"/>
+        <path class="spark" d="M560 160l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        <path class="spark" d="M40 170l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        <path class="spark" d="M300 420l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="featured-section">
+    <div class="wrap">
+      <div class="featured">
+        <div>
+          <div class="featured-app">
+            <img src="assets/apps/makimedia/icon-256.png" width="72" height="72" alt="">
+            <span><small>Featured</small>Makimedia</span>
+          </div>
+          <h2>Your film library, <em>on every screen.</em></h2>
+          <p>Makimedia turns the folders where you keep your films and shows into a library, with posters, seasons and the place where you stopped. Then it streams it from your PC to your phone, tablet and TV at home. Free and open source.</p>
+          <div class="buttons">
+            <a class="btn primary" href="https://apps.microsoft.com/detail/9p5vgk8g8207" target="_blank" rel="noopener">
+              <span class="ico i-microsoft" aria-hidden="true"></span>
+              <span><small>Get it from</small><strong>Microsoft Store</strong></span>
+            </a>
+            <a class="btn" href="https://makimedia.org/" target="_blank" rel="noopener">
+              <span class="ico i-arrow-right" aria-hidden="true"></span>
+              <span><small>Visit</small><strong>makimedia.org</strong></span>
+            </a>
+          </div>
+        </div>
+        <svg class="featured-art" viewBox="0 0 560 420" role="img" aria-label="Makimedia on a PC streaming the same film library to a TV, a tablet and a phone">
+          <defs>
+            <linearGradient id="mk-p1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F25252"/><stop offset="1" stop-color="#7A1010"/></linearGradient>
+            <linearGradient id="mk-p2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A7FB5"/><stop offset="1" stop-color="#16263A"/></linearGradient>
+            <linearGradient id="mk-p3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E0A040"/><stop offset="1" stop-color="#5A3410"/></linearGradient>
+            <linearGradient id="mk-p4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A5CC8"/><stop offset="1" stop-color="#2A1844"/></linearGradient>
+            <linearGradient id="mk-p5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FA884"/><stop offset="1" stop-color="#143428"/></linearGradient>
+            <linearGradient id="mk-hero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A0E12"/><stop offset="0.6" stop-color="#8E1414"/><stop offset="1" stop-color="#F25252"/></linearGradient>
+          </defs>
+          <circle cx="300" cy="200" r="190" fill="#E23434" opacity="0.1"/>
+          <ellipse cx="280" cy="398" rx="250" ry="10" fill="rgba(0,0,0,0.35)"/>
+
+          <path class="mk-flow" d="M230 120C260 92 280 80 306 76"/>
+          <path class="mk-flow" d="M230 200C270 230 300 256 330 268"/>
+          <path class="mk-flow" d="M230 216C300 300 400 320 470 300"/>
+          <circle class="mk-packet" r="5"><animateMotion dur="1.8s" begin="0s" repeatCount="indefinite" path="M230 120C260 92 280 80 306 76"/></circle>
+          <circle class="mk-packet" r="5"><animateMotion dur="2.2s" begin="0.6s" repeatCount="indefinite" path="M230 200C270 230 300 256 330 268"/></circle>
+          <circle class="mk-packet" r="5"><animateMotion dur="2.8s" begin="1.2s" repeatCount="indefinite" path="M230 216C300 300 400 320 470 300"/></circle>
+
+          <rect x="20" y="64" width="240" height="162" rx="12" fill="#1C1E24"/>
+          <rect x="30" y="74" width="220" height="134" rx="5" fill="#0E0F12"/>
+          <rect x="30" y="74" width="44" height="134" rx="5" fill="#15161A"/>
+          <rect x="37" y="84" width="30" height="8" rx="4" fill="#E23434"/>
+          <rect x="37" y="98" width="24" height="4" rx="2" fill="#3A3D46"/>
+          <rect x="37" y="108" width="28" height="4" rx="2" fill="#3A3D46"/>
+          <rect x="37" y="118" width="20" height="4" rx="2" fill="#3A3D46"/>
+          <rect x="37" y="128" width="26" height="4" rx="2" fill="#3A3D46"/>
+          <rect x="82" y="82" width="50" height="5" rx="2.5" fill="#D8DAE0"/>
+          <rect x="82" y="92" width="38" height="44" rx="4" fill="url(#mk-p1)"/>
+          <rect x="124" y="92" width="38" height="44" rx="4" fill="url(#mk-p2)"/>
+          <rect x="166" y="92" width="38" height="44" rx="4" fill="url(#mk-p3)"/>
+          <rect x="208" y="92" width="34" height="44" rx="4" fill="url(#mk-p4)"/>
+          <rect x="82" y="138" width="38" height="3" fill="#3A3D46"/>
+          <rect x="82" y="138" width="22" height="3" fill="#E23434"/>
+          <rect x="124" y="138" width="38" height="3" fill="#3A3D46"/>
+          <rect x="124" y="138" width="30" height="3" fill="#E23434"/>
+          <rect x="82" y="150" width="44" height="5" rx="2.5" fill="#D8DAE0"/>
+          <rect x="82" y="160" width="30" height="40" rx="4" fill="url(#mk-p5)"/>
+          <rect x="116" y="160" width="30" height="40" rx="4" fill="url(#mk-p3)"/>
+          <rect x="150" y="160" width="30" height="40" rx="4" fill="url(#mk-p1)"/>
+          <rect x="184" y="160" width="30" height="40" rx="4" fill="url(#mk-p2)"/>
+          <rect x="218" y="160" width="24" height="40" rx="4" fill="url(#mk-p4)"/>
+          <rect x="128" y="226" width="24" height="26" fill="#1C1E24"/>
+          <rect x="96" y="250" width="88" height="8" rx="4" fill="#1C1E24"/>
+          <rect x="102" y="270" width="76" height="22" rx="11" fill="#E23434"/>
+          <text x="140" y="285" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="700" letter-spacing="1">YOUR PC</text>
+
+          <g class="bob">
+            <rect x="300" y="26" width="240" height="146" rx="10" fill="#1C1E24"/>
+            <rect x="309" y="35" width="222" height="122" rx="4" fill="url(#mk-hero)"/>
+            <rect x="321" y="98" width="90" height="10" rx="3" fill="#FFFFFF"/>
+            <rect x="321" y="114" width="64" height="5" rx="2.5" fill="rgba(255,255,255,0.6)"/>
+            <rect x="321" y="128" width="54" height="16" rx="8" fill="#FFFFFF"/>
+            <path d="M331 131.5v9l7-4.5Z" fill="#E23434"/>
+            <rect x="345" y="134" width="22" height="4" rx="2" fill="#E23434"/>
+            <rect x="321" y="148" width="198" height="3" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+            <rect class="mk-play" x="321" y="148" width="198" height="3" rx="1.5" fill="#FFFFFF"/>
+            <path d="M380 172l-8 14M460 172l8 14" stroke="#1C1E24" stroke-width="5" stroke-linecap="round"/>
+            <rect x="472" y="44" width="50" height="18" rx="9" fill="rgba(0,0,0,0.45)"/>
+            <text x="497" y="57" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700" letter-spacing="1">TV</text>
+          </g>
+
+          <g class="bob late">
+            <rect x="312" y="214" width="150" height="112" rx="12" fill="#1C1E24" transform="rotate(-4 387 270)"/>
+            <g transform="rotate(-4 387 270)">
+              <rect x="320" y="222" width="134" height="96" rx="5" fill="#0E0F12"/>
+              <rect x="328" y="230" width="40" height="4" rx="2" fill="#D8DAE0"/>
+              <rect x="328" y="240" width="27" height="34" rx="3" fill="url(#mk-p2)"/>
+              <rect x="359" y="240" width="27" height="34" rx="3" fill="url(#mk-p1)"/>
+              <rect x="390" y="240" width="27" height="34" rx="3" fill="url(#mk-p5)"/>
+              <rect x="421" y="240" width="25" height="34" rx="3" fill="url(#mk-p3)"/>
+              <rect x="328" y="282" width="27" height="28" rx="3" fill="url(#mk-p4)"/>
+              <rect x="359" y="282" width="27" height="28" rx="3" fill="url(#mk-p3)"/>
+              <rect x="390" y="282" width="27" height="28" rx="3" fill="url(#mk-p2)"/>
+              <rect x="421" y="282" width="25" height="28" rx="3" fill="url(#mk-p1)"/>
+            </g>
+            <text x="388" y="350" text-anchor="middle" fill="currentColor" style="fill: var(--text-2)" font-size="11" font-weight="700" letter-spacing="1">TABLET</text>
+          </g>
+
+          <g class="bob late2">
+            <rect x="476" y="236" width="66" height="124" rx="12" fill="#1C1E24"/>
+            <rect x="482" y="246" width="54" height="104" rx="6" fill="#0E0F12"/>
+            <rect x="488" y="254" width="42" height="56" rx="4" fill="url(#mk-p1)"/>
+            <g class="k-pulse">
+              <circle cx="509" cy="282" r="9" fill="#FFFFFF" opacity="0.92"/>
+              <path d="M506 277.5v9l7-4.5Z" fill="#E23434"/>
+            </g>
+            <rect x="488" y="316" width="32" height="4" rx="2" fill="#D8DAE0"/>
+            <rect x="488" y="326" width="42" height="3" fill="#3A3D46"/>
+            <rect class="mk-play late" x="488" y="326" width="42" height="3" fill="#E23434"/>
+            <rect x="488" y="334" width="20" height="10" rx="2" fill="url(#mk-p3)"/>
+            <rect x="510" y="334" width="20" height="10" rx="2" fill="url(#mk-p2)"/>
+            <text x="509" y="380" text-anchor="middle" style="fill: var(--text-2)" font-size="11" font-weight="700" letter-spacing="1">PHONE</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps">
+    <div class="wrap">
+      <div class="section-head centered">
+        <p class="eyebrow">The apps</p>
+        <h2>Six apps, <em>built to one standard</em></h2>
+        <p>Films, money, notes and code. Each app is designed around its job and polished in the details. Open one to see it in action, what it can do and what it costs.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Show apps">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="films" aria-pressed="false">Films &amp; TV</button>
+        <button class="filter" type="button" data-filter="productivity" aria-pressed="false">Productivity</button>
+        <button class="filter" type="button" data-filter="learning" aria-pressed="false">Learning</button>
+      </div>
+      <div class="app-grid">
+        <a class="app-card card-makimedia" data-category="films" href="https://makimedia.org/" target="_blank" rel="noopener">
+          <span class="card-art" aria-hidden="true"><svg viewBox="0 0 360 128" preserveAspectRatio="xMinYMid slice">
+            <rect width="360" height="128" fill="#121014"/>
+            <circle cx="300" cy="10" r="110" fill="#E23434" opacity="0.18"/>
+            <g class="kb-slide">
+              <rect x="18" y="24" width="58" height="84" rx="6" fill="url(#k-maki-g)"/>
+              <rect x="84" y="24" width="58" height="84" rx="6" fill="#2A2E3A"/>
+              <rect x="150" y="24" width="58" height="84" rx="6" fill="#3B2A30"/>
+              <rect x="216" y="24" width="58" height="84" rx="6" fill="#23303A"/>
+              <rect x="282" y="24" width="58" height="84" rx="6" fill="#33262E"/>
+              <rect x="18" y="100" width="58" height="4" fill="rgba(255,255,255,0.25)"/>
+              <rect class="kb-grow" x="18" y="100" width="58" height="4" fill="#E23434"/>
+              <circle cx="47" cy="62" r="13" fill="#FFFFFF" opacity="0.92"/>
+              <path d="M43 55v14l12-7Z" fill="#E23434"/>
+              <rect x="92" y="88" width="34" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+              <rect x="158" y="88" width="40" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+              <rect x="224" y="88" width="30" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+              <rect x="290" y="88" width="38" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+            </g>
+          </svg></span>
+          <div class="card-top">
+            <img class="card-icon" src="assets/apps/makimedia/icon-136.png" width="68" height="68" alt="">
+            <span class="status">Windows now</span>
+          </div>
+          <h3>Makimedia</h3>
+          <p class="tagline">A video player that turns your folders into a library, and streams it from your PC to every screen at home.</p>
+          <ul class="platforms"><li>Windows</li><li>Android soon</li><li>Android TV soon</li></ul>
+          <span class="more">Visit makimedia.org <span class="ico i-arrow-right" aria-hidden="true"></span></span>
+        </a>
+        <a class="app-card card-reroll" data-category="films" href="reroll/">
+          <span class="card-art" aria-hidden="true"><svg viewBox="0 0 360 128" preserveAspectRatio="xMinYMid slice">
+            <rect width="360" height="128" fill="#090A0C"/>
+            <circle cx="250" cy="20" r="120" fill="#E25149" opacity="0.14"/>
+            <rect class="kb-fan" x="40" y="22" width="60" height="88" rx="8" fill="#20242B" transform="rotate(-9 70 66)"/>
+            <g class="kb-poster">
+              <rect x="62" y="16" width="64" height="94" rx="8" fill="url(#k-reroll-g)"/>
+              <circle cx="94" cy="50" r="11" fill="#FFD6A5"/>
+              <path d="M62 92L80 72L94 84L108 68L126 86V102a8 8 0 0 1-8 8H70a8 8 0 0 1-8-8Z" fill="#1B1F33"/>
+            </g>
+            <text x="160" y="66" fill="#F3F4F6" font-size="30" font-weight="700" letter-spacing="1">REROLL</text>
+            <rect x="162" y="80" width="70" height="7" rx="3.5" fill="rgba(255,255,255,0.22)"/>
+            <rect x="162" y="93" width="48" height="7" rx="3.5" fill="rgba(255,255,255,0.12)"/>
+            <circle cx="306" cy="88" r="22" fill="#E25149"/>
+            <g class="kb-spin">
+              <path d="M296 84a11 11 0 0 1 19-5M316 92a11 11 0 0 1-19 5" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+            </g>
+          </svg></span>
+          <div class="card-top">
+            <img class="card-icon" src="assets/apps/reroll/icon-136.png" width="68" height="68" alt="">
+            <span class="status">Available</span>
+          </div>
+          <h3>Reroll</h3>
+          <p class="tagline">Can't decide what to watch? One film or show at a time, and you reroll until something sticks.</p>
+          <ul class="platforms"><li>Android</li><li>Free</li></ul>
+          <span class="more">Explore Reroll <span class="ico i-arrow-right" aria-hidden="true"></span></span>
+        </a>
+        <a class="app-card card-md-editor" data-category="productivity" href="md-editor/">
+          <span class="card-art" aria-hidden="true"><svg viewBox="0 0 360 128" preserveAspectRatio="xMinYMid slice">
+            <rect width="360" height="128" fill="var(--k-md-bg)"/>
+            <rect x="0" y="0" width="360" height="20" fill="var(--k-md-line)" opacity="0.5"/>
+            <rect x="12" y="6" width="52" height="14" rx="4" fill="var(--k-md-bg)"/>
+            <rect x="178" y="28" width="2" height="92" fill="var(--k-md-line)"/>
+            <text x="20" y="46" fill="#4F7BE0" font-family="Consolas, monospace" font-size="15" font-weight="700">#</text>
+            <rect class="kb-line" x="36" y="36" width="70" height="8" rx="4" fill="var(--k-md-line)"/>
+            <rect class="kb-line" x="20" y="58" width="140" height="6" rx="3" fill="var(--k-md-line)"/>
+            <text x="20" y="84" fill="#4F7BE0" font-family="Consolas, monospace" font-size="14" font-weight="700">-</text>
+            <rect class="kb-line" x="34" y="76" width="100" height="6" rx="3" fill="var(--k-md-line)"/>
+            <text x="20" y="102" fill="#4F7BE0" font-family="Consolas, monospace" font-size="14" font-weight="700">**</text>
+            <rect class="kb-line" x="42" y="94" width="80" height="6" rx="3" fill="var(--k-md-line)"/>
+            <text x="196" y="52" fill="currentColor" font-family="Georgia, serif" font-size="20" font-weight="700" style="fill: var(--text)">Notes</text>
+            <rect x="196" y="60" width="148" height="1.5" fill="var(--k-md-line)"/>
+            <circle cx="200" cy="77" r="2.5" fill="#4F7BE0"/>
+            <rect x="208" y="74" width="100" height="6" rx="3" fill="var(--k-md-line)"/>
+            <rect x="196" y="92" width="120" height="6" rx="3" fill="var(--k-md-line)"/>
+            <rect x="196" y="92" width="44" height="6" rx="3" fill="#4F7BE0" opacity="0.8"/>
+          </svg></span>
+          <div class="card-top">
+            <img class="card-icon" src="assets/apps/md-editor/icon-136.png" width="68" height="68" alt="">
+            <span class="status is-soon">Coming soon</span>
+          </div>
+          <h3>MD Editor</h3>
+          <p class="tagline">A fast markdown reader and editor for Windows, with a clean reading view, split editing and folders as a notes workspace.</p>
+          <ul class="platforms"><li>Windows</li><li>Pay once</li></ul>
+          <span class="more">Explore MD Editor <span class="ico i-arrow-right" aria-hidden="true"></span></span>
+        </a>
+        <a class="app-card card-budget" data-category="productivity" href="topic-finance/">
+          <span class="card-art" aria-hidden="true"><svg viewBox="0 0 360 128" preserveAspectRatio="xMinYMid slice">
+            <rect width="360" height="128" fill="url(#k-fin-g)"/>
+            <circle cx="330" cy="0" r="90" fill="#FFFFFF" opacity="0.1"/>
+            <text x="22" y="32" fill="rgba(255,255,255,0.75)" font-size="10" font-weight="700" letter-spacing="2">NET WORTH</text>
+            <text x="22" y="62" fill="#FFFFFF" font-size="28" font-weight="700" letter-spacing="-1">€10,887</text>
+            <path d="M0 116L36 108L72 112L108 92L144 97L180 78L216 83L252 62L288 68L324 44L360 34V128H0Z" fill="rgba(255,255,255,0.16)"/>
+            <path class="kb-draw" pathLength="1" d="M0 116L36 108L72 112L108 92L144 97L180 78L216 83L252 62L288 68L324 44L360 34" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+          </svg></span>
+          <div class="card-top">
+            <img class="card-icon" src="assets/apps/budget-tracker/icon-136.png" width="68" height="68" alt="">
+            <span class="status">Available</span>
+          </div>
+          <h3>Topic Finance</h3>
+          <p class="tagline">Track income, expenses and subscriptions, set budgets, and see where your money goes, in any currency.</p>
+          <ul class="platforms"><li>Android</li><li>Free trial</li></ul>
+          <span class="more">Explore Topic Finance <span class="ico i-arrow-right" aria-hidden="true"></span></span>
+        </a>
+        <a class="app-card card-cpp" data-category="learning" href="cpp-guide/">
+          <span class="card-art" aria-hidden="true"><svg viewBox="0 0 360 128" preserveAspectRatio="xMinYMid slice">
+            <rect width="360" height="128" fill="#0A1220"/>
+            <path d="M0 32H360M0 64H360M0 96H360M72 0V128M144 0V128M216 0V128M288 0V128" stroke="rgba(100,255,218,0.08)"/>
+            <g font-family="Consolas, monospace" font-size="13">
+              <text x="20" y="34" fill="#C792EA">#include <tspan fill="#FFD700">&lt;iostream&gt;</tspan></text>
+              <text x="20" y="56" fill="#64FFDA">int <tspan fill="#A5B4FC">main</tspan><tspan fill="#CCD6F6">() {</tspan></text>
+              <text x="40" y="78" fill="#7FDBFF">std::cout <tspan fill="#CCD6F6">&lt;&lt; </tspan><tspan fill="#FFD700">"Hello"</tspan><tspan fill="#CCD6F6">;</tspan></text>
+              <text x="20" y="100" fill="#CCD6F6">}</text>
+              <text class="kb-ok" x="240" y="100" fill="#64FFDA" font-weight="700">[ OK ]</text>
+            </g>
+            <rect x="32" y="91" width="7" height="12" fill="#64FFDA" class="k-blink"/>
+          </svg></span>
+          <div class="card-top">
+            <img class="card-icon" src="assets/apps/cpp-guide/icon-136.png" width="68" height="68" alt="">
+            <span class="status">Available</span>
+          </div>
+          <h3>C++ Learning Guide</h3>
+          <p class="tagline">Learn C++ with interactive lessons, debugging challenges, algorithms and interview questions.</p>
+          <ul class="platforms"><li>Android</li><li>Free to start</li></ul>
+          <span class="more">Explore the C++ guide <span class="ico i-arrow-right" aria-hidden="true"></span></span>
+        </a>
+        <a class="app-card card-python" data-category="learning" href="python-guide/">
+          <span class="card-art" aria-hidden="true"><svg viewBox="0 0 360 128" preserveAspectRatio="xMinYMid slice">
+            <rect width="360" height="128" fill="var(--k-py-bg)"/>
+            <circle cx="320" cy="14" r="80" fill="#FFD43B" opacity="0.25"/>
+            <g font-family="Consolas, monospace" font-size="12" font-weight="700">
+              <text x="16" y="42" fill="#2F6EA8">In [1]:</text>
+              <text x="16" y="88" fill="#C0504D">Out[1]:</text>
+            </g>
+            <rect x="74" y="24" width="270" height="28" rx="8" fill="none" stroke="var(--k-py-line)" stroke-width="2"/>
+            <text x="86" y="43" font-family="Consolas, monospace" font-size="14" fill="#4078F2">print<tspan fill="currentColor" style="fill: var(--text)">(</tspan><tspan fill="#50A14F">"Hello, Python!"</tspan><tspan style="fill: var(--text)">)</tspan></text>
+            <text x="86" y="89" font-family="Consolas, monospace" font-size="14" style="fill: var(--text)">Hello, Python!</text>
+            <g class="kb-wobble">
+              <rect x="160" y="98" width="70" height="22" rx="7" fill="#FFD43B" stroke="#1D2433" stroke-width="2" transform="rotate(-5 195 109)"/>
+              <text x="195" y="114" text-anchor="middle" font-size="11" font-weight="700" fill="#1D2433" transform="rotate(-5 195 109)">No ads</text>
+            </g>
+          </svg></span>
+          <div class="card-top">
+            <img class="card-icon" src="assets/apps/python-guide/icon-136.png" width="68" height="68" alt="">
+            <span class="status">Available</span>
+          </div>
+          <h3>Python Learning Guide</h3>
+          <p class="tagline">Learn Python step by step, with exercises, bug hunts, algorithms, cheat sheets and interview prep.</p>
+          <ul class="platforms"><li>Android</li><li>Free to start</li></ul>
+          <span class="more">Explore the Python guide <span class="ico i-arrow-right" aria-hidden="true"></span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="values">
+    <div class="wrap">
+      <div class="section-head centered">
+        <p class="eyebrow">How we build</p>
+        <h2>Quality first, <em>in every app</em></h2>
+        <p>What goes into every TopicDev app, and what it looks like app by app.</p>
+      </div>
+      <div class="hb-rows">
+
+        <article class="hb-row">
+          <svg class="art" viewBox="0 0 320 240" aria-hidden="true">
+            <path class="blob" d="M78 34C124 2 222 8 264 46c40 36 34 110-10 142-46 32-148 30-194-6C14 146 30 66 78 34Z"/>
+            <ellipse class="floor" cx="166" cy="224" rx="96" ry="7"/>
+            <rect class="ink" x="124" y="30" width="94" height="180" rx="15"/>
+            <rect class="paper" x="132" y="42" width="78" height="156" rx="8"/>
+            <rect class="acc" x="140" y="52" width="62" height="52" rx="6"/>
+            <rect class="shine" x="146" y="58" width="36" height="4" rx="2"/>
+            <rect class="line k-line" x="140" y="112" width="58" height="6" rx="3"/>
+            <rect class="line k-line" x="140" y="124" width="42" height="5" rx="2.5"/>
+            <rect class="acc-flat" x="140" y="138" width="24" height="10" rx="5"/>
+            <rect class="mid" x="168" y="138" width="24" height="10" rx="5"/>
+            <rect class="acc" x="140" y="164" width="62" height="22" rx="11"/>
+            <g class="hb-lens">
+              <circle class="paper-soft" cx="196" cy="118" r="30"/>
+              <circle class="stroke-acc w5" cx="196" cy="118" r="30"/>
+              <path class="stroke-ink w7" d="M218 140l22 22"/>
+            </g>
+            <g class="bob late">
+              <circle class="paper" cx="62" cy="86" r="40"/>
+              <path class="stroke-acc w5" d="M34 100a30 30 0 1 1 56 0"/>
+              <path class="hb-needle stroke-ink thin" d="M62 98L62 66"/>
+              <circle class="ink" cx="62" cy="98" r="5"/>
+              <text class="label-ink small" x="62" y="118" text-anchor="middle">FAST</text>
+            </g>
+            <g class="bob">
+              <circle class="acc" cx="262" cy="168" r="30"/>
+              <path class="paper" d="M262 150l5.3 11 12 1.7-8.7 8.4 2 12-10.6-5.6-10.6 5.6 2-12-8.7-8.4 12-1.7Z"/>
+            </g>
+            <g class="bob late">
+              <rect class="paper" x="232" y="44" width="64" height="26" rx="13"/>
+              <path class="stroke-acc thin hb-check" pathLength="1" d="M243 57l5 5 9-10"/>
+              <rect class="line" x="262" y="54" width="24" height="6" rx="3"/>
+            </g>
+            <path class="spark" d="M290 112l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+            <path class="spark" d="M40 160l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+          </svg>
+          <div>
+            <span class="hb-num">01</span>
+            <h3>Made properly, down to the details</h3>
+            <p>Native code that opens fast and stays smooth, a design made for each screen it runs on, and features that are finished before they ship. You can see it in every app:</p>
+            <ul class="hb-apps">
+              <li><img src="assets/apps/makimedia/icon-136.png" width="34" height="34" alt=""><span>Makimedia<small>Your films on every screen at home</small></span></li>
+              <li><img src="assets/apps/reroll/icon-136.png" width="34" height="34" alt=""><span>Reroll<small>One pick at a time, and where it streams</small></span></li>
+              <li><img src="assets/apps/md-editor/icon-136.png" width="34" height="34" alt=""><span>MD Editor<small>Clean reading, split editing, live math</small></span></li>
+              <li><img src="assets/apps/budget-tracker/icon-136.png" width="34" height="34" alt=""><span>Topic Finance<small>Budgets that warn you, in any currency</small></span></li>
+              <li><img src="assets/apps/cpp-guide/icon-136.png" width="34" height="34" alt=""><span>C++ Guide<small>From first lesson to senior interview</small></span></li>
+              <li><img src="assets/apps/python-guide/icon-136.png" width="34" height="34" alt=""><span>Python Guide<small>Learn by doing, with real exercises</small></span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="hb-row flip">
+          <svg class="art" viewBox="0 0 320 240" aria-hidden="true">
+            <ellipse class="floor" cx="150" cy="224" rx="110" ry="7"/>
+            <ellipse class="hb-zone" cx="134" cy="132" rx="118" ry="90"/>
+            <text class="hb-label" x="134" y="66" text-anchor="middle">YOUR DEVICE</text>
+            <rect class="ink" x="48" y="96" width="112" height="72" rx="8"/>
+            <rect class="mid" x="56" y="104" width="96" height="56" rx="4"/>
+            <path class="acc hb-shield" d="M104 112l17 6v13c0 12-8 19-17 23-9-4-17-11-17-23v-13Z"/>
+            <path class="stroke-paper thin hb-check" pathLength="1" d="M97 132l5 5 9-10"/>
+            <rect class="ink" x="38" y="168" width="132" height="9" rx="4.5"/>
+            <rect class="ink" x="176" y="88" width="50" height="92" rx="10"/>
+            <rect class="mid" x="181" y="97" width="40" height="72" rx="5"/>
+            <rect class="paper" x="193" y="128" width="16" height="13" rx="3"/>
+            <path class="stroke-paper thin" d="M196 128v-4a5 5 0 0 1 10 0v4"/>
+            <g class="bob late">
+              <path class="paper" d="M262 50c0-11 8-18 17-18 8 0 14 5 16 12 9 0 14 6 14 14s-6 14-14 14h-30c-8 0-13-6-13-12s5-10 10-10Z"/>
+              <rect class="mid" x="262" y="88" width="38" height="21" rx="10.5"/>
+              <circle class="paper" cx="273" cy="98.5" r="7.5"/>
+              <text class="cap" x="281" y="128" text-anchor="middle">off</text>
+            </g>
+            <path class="link" d="M226 112C238 100 246 84 256 72"/>
+            <path class="spark" d="M30 70l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+            <path class="spark" d="M296 170l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+          </svg>
+          <div>
+            <span class="hb-num">02</span>
+            <h3>Your data, on your device</h3>
+            <p>Your library, lists, budgets and progress are kept on your own device. Where an app offers something in the cloud, like a backup, it's off until you turn it on.</p>
+            <ul class="hb-list">
+              <li><span class="hb-icons"><img src="assets/apps/makimedia/icon-136.png" width="34" height="34" alt=""></span><span><strong>Makimedia</strong><span class="txt">Your library lives on your PC and streams to your screens at home.</span></span></li>
+              <li><span class="hb-icons"><img src="assets/apps/reroll/icon-136.png" width="34" height="34" alt=""></span><span><strong>Reroll</strong><span class="txt">Your watchlist and settings stay on your phone.</span></span></li>
+              <li><span class="hb-icons"><img src="assets/apps/md-editor/icon-136.png" width="34" height="34" alt=""></span><span><strong>MD Editor</strong><span class="txt">Your files never leave your PC.</span></span></li>
+              <li><span class="hb-icons"><img src="assets/apps/budget-tracker/icon-136.png" width="34" height="34" alt=""></span><span><strong>Topic Finance</strong><span class="txt">On your phone. Drive backup and the shared budget stay off until you turn them on.</span></span></li>
+              <li><span class="hb-icons"><img src="assets/apps/cpp-guide/icon-136.png" width="34" height="34" alt=""><img src="assets/apps/python-guide/icon-136.png" width="34" height="34" alt=""></span><span><strong>C++ and Python guides</strong><span class="txt">Your progress stays on your phone.</span></span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="hb-row">
+          <svg class="art" viewBox="0 0 320 240" aria-hidden="true">
+            <path class="blob" d="M78 34C124 2 222 8 264 46c40 36 34 110-10 142-46 32-148 30-194-6C14 146 30 66 78 34Z"/>
+            <ellipse class="floor" cx="160" cy="226" rx="104" ry="7"/>
+            <path class="stroke-ink thin" d="M146 74c6-20 22-30 36-26"/>
+            <g transform="rotate(-12 100 90)">
+              <g class="hb-swing">
+                <path class="paper" d="M34 60h96l30 30-30 30H34a10 10 0 0 1-10-10V70a10 10 0 0 1 10-10Z"/>
+                <circle class="mid" cx="140" cy="90" r="6"/>
+                <text class="label-ink big" x="80" y="101" text-anchor="middle">FREE</text>
+              </g>
+            </g>
+            <g class="bob">
+              <circle class="acc" cx="242" cy="96" r="38"/>
+              <circle class="stroke-paper thin" cx="242" cy="96" r="30"/>
+              <text class="label-paper small" x="242" y="88" text-anchor="middle">PAY</text>
+              <text class="label-paper med" x="242" y="108" text-anchor="middle">ONCE</text>
+            </g>
+            <g class="bob late">
+              <rect class="paper" x="112" y="138" width="82" height="74" rx="9"/>
+              <path class="acc" d="M112 147a9 9 0 0 1 9-9h64a9 9 0 0 1 9 9v12h-82Z"/>
+              <rect class="ink" x="130" y="130" width="6" height="16" rx="3"/>
+              <rect class="ink" x="170" y="130" width="6" height="16" rx="3"/>
+              <text class="label-ink big" x="153" y="194" text-anchor="middle">21</text>
+              <text class="label-ink small" x="153" y="206" text-anchor="middle">DAYS FREE</text>
+            </g>
+            <g class="bob">
+              <circle class="ink" cx="64" cy="182" r="32"/>
+              <circle class="stroke-acc thin" cx="64" cy="182" r="25"/>
+              <text class="label-paper big" x="64" y="188" text-anchor="middle">0</text>
+              <text class="label-paper small" x="64" y="202" text-anchor="middle">ADS</text>
+            </g>
+            <path class="spark" d="M290 30l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+            <path class="spark" d="M292 170l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+          </svg>
+          <div>
+            <span class="hb-num">03</span>
+            <h3>Fair prices, and no ads</h3>
+            <p>Two apps are completely free. The others start free or with a free trial, and you always see the price in the store before you pay. None of them shows ads, in a free version or after you pay.</p>
+            <ul class="hb-list">
+              <li><span class="hb-icons"><img src="assets/apps/makimedia/icon-136.png" width="34" height="34" alt=""><img src="assets/apps/reroll/icon-136.png" width="34" height="34" alt=""></span><span><strong><span class="hb-pill">Free</span>Makimedia and Reroll</strong><span class="txt">Free and open source, under the GNU GPL v3.</span></span></li>
+              <li><span class="hb-icons"><img src="assets/apps/md-editor/icon-136.png" width="34" height="34" alt=""></span><span><strong><span class="hb-pill">Pay once</span>MD Editor</strong><span class="txt">A one-time purchase in the Microsoft Store. Still open source, under the GNU GPL v3.</span></span></li>
+              <li><span class="hb-icons"><img src="assets/apps/cpp-guide/icon-136.png" width="34" height="34" alt=""><img src="assets/apps/python-guide/icon-136.png" width="34" height="34" alt=""></span><span><strong><span class="hb-pill">Pay once</span>C++ and Python guides</strong><span class="txt">Free to start. Pro is a single payment that's yours to keep.</span></span></li>
+              <li><span class="hb-icons"><img src="assets/apps/budget-tracker/icon-136.png" width="34" height="34" alt=""></span><span><strong><span class="hb-pill">Free trial</span>Topic Finance</strong><span class="txt">Every feature free for 21 days, then Premium by the month, the year or once for life.</span></span></li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="hb-about">
+    <div class="wrap about">
+      <svg class="art" viewBox="0 0 520 400" role="img" aria-label="A small studio at night: a window with stars, a shelf of books, a lamp, a monitor full of code with a sticky note, a film poster on the wall, a mug and a phone showing the six apps">
+        <path class="blob" d="M96 52C188-8 372 0 448 76c70 72 62 210-10 274-76 66-292 62-372-8C-6 278 4 120 96 52Z"/>
+        <ellipse class="floor" cx="260" cy="352" rx="236" ry="10"/>
+
+        <rect class="ink" x="40" y="40" width="124" height="104" rx="8"/>
+        <rect fill="#0B1A33" x="48" y="48" width="108" height="88" rx="4"/>
+        <circle fill="#FFE9A8" cx="130" cy="70" r="11"/>
+        <circle fill="#0B1A33" cx="135" cy="66" r="9"/>
+        <circle class="hb-star" style="--d: 0s" fill="#FFFFFF" cx="62" cy="62" r="1.6"/>
+        <circle class="hb-star" style="--d: 0.8s" fill="#FFFFFF" cx="86" cy="78" r="1.2"/>
+        <circle class="hb-star" style="--d: 1.6s" fill="#FFFFFF" cx="70" cy="110" r="1.4"/>
+        <circle class="hb-star" style="--d: 0.4s" fill="#FFFFFF" cx="118" cy="118" r="1.2"/>
+        <circle class="hb-star" style="--d: 1.2s" fill="#FFFFFF" cx="142" cy="100" r="1.6"/>
+        <rect class="ink" x="100" y="48" width="4" height="88"/>
+        <rect class="ink" x="48" y="90" width="108" height="4"/>
+
+        <g transform="translate(0 34)">
+        <rect class="ink" x="26" y="166" width="140" height="8" rx="4"/>
+        <rect fill="#3D74C9" x="36" y="120" width="16" height="46" rx="2"/>
+        <text fill="#FFFFFF" font-size="8" font-weight="700" transform="rotate(-90 47 158)" x="47" y="158">C++</text>
+        <rect fill="#FFD43B" x="54" y="126" width="16" height="40" rx="2"/>
+        <text fill="#1D2433" font-size="8" font-weight="700" transform="rotate(-90 65 160)" x="65" y="160">PY</text>
+        <rect class="k-md" x="72" y="116" width="13" height="50" rx="2"/>
+        <rect class="k-fin" x="87" y="124" width="14" height="42" rx="2"/>
+        <rect class="mid" x="103" y="130" width="12" height="36" rx="2" transform="rotate(12 109 166)"/>
+        <rect class="acc" x="136" y="142" width="22" height="24" rx="4"/>
+        <ellipse class="acc-hi" cx="142" cy="130" rx="6" ry="14" transform="rotate(-24 142 130)"/>
+        <ellipse class="acc-flat" cx="154" cy="128" rx="6" ry="15" transform="rotate(20 154 128)"/>
+        </g>
+
+        <g transform="translate(8 -14)">
+        <rect class="ink" x="382" y="38" width="96" height="128" rx="8"/>
+        <rect fill="url(#k-maki-g)" x="388" y="44" width="84" height="116" rx="4"/>
+        <g class="k-pulse">
+          <circle fill="#FFFFFF" opacity="0.92" cx="430" cy="92" r="16"/>
+          <path fill="#E23434" d="M425 83v18l14-9Z"/>
+        </g>
+        <rect fill="#FFFFFF" x="398" y="128" width="52" height="7" rx="3"/>
+        <rect fill="rgba(255,255,255,0.6)" x="398" y="140" width="36" height="5" rx="2.5"/>
+        </g>
+
+        <rect class="ink" x="176" y="148" width="216" height="142" rx="12"/>
+        <rect fill="#0A1220" x="186" y="158" width="196" height="114" rx="5"/>
+        <rect class="k-line" fill="#C792EA" x="198" y="172" width="44" height="6" rx="3"/>
+        <rect class="k-line" fill="#FFD700" x="246" y="172" width="50" height="6" rx="3"/>
+        <rect class="k-line" fill="#64FFDA" x="198" y="186" width="26" height="6" rx="3"/>
+        <rect class="k-line" fill="#A5B4FC" x="228" y="186" width="64" height="6" rx="3"/>
+        <rect class="k-line" fill="#CCD6F6" opacity="0.5" x="212" y="200" width="96" height="6" rx="3"/>
+        <rect class="k-line" fill="#7FDBFF" x="212" y="214" width="54" height="6" rx="3"/>
+        <rect class="k-line" fill="#FFD700" x="270" y="214" width="40" height="6" rx="3"/>
+        <rect class="k-line" fill="#CCD6F6" opacity="0.5" x="212" y="228" width="70" height="6" rx="3"/>
+        <rect class="k-line" fill="#CCD6F6" opacity="0.5" x="198" y="242" width="14" height="6" rx="3"/>
+        <rect fill="#64FFDA" class="k-blink" x="216" y="240" width="6" height="10"/>
+        <g transform="rotate(7 372 166)">
+          <rect fill="#FFD43B" x="352" y="144" width="42" height="40" rx="3"/>
+          <text fill="#1D2433" font-size="9" font-weight="700" x="373" y="161" text-anchor="middle">NO</text>
+          <text fill="#1D2433" font-size="9" font-weight="700" x="373" y="174" text-anchor="middle">ADS!</text>
+        </g>
+        <rect class="ink" x="271" y="290" width="26" height="18"/>
+        <rect class="ink" x="240" y="304" width="88" height="8" rx="4"/>
+        <rect class="mid" x="206" y="314" width="156" height="16" rx="4"/>
+        <rect class="line" x="214" y="318" width="140" height="3" rx="1.5"/>
+        <rect class="line" x="214" y="324" width="140" height="3" rx="1.5"/>
+
+        <path class="hb-light" d="M124 248l58 82H78Z"/>
+        <ellipse class="ink" cx="88" cy="328" rx="26" ry="5"/>
+        <path class="stroke-ink w5" d="M88 326L76 268L118 238"/>
+        <path class="ink" d="M106 228l38 14-9 16-38-14Z"/>
+        <circle fill="#FFE9A8" cx="122" cy="250" r="5"/>
+
+        <rect class="ink" x="20" y="330" width="480" height="12" rx="6"/>
+
+        <rect class="paper" x="392" y="284" width="38" height="46" rx="6"/>
+        <rect class="acc" x="392" y="298" width="38" height="8"/>
+        <circle class="stroke-paper w5" cx="434" cy="306" r="10"/>
+        <path class="flow" d="M402 274c-7-9 7-13 0-22M416 274c-7-9 7-13 0-22"/>
+
+        <rect class="ink" x="452" y="266" width="38" height="64" rx="7"/>
+        <rect class="k-maki k-pop" style="--n: 0" x="458" y="276" width="11" height="11" rx="3"/>
+        <rect class="k-reroll k-pop" style="--n: 1" x="473" y="276" width="11" height="11" rx="3"/>
+        <rect class="k-md k-pop" style="--n: 2" x="458" y="291" width="11" height="11" rx="3"/>
+        <rect class="k-fin k-pop" style="--n: 3" x="473" y="291" width="11" height="11" rx="3"/>
+        <rect class="k-pop" style="--n: 4" fill="#3D74C9" x="458" y="306" width="11" height="11" rx="3"/>
+        <rect class="k-py k-pop" style="--n: 5" x="473" y="306" width="11" height="11" rx="3"/>
+
+        <path class="spark" d="M488 190l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+        <path class="spark" d="M206 70l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        <path class="spark" d="M300 108l1.6 4 4 1.6-4 1.6-1.6 4-1.6-4-4-1.6 4-1.6z"/>
+      </svg>
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Built with care, <em>one app at a time</em></h2>
+        <p>Each app starts from one clear job, like playing your own films, choosing what to watch or keeping a budget, and stays focused on doing that job really well.</p>
+        <p>Every app gets the time it needs to be done properly: a clean design and no feature added just to fill a list. And when you write in, you get a real answer.</p>
+        <div class="hb-stack">
+          <div>
+            <small>Built with</small>
+            <ul class="hb-chips"><li>C++</li><li>Qt 6</li><li>QML</li></ul>
+          </div>
+          <div>
+            <small>Made for</small>
+            <ul class="hb-chips"><li>Windows</li><li>Android</li><li>Android TV</li></ul>
+          </div>
+        </div>
+        <a class="text-link" href="contact.html">Say hello, every message gets an answer</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Questions, ideas or a bug to report?</h2>
+        <p>Every message is read and answered.</p>
+        <div class="buttons">
+          <a class="btn primary" href="contact.html">
+            <span class="ico i-mail" aria-hidden="true"></span>
+            <span><small>Get in touch</small><strong>Contact</strong></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/topicdev-logo.png" width="150" height="150" alt="TopicDev">
+        <p>Carefully crafted apps for Windows, Android and Android TV.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Apps</h2>
+        <ul>
+          <li><a href="https://makimedia.org/" target="_blank" rel="noopener">Makimedia</a></li>
+          <li><a href="reroll/">Reroll</a></li>
+          <li><a href="md-editor/">MD Editor</a></li>
+          <li><a href="topic-finance/">Topic Finance</a></li>
+          <li><a href="cpp-guide/">C++ Learning Guide</a></li>
+          <li><a href="python-guide/">Python Learning Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Studio</h2>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://play.google.com/store/apps/dev?id=6943416935116197981" target="_blank" rel="noopener">Google Play</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Website privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TopicDev</p>
+      <p class="tmdb-note"><img src="assets/tmdb-logo.svg" alt="TMDB">Makimedia and Reroll use the TMDB API but are not endorsed or certified by TMDB.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="filters.js?v=1"></script>
+<script src="nav.js?v=1"></script>
+<script src="home.js?v=1"></script>
+</body>
+</html>

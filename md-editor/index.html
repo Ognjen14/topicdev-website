@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MD Editor - markdown reader and editor for Windows | TopicDev</title>
+  <meta name="description" content="MD Editor is a fast markdown reader and editor for Windows, with a clean reading view, split editing, math, diagrams and folders as a notes workspace. Open source, with no ads and no account.">
+  <meta name="theme-color" content="#16171A">
+  <link rel="canonical" href="https://topicdev.com/md-editor/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TopicDev">
+  <meta property="og:title" content="MD Editor: markdown reader and editor for Windows">
+  <meta property="og:description" content="A fast markdown reader and editor for Windows. Open source, with no ads and no account.">
+  <meta property="og:url" content="https://topicdev.com/md-editor/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/apps/md-editor/icon-256.png">
+  <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="mdeditor.css?v=6">
+</head>
+<body class="app-md-editor md">
+
+<svg class="ill-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="ill-acc" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" class="st-acc-hi"/><stop offset="1" class="st-acc"/></linearGradient>
+    <linearGradient id="ill-ink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-ink-hi"/><stop offset="1" class="st-ink"/></linearGradient>
+    <linearGradient id="ill-mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-mid"/><stop offset="1" class="st-mid-lo"/></linearGradient>
+    <linearGradient id="ill-paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-paper"/><stop offset="1" class="st-paper-lo"/></linearGradient>
+    <radialGradient id="ill-blob" cx="0.5" cy="0.42" r="0.62"><stop offset="0" class="st-blob-hi"/><stop offset="1" class="st-blob"/></radialGradient>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/topicdev-mark-76.png" width="38" height="38" alt="">
+      <span>TOPIC<span class="brand-dev">DEV</span></span>
+    </a>
+    <a class="app-crumb" href="./"><img src="../assets/apps/md-editor/icon-136.png" width="26" height="26" alt=""><span>MD Editor</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="../index.html#apps">All apps</a>
+      <a href="../index.html#about">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="#get"><span class="ico i-download" aria-hidden="true"></span>Get MD Editor</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="ico i-menu icon-open" aria-hidden="true"></span><span class="ico i-close icon-close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="md-hero" id="get">
+    <div class="wrap">
+      <div class="md-hero-top">
+        <div>
+          <p class="md-eyebrow"># MD Editor for Windows</p>
+          <h1>Markdown, made for <em>reading.</em></h1>
+          <p class="lead">MD Editor opens your markdown as a clean, comfortable page, with an outline that follows you as you read. Switch to the source, or put both side by side, and open a whole folder to turn it into a small notes workspace.</p>
+          <div class="buttons">
+            <span class="btn primary is-soon" aria-disabled="true">
+              <span class="ico i-microsoft" aria-hidden="true"></span>
+              <span><small>Coming soon to</small><strong>Microsoft Store</strong></span>
+            </span>
+          </div>
+          <p class="meta">For Windows 10 and 11. Opens .md and .markdown files.</p>
+        </div>
+        <pre class="md-front" aria-label="MD Editor at a glance"><span class="fence">---</span>
+<span class="key">price:</span>     <span class="val">pay once</span>
+<span class="key">licence:</span>   <span class="val">GNU GPL v3</span>
+<span class="key">ads:</span>       <span class="val">none</span>
+<span class="key">account:</span>   <span class="val">none</span>
+<span class="key">analytics:</span> <span class="val">none</span>
+<span class="key">files:</span>     <span class="val">stay on your PC</span>
+<span class="fence">---</span></pre>
+      </div>
+
+      <div class="md-scene">
+        <svg class="art md-anim" viewBox="0 0 1000 300" role="img" aria-label="Markdown being typed on the left, its symbols flying across, and a finished page building up on the right">
+          <ellipse class="blob" cx="500" cy="158" rx="480" ry="132"/>
+          <ellipse class="floor" cx="210" cy="276" rx="170" ry="9"/>
+          <ellipse class="floor" cx="790" cy="280" rx="176" ry="9"/>
+
+          <rect class="ink" x="40" y="40" width="340" height="226" rx="16"/>
+          <circle class="md-dot" cx="64" cy="62" r="5"/>
+          <circle class="md-dot" cx="82" cy="62" r="5"/>
+          <circle class="md-dot" cx="100" cy="62" r="5"/>
+          <g class="md-src">
+            <text class="md-type" style="--i: 0" x="64" y="104"><tspan class="sym">#</tspan> Trip notes</text>
+            <text class="md-type" style="--i: 1" x="64" y="136"><tspan class="sym">- [x]</tspan> Book the train</text>
+            <text class="md-type" style="--i: 2" x="64" y="164"><tspan class="sym">- [ ]</tspan> Pack the <tspan class="sym">**</tspan>map<tspan class="sym">**</tspan></text>
+            <text class="md-type" style="--i: 3" x="64" y="196"><tspan class="sym">&gt;</tspan> Plain .md files</text>
+            <text class="md-type" style="--i: 4" x="64" y="228"><tspan class="sym">$$</tspan> a^2 + b^2 = c^2 <tspan class="sym">$$</tspan></text>
+          </g>
+          <rect class="md-caret" x="326" y="214" width="3" height="18" rx="1.5"/>
+
+          <path class="flow" d="M396 150C450 104 540 104 604 150"/>
+          <g class="md-fly" style="--d: 0s"><text class="md-glyph" x="400" y="160">#</text></g>
+          <g class="md-fly" style="--d: 0.7s"><text class="md-glyph" x="400" y="160">**</text></g>
+          <g class="md-fly" style="--d: 1.4s"><text class="md-glyph" x="400" y="160">-</text></g>
+          <g class="md-fly" style="--d: 2.1s"><text class="md-glyph" x="400" y="160">$</text></g>
+          <g class="md-fly" style="--d: 2.8s"><text class="md-glyph" x="400" y="160">&gt;</text></g>
+
+          <rect class="paper md-page" x="620" y="28" width="340" height="244" rx="14"/>
+          <g class="md-build" style="--i: 0"><text class="md-page-h" x="648" y="76">Trip notes</text><rect class="acc-flat" x="648" y="86" width="56" height="4" rx="2"/></g>
+          <g class="md-build" style="--i: 1">
+            <rect class="md-box on" x="648" y="104" width="16" height="16" rx="4"/>
+            <path class="md-tick" d="M652 112l3.5 3.5 6-7"/>
+            <rect class="line" x="674" y="109" width="110" height="7" rx="3.5"/>
+          </g>
+          <g class="md-build" style="--i: 2">
+            <rect class="md-box" x="648" y="130" width="16" height="16" rx="4"/>
+            <rect class="line" x="674" y="135" width="64" height="7" rx="3.5"/>
+            <rect class="md-bold" x="744" y="133" width="40" height="11" rx="3"/>
+          </g>
+          <g class="md-build" style="--i: 3">
+            <rect class="acc-flat" x="648" y="162" width="5" height="30" rx="2.5"/>
+            <rect class="line" x="664" y="168" width="128" height="7" rx="3.5"/>
+            <rect class="line" x="664" y="180" width="90" height="7" rx="3.5"/>
+          </g>
+          <g class="md-build" style="--i: 4"><text class="md-formula" x="648" y="232">a² + b² = c²</text></g>
+          <g class="md-build" style="--i: 5">
+            <rect class="ink" x="838" y="112" width="96" height="26" rx="7"/>
+            <rect class="paper" x="856" y="122" width="60" height="6" rx="3"/>
+            <path class="stroke-acc thin" d="M886 138v18"/>
+            <path class="acc-flat" d="M880 152h12l-6 8Z"/>
+            <path class="acc" d="M886 164l30 20-30 20-30-20Z"/>
+            <path class="stroke-acc thin" d="M886 204v12"/>
+            <rect class="ink" x="838" y="218" width="96" height="26" rx="7"/>
+            <rect class="paper" x="856" y="228" width="60" height="6" rx="3"/>
+          </g>
+
+          <path class="spark md-twinkle" d="M494 54l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+          <path class="spark md-twinkle late" d="M970 30l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+          <path class="spark md-twinkle" d="M24 250l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap screenshots" id="screenshots">
+    <div class="gallery desktop">
+      <div class="strip">
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/md-editor/reading.webp" width="1908" height="1143" alt="The reading view with a folder of notes in the side pane" loading="lazy"></div>
+          <figcaption>Markdown, made for reading</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/md-editor/split.webp" width="1908" height="1143" alt="The source and the page side by side" loading="lazy"></div>
+          <figcaption>Write it and see it at once</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/md-editor/light-reading.webp" width="1908" height="1143" alt="The reading view in the light theme" loading="lazy"></div>
+          <figcaption>Easy on the eyes, day or night</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/md-editor/light-split.webp" width="1908" height="1143" alt="Split view in the light theme, with the source and page scrolling together" loading="lazy"></div>
+          <figcaption>Source and page, always in step</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/md-editor/source.webp" width="1908" height="1143" alt="Editing the markdown source" loading="lazy"></div>
+          <figcaption>Your notes stay plain .md files</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/md-editor/themes.webp" width="1908" height="1143" alt="Markdown colours with the Classic, Mono, Sepia, Forest and Dusk presets" loading="lazy"></div>
+          <figcaption>Five themes, every colour yours</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <section class="md-features">
+    <div class="wrap md-doc">
+      <div class="md-doc-head">
+        <h2 class="md-h" data-md="##">Read it, write it, <em>find it</em></h2>
+        <p>Everything MD Editor does, on one page.</p>
+      </div>
+
+      <div class="md-sec">
+        <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+          <path class="blob" d="M58 32C92 6 168 10 200 40c30 28 26 90-8 116-34 24-112 22-146-4C12 128 22 60 58 32Z"/>
+          <ellipse class="floor" cx="120" cy="162" rx="84" ry="7"/>
+          <rect class="ink" x="28" y="26" width="184" height="130" rx="12"/>
+          <rect class="paper" x="40" y="46" width="30" height="5" rx="2.5"/>
+          <rect class="line" x="40" y="58" width="24" height="5" rx="2.5"/>
+          <rect class="acc" x="36" y="68" width="40" height="13" rx="4"/>
+          <rect class="paper" x="40" y="72" width="26" height="5" rx="2.5"/>
+          <rect class="line" x="40" y="88" width="28" height="5" rx="2.5"/>
+          <rect class="line" x="40" y="100" width="20" height="5" rx="2.5"/>
+          <rect class="paper" x="86" y="36" width="116" height="112" rx="6"/>
+          <rect class="ink" x="98" y="50" width="62" height="10" rx="3"/>
+          <rect class="line" x="98" y="70" width="90" height="5" rx="2.5"/>
+          <rect class="line" x="98" y="80" width="82" height="5" rx="2.5"/>
+          <rect class="line" x="98" y="90" width="88" height="5" rx="2.5"/>
+          <rect class="acc-hi" x="98" y="100" width="42" height="7" rx="2"/>
+          <rect class="line" x="144" y="101" width="40" height="5" rx="2.5"/>
+          <rect class="line" x="98" y="114" width="72" height="5" rx="2.5"/>
+          <rect class="line" x="98" y="124" width="86" height="5" rx="2.5"/>
+          <rect class="line" x="98" y="134" width="56" height="5" rx="2.5"/>
+          <g class="bob">
+            <circle class="acc" cx="204" cy="36" r="22"/>
+            <text class="label-paper med" x="204" y="42" text-anchor="middle">Aa</text>
+          </g>
+          <path class="spark" d="M20 120l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        </svg>
+        <div>
+          <h3>A real reading view</h3>
+          <p>Your notes open as a clean page, not a wall of symbols. The <strong>outline follows you</strong> as you scroll and jumps to any heading. Pick one of five reading themes, set any colour by hand, and choose separate fonts for reading and for editing.</p>
+        </div>
+      </div>
+
+      <div class="md-sec">
+        <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+          <path class="blob" d="M182 28c-34-24-104-22-138 6C12 60 16 124 50 150c34 26 108 24 140-4 32-28 26-94-8-118Z"/>
+          <ellipse class="floor" cx="120" cy="164" rx="86" ry="7"/>
+          <rect class="ink" x="24" y="28" width="192" height="122" rx="12"/>
+          <text class="label-acc" x="36" y="58">#</text>
+          <rect class="paper" x="50" y="50" width="48" height="7" rx="3.5"/>
+          <text class="label-acc" x="37" y="79">-</text>
+          <rect class="line" x="50" y="73" width="42" height="5" rx="2.5"/>
+          <text class="label-acc" x="37" y="96">-</text>
+          <rect class="line" x="50" y="90" width="36" height="5" rx="2.5"/>
+          <text class="label-acc" x="34" y="114">**</text>
+          <rect class="paper" x="52" y="107" width="38" height="6" rx="3"/>
+          <rect class="line" x="36" y="122" width="62" height="5" rx="2.5"/>
+          <rect class="line" x="36" y="133" width="48" height="5" rx="2.5"/>
+          <rect class="line" x="117" y="38" width="2" height="104" rx="1"/>
+          <rect class="paper" x="126" y="38" width="80" height="104" rx="6"/>
+          <rect class="ink" x="134" y="48" width="48" height="9" rx="3"/>
+          <circle class="acc-flat" cx="137" cy="70" r="2.6"/>
+          <rect class="line" x="143" y="68" width="46" height="5" rx="2.5"/>
+          <circle class="acc-flat" cx="137" cy="84" r="2.6"/>
+          <rect class="line" x="143" y="82" width="38" height="5" rx="2.5"/>
+          <rect class="ink" x="134" y="96" width="40" height="6" rx="3"/>
+          <rect class="line" x="134" y="110" width="62" height="5" rx="2.5"/>
+          <rect class="line" x="134" y="121" width="52" height="5" rx="2.5"/>
+          <g class="bob">
+            <circle class="acc" cx="118" cy="152" r="17"/>
+            <path class="stroke-paper thin" d="M112 149l6-6 6 6"/>
+            <path class="stroke-paper thin" d="M112 155l6 6 6-6"/>
+          </g>
+          <path class="spark" d="M212 22l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        </svg>
+        <div>
+          <h3>Edit side by side</h3>
+          <p>Write the source with the page next to it, <strong>scrolling together</strong>. Lists continue when you press Enter, blocks indent and outdent, and find and replace is a <kbd>Ctrl+H</kbd> away. The status bar keeps your line, column and word count.</p>
+        </div>
+      </div>
+
+      <div class="md-sec">
+        <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+          <path class="blob" d="M58 32C92 6 168 10 200 40c30 28 26 90-8 116-34 24-112 22-146-4C12 128 22 60 58 32Z"/>
+          <ellipse class="floor" cx="120" cy="162" rx="80" ry="7"/>
+          <rect class="mid" x="100" y="32" width="48" height="20" rx="6"/>
+          <rect class="mid" x="152" y="32" width="42" height="20" rx="6"/>
+          <rect class="ink" x="32" y="44" width="176" height="106" rx="12"/>
+          <rect class="acc" x="42" y="28" width="54" height="26" rx="7"/>
+          <rect class="paper" x="50" y="37" width="30" height="5" rx="2.5"/>
+          <rect class="paper" x="48" y="66" width="88" height="7" rx="3.5"/>
+          <rect class="line" x="48" y="82" width="120" height="5" rx="2.5"/>
+          <rect class="line" x="48" y="94" width="108" height="5" rx="2.5"/>
+          <rect class="line" x="48" y="106" width="116" height="5" rx="2.5"/>
+          <rect class="line" x="48" y="118" width="70" height="5" rx="2.5"/>
+          <rect class="acc-flat" x="120" y="117" width="2" height="8" rx="1"/>
+          <g class="bob">
+            <circle class="acc" cx="190" cy="128" r="22"/>
+            <g class="spin">
+              <path class="stroke-paper thin" d="M180 125a10 10 0 0 1 17-5"/>
+              <path class="paper" d="M201 115v10h-9Z"/>
+              <path class="stroke-paper thin" d="M200 131a10 10 0 0 1-17 5"/>
+              <path class="paper" d="M179 141v-10h9Z"/>
+            </g>
+          </g>
+          <path class="spark" d="M24 84l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        </svg>
+        <div>
+          <h3>Tabs that remember</h3>
+          <p>Open as many files as you like. They <strong>come back next time</strong> you start the app, and drafts are saved as you type, so a crash doesn't take your work with it. If a file changes on disk, MD Editor offers to reload it.</p>
+        </div>
+      </div>
+
+      <div class="md-sec">
+        <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+          <path class="blob" d="M182 28c-34-24-104-22-138 6C12 60 16 124 50 150c34 26 108 24 140-4 32-28 26-94-8-118Z"/>
+          <ellipse class="floor" cx="116" cy="164" rx="80" ry="7"/>
+          <rect class="ink" x="36" y="26" width="136" height="128" rx="12"/>
+          <rect class="acc-flat" x="48" y="40" width="9" height="5" rx="1.5"/>
+          <rect class="acc-flat" x="48" y="43" width="18" height="12" rx="2.5"/>
+          <rect class="paper" x="74" y="46" width="52" height="6" rx="3"/>
+          <rect class="paper" x="62" y="64" width="11" height="13" rx="2"/>
+          <rect class="line" x="80" y="68" width="48" height="5" rx="2.5"/>
+          <rect class="mid" x="56" y="84" width="108" height="21" rx="5"/>
+          <rect class="paper" x="62" y="88" width="11" height="13" rx="2"/>
+          <rect class="paper" x="80" y="92" width="56" height="5" rx="2.5"/>
+          <rect class="paper" x="62" y="112" width="11" height="13" rx="2"/>
+          <rect class="line" x="80" y="116" width="40" height="5" rx="2.5"/>
+          <rect class="acc-flat" x="48" y="132" width="9" height="5" rx="1.5"/>
+          <rect class="acc-flat" x="48" y="135" width="18" height="12" rx="2.5"/>
+          <rect class="line" x="74" y="138" width="44" height="5" rx="2.5"/>
+          <g class="bob late">
+            <circle class="paper" cx="182" cy="104" r="26"/>
+            <circle class="stroke-acc w5" cx="177" cy="99" r="11"/>
+            <path class="stroke-acc w5" d="M185 107l10 10"/>
+          </g>
+          <path class="spark" d="M206 40l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        </svg>
+        <div>
+          <h3>Folders as a workspace</h3>
+          <p>Open a folder to browse its notes in a file tree. Create, rename and <strong>drag to move</strong> them, and deleted files go to the Recycle Bin, not into thin air. Search every file at once with <kbd>Ctrl+Shift+F</kbd>, results grouped by file.</p>
+        </div>
+      </div>
+
+      <div class="md-sec">
+        <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+          <path class="blob" d="M58 32C92 6 168 10 200 40c30 28 26 90-8 116-34 24-112 22-146-4C12 128 22 60 58 32Z"/>
+          <ellipse class="floor" cx="120" cy="162" rx="86" ry="7"/>
+          <rect class="paper" x="24" y="42" width="112" height="58" rx="10"/>
+          <text class="formula" x="80" y="78" text-anchor="middle">a² + b² = c²</text>
+          <rect class="ink" x="28" y="112" width="100" height="38" rx="7"/>
+          <rect class="acc-flat" x="34" y="118" width="28" height="8" rx="2"/>
+          <rect class="acc-flat" x="66" y="118" width="28" height="8" rx="2"/>
+          <rect class="acc-flat" x="98" y="118" width="24" height="8" rx="2"/>
+          <rect class="mid" x="34" y="130" width="28" height="7" rx="2"/>
+          <rect class="mid" x="66" y="130" width="28" height="7" rx="2"/>
+          <rect class="mid" x="98" y="130" width="24" height="7" rx="2"/>
+          <rect class="mid" x="34" y="140" width="28" height="5" rx="2"/>
+          <rect class="mid" x="66" y="140" width="28" height="5" rx="2"/>
+          <rect class="mid" x="98" y="140" width="24" height="5" rx="2"/>
+          <rect class="ink" x="152" y="22" width="60" height="24" rx="6"/>
+          <rect class="paper" x="166" y="31" width="32" height="6" rx="3"/>
+          <path class="stroke-acc thin" d="M182 46v12"/>
+          <path class="acc-flat" d="M177 56h10l-5 7Z"/>
+          <path class="acc" d="M182 66l26 18-26 18-26-18Z"/>
+          <path class="stroke-acc thin" d="M182 102v12"/>
+          <path class="acc-flat" d="M177 112h10l-5 7Z"/>
+          <rect class="ink" x="152" y="122" width="60" height="24" rx="6"/>
+          <rect class="paper" x="166" y="131" width="32" height="6" rx="3"/>
+          <path class="spark" d="M136 26l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        </svg>
+        <div>
+          <h3>Math, diagrams and more</h3>
+          <p><strong>LaTeX formulas</strong> rendered with MathJax, Mermaid flowcharts drawn right in the page, tables, task lists, footnotes, highlights and emoji shortcodes. Code blocks are coloured for C, C++, C#, Python, JavaScript, PowerShell and shell.</p>
+        </div>
+      </div>
+
+      <div class="md-sec">
+        <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+          <path class="blob" d="M182 28c-34-24-104-22-138 6C12 60 16 124 50 150c34 26 108 24 140-4 32-28 26-94-8-118Z"/>
+          <ellipse class="floor" cx="120" cy="164" rx="86" ry="7"/>
+          <g transform="rotate(-6 70 92)">
+            <rect class="paper" x="28" y="40" width="82" height="104" rx="8"/>
+            <rect class="ink" x="38" y="52" width="46" height="8" rx="3"/>
+            <rect class="line" x="38" y="70" width="60" height="5" rx="2.5"/>
+            <rect class="line" x="38" y="80" width="52" height="5" rx="2.5"/>
+            <rect class="acc-flat" x="38" y="92" width="38" height="6" rx="3"/>
+            <rect class="acc-flat" x="38" y="100" width="38" height="2" rx="1"/>
+            <rect class="line" x="38" y="112" width="56" height="5" rx="2.5"/>
+            <rect class="line" x="38" y="122" width="44" height="5" rx="2.5"/>
+          </g>
+          <rect class="paper" x="132" y="28" width="84" height="110" rx="8"/>
+          <rect class="ink" x="142" y="40" width="50" height="8" rx="3"/>
+          <rect class="line" x="142" y="56" width="62" height="5" rx="2.5"/>
+          <rect class="acc-hi" x="138" y="68" width="72" height="16" rx="4"/>
+          <text class="label-acc" x="143" y="80.5">#</text>
+          <rect class="ink" x="155" y="73" width="44" height="6" rx="3"/>
+          <rect class="line" x="142" y="92" width="64" height="5" rx="2.5"/>
+          <rect class="line" x="142" y="102" width="56" height="5" rx="2.5"/>
+          <rect class="line" x="142" y="112" width="60" height="5" rx="2.5"/>
+          <path class="link" d="M84 96C106 96 112 76 132 76"/>
+          <g class="bob">
+            <rect class="ink" x="112" y="140" width="96" height="22" rx="11"/>
+            <text class="label-paper small" x="160" y="154.5" text-anchor="middle">notes.md#setup</text>
+          </g>
+          <path class="spark" d="M22 30l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+        </svg>
+        <div>
+          <h3>Links between notes</h3>
+          <p>Link to another file and one of its headings, and the link <strong>opens it in a new tab, right at that heading</strong>. You can even leave off the .md at the end.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="md-shortcuts alt">
+    <div class="wrap">
+      <div class="md-doc-head">
+        <h2 class="md-h" data-md="##">Keyboard <em>first</em></h2>
+        <p>The shortcuts you'll use every day.</p>
+      </div>
+      <div class="md-kbd">
+        <svg class="art md-anim" viewBox="0 0 680 300" role="img" aria-label="A keyboard pressing Ctrl+E, Ctrl+\, Ctrl+B and Ctrl+Shift+F in turn">
+          <ellipse class="blob" cx="340" cy="170" rx="330" ry="128"/>
+          <ellipse class="floor" cx="342" cy="282" rx="270" ry="9"/>
+          <text class="md-cap s1" x="340" y="38" text-anchor="middle">Ctrl+E: reading view or source</text>
+          <text class="md-cap s2" x="340" y="38" text-anchor="middle">Ctrl+\: split side by side</text>
+          <text class="md-cap s3" x="340" y="38" text-anchor="middle">Ctrl+B: show or hide the side pane</text>
+          <text class="md-cap s4" x="340" y="38" text-anchor="middle">Ctrl+Shift+F: search every file</text>
+          <rect class="ink" x="60" y="64" width="564" height="206" rx="18"/>
+          <g class="md-keyset">
+            <g><rect x="80" y="80" width="40" height="26" rx="6"/><text x="100" y="97">Esc</text></g>
+            <g><rect x="124" y="80" width="40" height="26" rx="6"/><text x="144" y="97">F1</text></g>
+            <g><rect x="168" y="80" width="40" height="26" rx="6"/><text x="188" y="97">F2</text></g>
+            <g><rect x="212" y="80" width="40" height="26" rx="6"/><text x="232" y="97">F3</text></g>
+            <g><rect x="256" y="80" width="40" height="26" rx="6"/><text x="276" y="97">F4</text></g>
+            <g><rect x="300" y="80" width="40" height="26" rx="6"/><text x="320" y="97">F5</text></g>
+            <g><rect x="344" y="80" width="40" height="26" rx="6"/><text x="364" y="97">F6</text></g>
+            <g><rect x="388" y="80" width="40" height="26" rx="6"/><text x="408" y="97">F7</text></g>
+            <g><rect x="432" y="80" width="40" height="26" rx="6"/><text x="452" y="97">F8</text></g>
+            <g><rect x="476" y="80" width="40" height="26" rx="6"/><text x="496" y="97">F9</text></g>
+            <g><rect x="520" y="80" width="40" height="26" rx="6"/><text x="540" y="97">F10</text></g>
+            <g><rect x="564" y="80" width="40" height="26" rx="6"/><text x="584" y="97">F11</text></g>
+
+            <g><rect x="80" y="114" width="36" height="30" rx="6"/><text x="98" y="133">Q</text></g>
+            <g><rect x="120" y="114" width="36" height="30" rx="6"/><text x="138" y="133">W</text></g>
+            <g class="k s1"><rect x="160" y="114" width="36" height="30" rx="6"/><text x="178" y="133">E</text></g>
+            <g><rect x="200" y="114" width="36" height="30" rx="6"/><text x="218" y="133">R</text></g>
+            <g><rect x="240" y="114" width="36" height="30" rx="6"/><text x="258" y="133">T</text></g>
+            <g><rect x="280" y="114" width="36" height="30" rx="6"/><text x="298" y="133">Y</text></g>
+            <g><rect x="320" y="114" width="36" height="30" rx="6"/><text x="338" y="133">U</text></g>
+            <g><rect x="360" y="114" width="36" height="30" rx="6"/><text x="378" y="133">I</text></g>
+            <g><rect x="400" y="114" width="36" height="30" rx="6"/><text x="418" y="133">O</text></g>
+            <g><rect x="440" y="114" width="36" height="30" rx="6"/><text x="458" y="133">P</text></g>
+            <g><rect x="480" y="114" width="36" height="30" rx="6"/><text x="498" y="133">[</text></g>
+            <g><rect x="520" y="114" width="36" height="30" rx="6"/><text x="538" y="133">]</text></g>
+            <g class="k s2"><rect x="560" y="114" width="44" height="30" rx="6"/><text x="582" y="133">\</text></g>
+
+            <g><rect x="92" y="152" width="36" height="30" rx="6"/><text x="110" y="171">A</text></g>
+            <g><rect x="132" y="152" width="36" height="30" rx="6"/><text x="150" y="171">S</text></g>
+            <g><rect x="172" y="152" width="36" height="30" rx="6"/><text x="190" y="171">D</text></g>
+            <g class="k s4"><rect x="212" y="152" width="36" height="30" rx="6"/><text x="230" y="171">F</text></g>
+            <g><rect x="252" y="152" width="36" height="30" rx="6"/><text x="270" y="171">G</text></g>
+            <g><rect x="292" y="152" width="36" height="30" rx="6"/><text x="310" y="171">H</text></g>
+            <g><rect x="332" y="152" width="36" height="30" rx="6"/><text x="350" y="171">J</text></g>
+            <g><rect x="372" y="152" width="36" height="30" rx="6"/><text x="390" y="171">K</text></g>
+            <g><rect x="412" y="152" width="36" height="30" rx="6"/><text x="430" y="171">L</text></g>
+            <g><rect x="452" y="152" width="36" height="30" rx="6"/><text x="470" y="171">;</text></g>
+            <g><rect x="492" y="152" width="36" height="30" rx="6"/><text x="510" y="171">'</text></g>
+            <g><rect x="532" y="152" width="72" height="30" rx="6"/><text x="568" y="171">Enter</text></g>
+
+            <g class="k s4"><rect x="80" y="190" width="66" height="30" rx="6"/><text x="113" y="209">Shift</text></g>
+            <g><rect x="152" y="190" width="36" height="30" rx="6"/><text x="170" y="209">Z</text></g>
+            <g><rect x="192" y="190" width="36" height="30" rx="6"/><text x="210" y="209">X</text></g>
+            <g><rect x="232" y="190" width="36" height="30" rx="6"/><text x="250" y="209">C</text></g>
+            <g><rect x="272" y="190" width="36" height="30" rx="6"/><text x="290" y="209">V</text></g>
+            <g class="k s3"><rect x="312" y="190" width="36" height="30" rx="6"/><text x="330" y="209">B</text></g>
+            <g><rect x="352" y="190" width="36" height="30" rx="6"/><text x="370" y="209">N</text></g>
+            <g><rect x="392" y="190" width="36" height="30" rx="6"/><text x="410" y="209">M</text></g>
+            <g><rect x="432" y="190" width="36" height="30" rx="6"/><text x="450" y="209">,</text></g>
+            <g><rect x="472" y="190" width="36" height="30" rx="6"/><text x="490" y="209">.</text></g>
+            <g><rect x="512" y="190" width="36" height="30" rx="6"/><text x="530" y="209">/</text></g>
+            <g><rect x="552" y="190" width="52" height="30" rx="6"/><text x="578" y="209">Shift</text></g>
+
+            <g class="k ctrl"><rect x="80" y="228" width="56" height="30" rx="6"/><text x="108" y="247">Ctrl</text></g>
+            <g><rect x="142" y="228" width="40" height="30" rx="6"/><text x="162" y="247">Win</text></g>
+            <g><rect x="188" y="228" width="44" height="30" rx="6"/><text x="210" y="247">Alt</text></g>
+            <g><rect x="238" y="228" width="230" height="30" rx="6"/></g>
+            <g><rect x="474" y="228" width="44" height="30" rx="6"/><text x="496" y="247">Alt</text></g>
+            <g><rect x="524" y="228" width="80" height="30" rx="6"/><text x="564" y="247">Ctrl</text></g>
+          </g>
+        </svg>
+      </div>
+      <div class="md-keys">
+        <table>
+          <thead>
+            <tr><th scope="col">Keys</th><th scope="col">What they do</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><kbd>Ctrl+E</kbd></td><td>Switch between the reading view and the source</td></tr>
+            <tr><td><kbd>Ctrl+\</kbd></td><td>Split the source and the page side by side</td></tr>
+            <tr><td><kbd>Ctrl+B</kbd></td><td>Show or hide the side pane</td></tr>
+            <tr><td><kbd>Ctrl+Shift+O</kbd></td><td>Open a folder as a workspace</td></tr>
+            <tr><td><kbd>Ctrl+Shift+F</kbd></td><td>Search every file in the folder</td></tr>
+            <tr><td><kbd>Ctrl+F</kbd> <kbd>Ctrl+H</kbd></td><td>Find, and find and replace</td></tr>
+            <tr><td><kbd>Ctrl+1</kbd> to <kbd>Ctrl+9</kbd></td><td>Jump to a tab</td></tr>
+            <tr><td><kbd>F11</kbd></td><td>Full screen</td></tr>
+            <tr><td><kbd>F1</kbd></td><td>Markdown reference</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="md-try" id="try">
+    <div class="wrap">
+      <div class="md-doc-head">
+        <h2 class="md-h" data-md="##">Try it <em>right here</em></h2>
+        <p>Type in the source, switch views, pick a reading theme. It works like the app.</p>
+      </div>
+
+      <div class="md-app" data-mode="split">
+        <div class="md-titlebar">
+          <img src="../assets/apps/md-editor/icon-136.png" width="16" height="16" alt="">
+          <span class="title">welcome.md - MD Editor</span>
+          <span class="md-winbtns" aria-hidden="true"><span class="min"></span><span class="max"></span><span class="close"></span></span>
+        </div>
+        <div class="md-toolbar">
+          <div class="md-tabs" aria-hidden="true">
+            <span class="md-tab is-active">welcome.md <i class="dirty"></i></span>
+            <span class="md-tab">ideas.md</span>
+            <span class="md-tab">reading-list.md</span>
+          </div>
+          <div class="md-modes" role="group" aria-label="View">
+            <button type="button" data-mode-set="read" aria-pressed="false">Reading</button>
+            <button type="button" data-mode-set="split" aria-pressed="true">Split</button>
+            <button type="button" data-mode-set="source" aria-pressed="false">Source</button>
+          </div>
+        </div>
+        <div class="md-body">
+          <aside class="md-side" aria-label="Outline">
+            <div class="md-side-tabs" aria-hidden="true"><span>Files</span><span>Search</span><span class="is-active">Outline</span></div>
+            <ul class="md-outline"></ul>
+          </aside>
+          <div class="md-editor">
+            <textarea spellcheck="false" aria-label="Markdown source, try typing">
+# Welcome to MD Editor
+
+Markdown that reads like a **page** and edits like *plain text*. Type here, the page follows.
+
+## Try it
+- [x] Open a markdown file
+- [ ] Press `Ctrl+\` for split view
+- [ ] Pick a reading theme below
+
+> Your notes stay plain `.md` files on your PC.
+
+## Shortcuts
+| Keys | Does |
+|---|---|
+| Ctrl+E | Reading view or source |
+| Ctrl+B | Side pane |
+| F11 | Full screen |
+
+## Some code
+```python
+def greet(name):
+    # say hello
+    return f"Hello, {name}!"
+```
+
+==Highlights==, ~~strikethrough~~ and [links](notes.md#ideas) work too.
+</textarea>
+          </div>
+          <article class="md-preview" aria-label="Rendered page"></article>
+        </div>
+        <div class="md-status">
+          <span class="hint"><kbd>Ctrl+E</kbd> and <kbd>Ctrl+\</kbd> work here too</span>
+          <span data-pos>Ln 1, Col 1</span>
+          <span data-words>0 words</span>
+          <span class="chars" data-chars>0 chars</span>
+        </div>
+      </div>
+
+      <div class="md-under">
+        <fieldset class="md-themes">
+          <legend>Reading theme</legend>
+          <button type="button" data-theme-set="classic" aria-pressed="true"><span class="md-swatch"></span>Classic</button>
+          <button type="button" data-theme-set="mono" aria-pressed="false"><span class="md-swatch"></span>Mono</button>
+          <button type="button" data-theme-set="sepia" aria-pressed="false"><span class="md-swatch"></span>Sepia</button>
+          <button type="button" data-theme-set="forest" aria-pressed="false"><span class="md-swatch"></span>Forest</button>
+          <button type="button" data-theme-set="dusk" aria-pressed="false"><span class="md-swatch"></span>Dusk</button>
+        </fieldset>
+        <p>The five themes from the app, light and dark. Every colour can also be set by hand.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="md-end">
+    <div class="wrap md-end-grid">
+      <div class="md-quote">
+        <h2>Coming soon to the <em>Microsoft Store</em></h2>
+        <p>MD Editor will be a one-time purchase in the Microsoft Store, with no ads, no account, no analytics and no subscription. It stays open source under the GNU GPL v3. Want to know the day it's out? Write to us.</p>
+        <div class="buttons">
+          <a class="btn primary" href="../contact.html">
+            <span class="ico i-mail" aria-hidden="true"></span>
+            <span><small>Get in touch</small><strong>Contact</strong></span>
+          </a>
+        </div>
+      </div>
+      <svg class="art md-anim md-box-art" viewBox="0 0 360 300" role="img" aria-label="A markdown page rising out of an open box, with a note that it's coming soon">
+        <path class="blob" d="M70 52C116 14 236 18 290 62c48 40 44 138-8 180-54 42-180 40-232-6C4 196 20 92 70 52Z"/>
+        <ellipse class="floor" cx="180" cy="276" rx="110" ry="9"/>
+        <rect class="mid" x="90" y="168" width="180" height="40" rx="6"/>
+        <g class="md-rise">
+          <rect class="paper" x="124" y="70" width="112" height="140" rx="10"/>
+          <text class="label-acc md-hash" x="138" y="100">#</text>
+          <rect class="ink" x="154" y="88" width="64" height="11" rx="4"/>
+          <rect class="line" x="138" y="114" width="84" height="6" rx="3"/>
+          <rect class="line" x="138" y="126" width="72" height="6" rx="3"/>
+          <rect class="acc-hi" x="138" y="138" width="44" height="8" rx="3"/>
+          <rect class="line" x="138" y="152" width="80" height="6" rx="3"/>
+        </g>
+        <path class="acc md-flap left" d="M90 196L54 162L104 150L132 196Z"/>
+        <path class="acc md-flap right" d="M270 196L306 162L256 150L228 196Z"/>
+        <rect class="ink" x="90" y="194" width="180" height="74" rx="8"/>
+        <rect class="acc-flat" x="90" y="214" width="180" height="8"/>
+        <g class="bob">
+          <rect class="acc" x="246" y="44" width="80" height="30" rx="15"/>
+          <text class="label-paper med" x="286" y="65" text-anchor="middle">soon</text>
+        </g>
+        <g class="bob late">
+          <rect class="paper" x="26" y="88" width="66" height="46" rx="7"/>
+          <path class="stroke-acc thin" d="M30 94l29 21 29-21"/>
+        </g>
+        <path class="spark md-twinkle" d="M318 120l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
+        <path class="spark md-twinkle late" d="M50 210l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+      </svg>
+      <div class="legal-links">
+        <a class="text-link" href="privacy.html">Privacy policy</a>
+        <a class="text-link" href="terms.html">Terms of use</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/topicdev-logo.png" width="150" height="150" alt="TopicDev">
+        <p>Carefully crafted apps for Windows, Android and Android TV.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Apps</h2>
+        <ul>
+          <li><a href="https://makimedia.org/" target="_blank" rel="noopener">Makimedia</a></li>
+          <li><a href="../reroll/">Reroll</a></li>
+          <li><a href="../md-editor/" aria-current="page">MD Editor</a></li>
+          <li><a href="../topic-finance/">Topic Finance</a></li>
+          <li><a href="../cpp-guide/">C++ Learning Guide</a></li>
+          <li><a href="../python-guide/">Python Learning Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Studio</h2>
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="https://play.google.com/store/apps/dev?id=6943416935116197981" target="_blank" rel="noopener">Google Play</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="../privacy.html">Website privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TopicDev</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js?v=1"></script>
+<script src="../nav.js?v=1"></script>
+<script src="mdeditor.js?v=2"></script>
+</body>
+</html>

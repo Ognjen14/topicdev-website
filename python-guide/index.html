@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Python Learning Guide - learn Python step by step | TopicDev</title>
+  <meta name="description" content="Learn Python with interactive lessons, exercises, bug hunts, algorithms, design patterns, cheat sheets and interview questions. Works offline, no account, no ads.">
+  <meta name="theme-color" content="#FFFBF2">
+  <link rel="canonical" href="https://topicdev.com/python-guide/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TopicDev">
+  <meta property="og:title" content="Python Learning Guide">
+  <meta property="og:description" content="Learn Python with interactive lessons, exercises, bug hunts, algorithms and interview prep. No ads.">
+  <meta property="og:url" content="https://topicdev.com/python-guide/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/apps/python-guide/icon-256.png">
+  <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../guide-demo.css?v=1">
+  <link rel="stylesheet" href="../guide-qa.css?v=1">
+  <link rel="stylesheet" href="python.css?v=7">
+</head>
+<body class="app-python py">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/topicdev-mark-76.png" width="38" height="38" alt="">
+      <span>TOPIC<span class="brand-dev">DEV</span></span>
+    </a>
+    <a class="app-crumb" href="./"><img src="../assets/apps/python-guide/icon-136.png" width="26" height="26" alt=""><span>Python Guide</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="../index.html#apps">All apps</a>
+      <a href="../index.html#about">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="#get"><span class="ico i-download" aria-hidden="true"></span>Get the app</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="ico i-menu icon-open" aria-hidden="true"></span><span class="ico i-close icon-close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="py-hero" id="get">
+    <div class="py-paperbg" aria-hidden="true"></div>
+    <div class="wrap">
+      <svg class="py-doodles py-anim" viewBox="0 0 1160 472" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <g transform="translate(-300 -102)"><path class="pen blue" style="--d: 0.2s" pathLength="1" d="M1106 92c0-10 14-12 18-4 6 12-10 24-22 18-16-8-12-32 6-38 22-8 42 12 36 34-6 26-40 34-60 18"/></g>
+        <g transform="translate(-32 -100)"><path class="pen yellow" style="--d: 0.6s" pathLength="1" d="M640 548l9 19 21 3-15 15 4 21-19-10-19 10 4-21-15-15 21-3Z"/></g>
+        <g transform="translate(-36 -94)"><path class="pen green" style="--d: 1s" pathLength="1" d="M60 600c18-10 30 10 48 0s30 10 48 0 30 10 48 0 30 10 48 0"/></g>
+        <g transform="translate(-92 -82)">
+          <path class="pen blue" style="--d: 1.4s" pathLength="1" d="M612 128c30-34 74-38 104-12"/>
+          <path class="pen blue" style="--d: 1.6s" pathLength="1" d="M704 104l12 12-16 6"/>
+        </g>
+        <g transform="translate(40 -90)"><path class="pen red" style="--d: 1.8s" pathLength="1" d="M1120 520c-20-24 10-46 26-26 14 18-16 40-34 22"/></g>
+      </svg>
+      <div>
+        <span class="py-mark"><img src="../assets/apps/python-guide/icon-136.png" width="36" height="36" alt="">Python Learning Guide</span>
+        <h1>Learn Python, <em>one step</em> at a time.</h1>
+        <p class="lead">Short lessons that make you think: predict the output, fix the bug, put the code in order. Then practise with algorithms, design patterns and the questions interviewers really ask.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.ognje.py" target="_blank" rel="noopener">
+            <span class="ico i-google-play" aria-hidden="true"></span>
+            <span><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <p class="meta">For Android. Free to start, with an optional one-time Pro upgrade. No ads, no subscription.</p>
+      </div>
+
+      <div class="py-notebook">
+        <span class="py-sticker s1">No ads</span>
+        <div class="py-card py-nb" aria-label="A Python notebook with three cells and their output">
+          <div class="py-nb-bar"><i></i><i></i><span>first_steps.py</span></div>
+          <div class="py-cell">
+            <span class="lbl in">In [1]:</span>
+            <pre class="py-code src" data-py>print("Hello, Python!")</pre>
+            <span class="lbl"></span>
+            <span class="res">Hello, Python!</span>
+          </div>
+          <div class="py-cell">
+            <span class="lbl in">In [2]:</span>
+            <pre class="py-code src" data-py>[n * n for n in range(5)]</pre>
+            <span class="lbl out">Out[2]:</span>
+            <span class="res">[0, 1, 4, 9, 16]</span>
+          </div>
+          <div class="py-cell">
+            <span class="lbl in">In [3]:</span>
+            <pre class="py-code src" data-py>"learn python".title()</pre>
+            <span class="lbl out">Out[3]:</span>
+            <span class="res">'Learn Python'</span>
+          </div>
+          <div class="py-cell">
+            <span class="lbl in">In [4]:</span>
+            <pre class="py-code src" data-py>sorted({"pears": 3, "apples": 5})</pre>
+            <span class="lbl out">Out[4]:</span>
+            <span class="res">['apples', 'pears']</span>
+          </div>
+        </div>
+        <span class="py-sticker s2">Works offline</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-facts">
+    <div class="wrap">
+      <ul class="py-stickers">
+        <li><span class="ico i-heart" aria-hidden="true"></span><strong>Free to start</strong><span>Pro is a one-time purchase</span></li>
+        <li><span class="ico i-no-ads" aria-hidden="true"></span><strong>No ads</strong><span>And no subscription</span></li>
+        <li><span class="ico i-offline" aria-hidden="true"></span><strong>Works offline</strong><span>Everything is in the app</span></li>
+        <li><span class="ico i-no-account" aria-hidden="true"></span><strong>No account</strong><span>Your progress stays on your phone</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="py-try" id="try">
+    <div class="wrap">
+      <div class="py-head centered">
+        <p class="py-prompt">&gt;&gt;&gt; lesson.try_it()</p>
+        <h2>One lesson, <em>every kind of question</em></h2>
+        <p>This is how lessons work in the app: a short read, then one of each kind of question. Check your answer, and if it's wrong you get one more try before the explanation.</p>
+      </div>
+      <div class="gd py-gd" id="py-demo" aria-label="A sample lesson"></div>
+      <template id="py-demo-end">
+        <div class="gd-end">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.ognje.py" target="_blank" rel="noopener">
+            <span class="ico i-google-play" aria-hidden="true"></span>
+            <span><small>Keep learning on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </template>
+      <script type="application/json" id="py-demo-steps">
+[
+  {
+    "type": "lesson",
+    "title": "Lists hold many values",
+    "content": "<p>A <b>list</b> keeps several values in order, inside square brackets.</p><p>Each value has an <b>index</b>, and counting starts at 0, so <code>scores[0]</code> is the first value. <code>len(scores)</code> tells you how many values there are.</p>",
+    "code": "scores = [7, 9, 4]\nprint(scores[0])   # prints 7"
+  },
+  {
+    "type": "question",
+    "title": "Indexes start at zero",
+    "question": "With <code>scores = [7, 9, 4]</code> what is <code>scores[1]</code>?",
+    "options": ["9", "7", "4", "an IndexError"],
+    "correctIndex": 0,
+    "explanation": "Index 0 is the first value, so index 1 is the second one: 9."
+  },
+  {
+    "type": "predict_output",
+    "title": "What does it print?",
+    "code": "word = \"python\"\nprint(word[1:4])",
+    "options": ["pyt", "yth", "ytho", "thon"],
+    "correctIndex": 1,
+    "explanation": "A slice includes the start and stops before the end, so [1:4] takes the letters at 1, 2 and 3."
+  },
+  {
+    "type": "fill_blank",
+    "title": "Is it in the list?",
+    "template": "fruits = [\"apple\", \"pear\"]\nprint(\"pear\" ___ fruits)",
+    "answer": "in",
+    "hint": "the line should print True",
+    "explanation": "The in keyword checks whether a value is in the list, so this prints True."
+  },
+  {
+    "type": "bug_fix",
+    "title": "Spot the bug",
+    "lines": [
+      "scores = [7, 9, 4]",
+      "total = 0",
+      "for score in scores:",
+      "    total = score",
+      "print(total)"
+    ],
+    "errorLine": 3,
+    "explanation": "total = score replaces the total on every pass, so it prints 4. Add to it instead: total = total + score."
+  },
+  {
+    "type": "code_order",
+    "title": "Add up a list",
+    "fragments": [
+      "    total = total + score",
+      "total = 0",
+      "print(total)",
+      "for score in scores:"
+    ],
+    "correctOrder": [1, 3, 0, 2],
+    "explanation": "Start the total at 0, loop over the scores, add each one inside the loop, and print once it's done."
+  },
+  {
+    "type": "word_bank",
+    "title": "Find the best score",
+    "template": "best = ___(scores)\nprint(___)",
+    "correctTokens": ["max", "best"],
+    "options": ["max", "best", "len", "scores"],
+    "explanation": "max() returns the largest value in the list, and print(best) shows it: 9."
+  },
+  {
+    "type": "trace_table",
+    "title": "Follow the loop",
+    "code": "total = 0\nfor n in [2, 3]:\n    total = total + n",
+    "variables": ["n", "total"],
+    "rows": [
+      { "label": "after pass 1", "values": ["2", "2"] },
+      { "label": "after pass 2", "values": ["3", "5"] }
+    ],
+    "explanation": "On the first pass n is 2 and total becomes 2. On the second, n is 3 and total becomes 5."
+  },
+  {
+    "type": "compare_snippets",
+    "title": "Count from one",
+    "prompt": "Which loop prints 1, 2 and 3?",
+    "snippets": [
+      { "label": "A", "code": "for i in range(3):\n    print(i)" },
+      { "label": "B", "code": "for i in range(1, 4):\n    print(i)" }
+    ],
+    "correctIndex": 1,
+    "explanation": "range(3) gives 0, 1 and 2. range(1, 4) starts at 1 and stops before 4, so it gives 1, 2 and 3."
+  },
+  {
+    "type": "match_pairs",
+    "title": "Match each type",
+    "leftMono": true,
+    "pairs": [
+      { "left": "7", "right": "int" },
+      { "left": "\"seven\"", "right": "str" },
+      { "left": "True", "right": "bool" },
+      { "left": "[7, 9]", "right": "list" }
+    ],
+    "explanation": "7 is an int, \"seven\" a str, True a bool and [7, 9] a list."
+  }
+]
+      </script>
+    </div>
+  </section>
+
+  <section class="py-qa" id="interview">
+    <div class="wrap">
+      <div class="py-head">
+        <p class="py-prompt">&gt;&gt;&gt; interview.prep()</p>
+        <h2>Walk into the interview <em>ready</em></h2>
+        <p>199 questions interviewers really ask, from junior to senior roles. Every one has a clear answer and a code example. Here are six from the app, try them:</p>
+      </div>
+      <div class="gq-wrap py-gq">
+        <aside class="gq-stats">
+          <p class="gq-total"><strong>199</strong>interview questions</p>
+          <ul class="gq-bars">
+            <li class="is-junior"><span>Junior</span><i><b style="--p: 75%"></b></i><span>71</span></li>
+            <li class="is-medior"><span>Medior</span><i><b style="--p: 100%"></b></i><span>95</span></li>
+            <li class="is-senior"><span>Senior</span><i><b style="--p: 35%"></b></i><span>33</span></li>
+          </ul>
+          <h3>Topics</h3>
+          <ul class="gq-topics">
+            <li>Core</li>
+            <li>Program flow</li>
+            <li>Functions</li>
+            <li>Data structures</li>
+            <li>Strings</li>
+            <li>Input and output</li>
+            <li>Error handling</li>
+            <li>Modules and packages</li>
+            <li>OOP</li>
+            <li>Iterators and generators</li>
+            <li>Decorators</li>
+            <li>Comprehensions</li>
+            <li>Closures</li>
+            <li>File I/O</li>
+            <li>Type hints</li>
+            <li>Testing</li>
+            <li>Concurrency</li>
+            <li>CPython internals</li>
+            <li>Metaprogramming</li>
+            <li>Performance</li>
+          </ul>
+          <ul class="gq-perks">
+            <li><span class="ico i-check" aria-hidden="true"></span><span>Filter by level and topic, or search for a question.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span>Mark answers as mastered and see your progress for every level.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span>Junior answers are free. <strong>Medior and senior answers come with Pro.</strong></span></li>
+          </ul>
+        </aside>
+        <div class="gq" id="py-qa" aria-label="Sample interview questions"></div>
+      </div>
+      <script type="application/json" id="py-qa-items">
+[
+  {
+    "level": "junior",
+    "topic": "Modules and packages",
+    "q": "What is __name__ == \"__main__\" used for?",
+    "a": "In Python, <code>__name__</code> is a built-in variable that is automatically set by the interpreter. The <code>if __name__ == \"__main__\":</code> block is a common idiom used to control the execution of code depending on how the script is being used.<br><br><b>How it works:</b><br>&bull; <b>Direct Execution:</b> If you run a Python file directly (e.g., <code>python script.py</code>), Python sets the <code>__name__</code> variable to the string <code>\"__main__\"</code>. Any code inside that <code>if</code> block will run.<br>&bull; <b>Importing:</b> If that same file is <b>imported</b> as a module into another script (e.g., <code>import script</code>), Python sets <code>__name__</code> to the <b>filename</b> of the module instead. In this case, the code inside the <code>if</code> block is skipped.<br><br><b>Why use it?</b><br>It allows you to create files that can serve as <b>both</b> reusable modules (containing functions and classes) and standalone scripts (containing tests or a main program flow). Without this check, any code written at the top level of a module would run automatically the moment it is imported, which is usually unwanted behavior.",
+    "code": "# --- math_utils.py ---\ndef add(a, b):\n    return a + b\n\n# This block only runs if you execute math_utils.py directly\nif __name__ == \"__main__\":\n    print(\"Testing the add function:\")\n    print(add(10, 5))\n\n# --- main.py ---\nimport math_utils\n\n# The print statements inside math_utils.py will NOT run here!\nprint(math_utils.add(20, 30))"
+  },
+  {
+    "level": "junior",
+    "topic": "Error handling",
+    "q": "What is the purpose of try, except, else, and finally?",
+    "a": "Python's <b>try-except-else-finally</b> block is the complete structure for handling runtime errors and ensuring code reliability. Each block serves a distinct role in the error-handling lifecycle:<br><br>&bull; <b><code>try</code>:</b> This block contains the code that you think might cause an error (e.g., opening a file or performing math). Python 'tries' to run this code first.<br>&bull; <b><code>except</code>:</b> If an error occurs in the <code>try</code> block, Python stops executing it and jumps here. This is where you write code to handle the error (like printing a warning or logging the failure).<br>&bull; <b><code>else</code>:</b> This block is optional and runs <b>only if no exceptions</b> were raised in the <code>try</code> block. Use it for code that should only happen if the 'try' part was 100% successful.<br>&bull; <b><code>finally</code>:</b> This block is the 'cleanup' phase. It <b>always runs</b>, regardless of whether an exception occurred, was caught, or if the program crashed. It is perfect for closing files, releasing database connections, or cleaning up resources.",
+    "code": "try:\n    # 1. Try to do something risky\n    f = open(\"data.txt\", \"r\")\n    content = f.read()\nexcept FileNotFoundError:\n    # 2. Handle the specific error\n    print(\"Error: The file does not exist!\")\nelse:\n    # 3. Only runs if the file opened successfully\n    print(f\"File contains: {len(content)} characters.\")\nfinally:\n    # 4. Always runs to clean up\n    print(\"Closing resources...\")\n    # In a real app, you'd close the file here"
+  },
+  {
+    "level": "medior",
+    "topic": "Closures",
+    "q": "What is a closure in Python?",
+    "a": "A <b>closure</b> is a function object that 'remembers' and has access to variables from its enclosing lexical scope even after the outer function has finished executing. It allows you to bind data to a function without using global variables or creating a full class.<br><br><b>The Three Criteria for a Closure:</b><br>1. <b>Nesting:</b> There must be a nested function (a function defined inside another function).<br>2. <b>Non-local Reference:</b> The nested function must refer to a variable defined in the enclosing (outer) scope.<br>3. <b>Return:</b> The outer function must return the nested function.<br><br><b>How it works (The Technical Bit):</b><br>Python stores these 'remembered' variables in a special attribute of the function called <b><code>__closure__</code></b>. These are technically called <b>free variables</b>. Even when the outer function's scope is destroyed, the inner function carries these variables in its 'backpack' (the closure), keeping them alive in memory.<br><br><b>Common Use Cases:</b><br>&bull; <b>Data Encapsulation:</b> Providing a way to have private-like state without the overhead of a class.<br>&bull; <b>Function Factories:</b> Creating specialized versions of a function (e.g., a function that generates 'multiplier' functions).<br>&bull; <b>Implementation of Decorators:</b> Closures are the fundamental mechanism that allows decorators to work.",
+    "code": "def make_multiplier(x):\n    # 'x' is a local variable in the outer scope\n    def multiplier(n):\n        # multiplier 'closes over' the variable x\n        return x * n\n\n    return multiplier\n\n# Create a 'multiply by 3' function\ntimes3 = make_multiplier(3)\n\n# Create a 'multiply by 5' function\ntimes5 = make_multiplier(5)\n\nprint(times3(10)) # Output: 30\nprint(times5(10)) # Output: 50\n\n# Proof of closure: Introspecting the free variables\nprint(times3.__closure__[0].cell_contents) # Output: 3"
+  },
+  {
+    "level": "medior",
+    "topic": "Decorators",
+    "q": "What does @functools.wraps do, and why is it important?",
+    "a": "In Python, <b><code>@functools.wraps</code></b> is a decorator that is applied to the <b>wrapper function</b> inside a custom decorator. Its primary purpose is to <b>preserve the metadata</b> of the original function that is being decorated.<br><br><b>Why it is important:</b><br>&bull; <b>Identity Preservation:</b> When you decorate a function, you are technically replacing it with the wrapper function. Without <code>@wraps</code>, the decorated function will lose its original name (<code>__name__</code>) and documentation string (<code>__doc__</code>), and instead report the name of the wrapper (usually 'wrapper').<br>&bull; <b>Debugging and Introspection:</b> Tools like <code>help()</code>, <code>inspect</code>, and debuggers rely on this metadata. If a developer calls <code>help(my_decorated_func)</code>, they expect to see the documentation for <i>their</i> function, not the internal code of the decorator.<br>&bull; <b>Signature Consistency:</b> It ensures that attributes like <code>__annotations__</code> (type hints) and the <code>__module__</code> path are correctly carried over, preventing issues with libraries that use reflection or inspection.<br><br><b>The Medior Rule:</b> You should treat <code>@functools.wraps</code> as a mandatory part of writing any decorator. It turns a 'destructive' wrapper into a transparent one.",
+    "code": "import functools\n\ndef my_decorator(func):\n    # Try removing this line to see the difference:\n    @functools.wraps(func)\n    def wrapper(*args, **kwargs):\n        \"\"\"I am the wrapper documentation.\"\"\"\n        return func(*args, **kwargs)\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    \"\"\"I am the original say_hello documentation.\"\"\"\n    print(\"Hello!\")\n\n# Checking Metadata:\nprint(say_hello.__name__) # Output: say_hello (Without @wraps: 'wrapper')\nprint(say_hello.__doc__)  # Output: I am the original... (Without @wraps: 'I am the wrapper...')"
+  },
+  {
+    "level": "senior",
+    "topic": "Metaprogramming",
+    "q": "What is __new__ vs. __init__? When would you override __new__?",
+    "a": "<b><code>__new__</code></b> is the actual <i>constructor</i> of a Python object. It is a static method (implicitly treated as a class method) responsible for creating and returning a new instance of the class. It is the first step in the object lifecycle.<br><br><b><code>__init__</code></b> is the <i>initializer</i>. It is an instance method called immediately after <code>__new__</code> has returned the new instance. Its job is to set the initial state (attributes) of that instance. It does not return a value (it must return <code>None</code>).<br><br><b>When to override <code>__new__</code>:</b><br>&bull; <b>Subclassing Immutable Types:</b> Types like <code>str</code>, <code>int</code>, and <code>tuple</code> are immutable. Their values cannot be changed in <code>__init__</code> because they are already 'set' by the time <code>__init__</code> is called. You must override <code>__new__</code> to modify the value before the object is created.<br>&bull; <b>Implementing Design Patterns:</b> Such as the <b>Singleton</b> pattern, where you need to control the creation process to ensure only one instance exists, or a <b>Factory</b> where you might return an instance of a different subclass based on the arguments.<br>&bull; <b>Metaprogramming:</b> When you need to intercept and customize how classes are instantiated at a very low level.",
+    "code": "# 1. Overriding __new__ for Immutable Types\nclass CapsStr(str):\n    def __new__(cls, value):\n        # We must modify the value BEFORE the string object is created\n        return super().__new__(cls, value.upper())\n\ns = CapsStr(\"hello\")\nprint(s) # Output: HELLO\n\n# 2. Overriding __new__ for the Singleton Pattern\nclass Database:\n    _instance = None\n\n    def __new__(cls):\n        if cls._instance is None:\n            print(\"Creating new instance\")\n            # Call super().__new__ to actually allocate memory\n            cls._instance = super().__new__(cls)\n        return cls._instance\n\ndb1 = Database()\ndb2 = Database()\nprint(db1 is db2) # Output: True"
+  },
+  {
+    "level": "senior",
+    "topic": "Concurrency",
+    "q": "What is the difference between a coroutine, a future, and a task in asyncio?",
+    "a": "These three objects form the foundation of Python's asynchronous stack, representing different stages of an operation's lifecycle.<br><br>&bull; <b>Coroutine:</b> This is the 'lazy' object created when you call an <code>async def</code> function. It contains the code to be executed but does <b>nothing</b> on its own. You must either <code>await</code> it or schedule it to run.<br>&bull; <b>Future:</b> A low-level object that acts as a <b>placeholder</b> for a result that hasn't arrived yet. It represents an eventual completion of an operation. It has a state (Pending, Finished, Cancelled) and can hold a result or an exception. You rarely create these manually in high-level code.<br>&bull; <b>Task:</b> A <b>subclass of Future</b> that wraps a coroutine. When you create a Task (via <code>asyncio.create_task()</code>), the event loop immediately schedules the coroutine to run. The Task provides the 'Future' interface to check if the coroutine is done and to retrieve its result once finished.<br><br><b>The Relationship:</b> You write a <b>Coroutine</b>, the event loop wraps it in a <b>Task</b> so it can run, and that Task behaves like a <b>Future</b> so you can wait for its result.",
+    "code": "import asyncio\n\nasync def my_coro():\n    await asyncio.sleep(1)\n    return \"Done!\"\n\nasync def main():\n    # 1. This is a COROUTINE object\n    coro = my_coro()\n    print(f\"Type: {type(coro)}\") # <class 'coroutine'>\n\n    # 2. This is a TASK (which is also a Future)\n    task = asyncio.create_task(coro)\n    print(f\"Type: {type(task)}\") # <class '_asyncio.Task'>\n    print(f\"Is Task a Future? {isinstance(task, asyncio.Future)}\") # True\n\n    # 3. Getting the result from the Future interface\n    result = await task\n    print(result) # Output: Done!\n\nasyncio.run(main())"
+  }
+]
+      </script>
+    </div>
+  </section>
+
+  <section class="py-path">
+    <div class="wrap">
+      <div class="py-head">
+        <p class="py-prompt">&gt;&gt;&gt; path.sections()</p>
+        <h2>From your first print to <em>testing and debugging</em></h2>
+        <p>Sections that build on each other, from the basics to modern Python. Your progress, a daily streak, your own avatar and badges keep you coming back.</p>
+      </div>
+      <div class="py-road-art">
+        <svg class="py-art py-anim" viewBox="0 0 1000 290" role="img" aria-label="Your avatar walks a winding road past stickers for print, if, for, def, class and assert, each one lighting up, while a streak flame flickers">
+          <path class="py-road-edge" d="M80 210C190 210 190 90 300 90C410 90 410 210 520 210C630 210 630 90 740 90C830 90 860 160 920 160"/>
+          <path class="py-road" d="M80 210C190 210 190 90 300 90C410 90 410 210 520 210C630 210 630 90 740 90C830 90 860 160 920 160"/>
+          <path class="py-road-dash" d="M80 210C190 210 190 90 300 90C410 90 410 210 520 210C630 210 630 90 740 90C830 90 860 160 920 160"/>
+
+          <g class="py-stop">
+            <circle class="base" cx="80" cy="210" r="21"/>
+            <circle class="lit c1" cx="80" cy="210" r="21" opacity="1"><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.97;1" dur="8s" repeatCount="indefinite"/></circle>
+            <text x="80" y="266">print()</text>
+          </g>
+          <g class="py-stop">
+            <circle class="base" cx="238" cy="106" r="21"/>
+            <circle class="lit c2" cx="238" cy="106" r="21" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.18;0.19;0.97;1" dur="8s" repeatCount="indefinite"/></circle>
+            <text x="238" y="160">if</text>
+          </g>
+          <g class="py-stop">
+            <circle class="base" cx="410" cy="150" r="21"/>
+            <circle class="lit c3" cx="410" cy="150" r="21" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.36;0.37;0.97;1" dur="8s" repeatCount="indefinite"/></circle>
+            <text x="410" y="206">for</text>
+          </g>
+          <g class="py-stop">
+            <circle class="base" cx="583" cy="193" r="21"/>
+            <circle class="lit c4" cx="583" cy="193" r="21" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.54;0.55;0.97;1" dur="8s" repeatCount="indefinite"/></circle>
+            <text x="583" y="249">def</text>
+          </g>
+          <g class="py-stop">
+            <circle class="base" cx="741" cy="90" r="21"/>
+            <circle class="lit c1" cx="741" cy="90" r="21" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.72;0.73;0.97;1" dur="8s" repeatCount="indefinite"/></circle>
+            <text x="741" y="144">class</text>
+          </g>
+          <g class="py-stop">
+            <circle class="base" cx="920" cy="160" r="21"/>
+            <circle class="lit c2" cx="920" cy="160" r="21" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.9;0.91;0.97;1" dur="8s" repeatCount="indefinite"/></circle>
+            <text x="920" y="216">assert</text>
+          </g>
+
+          <g class="py-ticks">
+            <path d="M72 210l6 6 11-12"/>
+            <path d="M230 106l6 6 11-12" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.18;0.19;0.97;1" dur="8s" repeatCount="indefinite"/></path>
+            <path d="M402 150l6 6 11-12" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.36;0.37;0.97;1" dur="8s" repeatCount="indefinite"/></path>
+            <path d="M575 193l6 6 11-12" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.54;0.55;0.97;1" dur="8s" repeatCount="indefinite"/></path>
+            <path d="M733 90l6 6 11-12" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.72;0.73;0.97;1" dur="8s" repeatCount="indefinite"/></path>
+            <path d="M912 160l6 6 11-12" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.9;0.91;0.97;1" dur="8s" repeatCount="indefinite"/></path>
+          </g>
+
+          <g class="py-avatar">
+            <animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.9;1" path="M80 210C190 210 190 90 300 90C410 90 410 210 520 210C630 210 630 90 740 90C830 90 860 160 920 160"/>
+            <g transform="translate(0 -40)">
+              <circle class="face" cx="0" cy="0" r="17"/>
+              <circle class="eye" cx="-6" cy="-3" r="2.4"/>
+              <circle class="eye" cx="6" cy="-3" r="2.4"/>
+              <path class="smile" d="M-6 5q6 6 12 0"/>
+            </g>
+          </g>
+
+          <g class="py-flame">
+            <path class="out" d="M960 26c14 16 22 30 22 44a22 22 0 0 1-44 0c0-10 6-18 10-22 0 8 4 12 8 12 0-14 0-24 4-34Z"/>
+            <path class="in" d="M960 54c6 8 10 14 10 20a10 10 0 0 1-20 0c0-6 4-12 10-20Z"/>
+          </g>
+          <text class="py-streak" x="960" y="118">7 days</text>
+        </svg>
+      </div>
+      <div class="py-paper">
+        <ol class="py-toc">
+          <li class="done">Introduction to Python</li>
+          <li class="done">Anatomy of a Python Program</li>
+          <li class="done">Variables and Data Types</li>
+          <li class="now">Operators and Expressions</li>
+          <li>Strings</li>
+          <li>Control Flow</li>
+          <li>Functions</li>
+          <li>Lists and Tuples</li>
+          <li>Dictionaries and Sets</li>
+          <li>Error Handling</li>
+          <li>File I/O</li>
+          <li>OOP: Classes and Objects</li>
+          <li>Inheritance and Polymorphism</li>
+          <li>Modules and Packages</li>
+          <li>Functional Programming Tools</li>
+          <li>Iterators and Generators</li>
+          <li>Concurrency and Parallelism</li>
+          <li>Type Hints and Modern Python</li>
+          <li>Testing and Debugging</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-kinds">
+    <div class="wrap">
+      <div class="py-head centered">
+        <p class="py-prompt">&gt;&gt;&gt; lesson.questions</p>
+        <h2>Learn by <em>doing</em></h2>
+        <p>Every lesson asks something of you, so it sticks.</p>
+      </div>
+      <div class="py-run-art">
+        <svg class="py-art py-anim" viewBox="0 0 1000 260" role="img" aria-label="A notebook cell runs: In [ ] turns into In [1], the output Hello, Python! appears and a gold star sticker lands on the page">
+          <rect class="py-sheet-shadow" x="226" y="26" width="560" height="214" rx="18"/>
+          <rect class="py-sheet" x="220" y="20" width="560" height="214" rx="18"/>
+          <path class="py-rule" d="M220 70H780M220 110H780M220 150H780M220 190H780"/>
+          <path class="py-margin" d="M262 20V234"/>
+          <text class="py-in t0" x="282" y="96">In [ ]:</text>
+          <text class="py-in t1" x="282" y="96">In [*]:</text>
+          <text class="py-in t2" x="282" y="96">In [1]:</text>
+          <rect class="py-cellbox" x="372" y="70" width="330" height="40" rx="10"/>
+          <text class="py-src" x="388" y="96"><tspan class="fn">print</tspan>(<tspan class="st">"Hello, Python!"</tspan>)</text>
+          <g class="py-runbtn">
+            <circle cx="736" cy="90" r="22"/>
+            <path d="M729 80v20l16-10Z"/>
+          </g>
+          <text class="py-out" x="282" y="176">Hello, Python!</text>
+          <g class="py-star">
+            <path d="M700 132l11 22 24 4-17 17 4 24-22-12-22 12 4-24-17-17 24-4Z"/>
+          </g>
+          <g class="py-cursor">
+            <path d="M0 0v24l6-6 5 11 5-2-5-11h9Z"/>
+          </g>
+          <g class="py-postit">
+            <rect x="74" y="40" width="124" height="104" rx="6"/>
+            <text class="py-sticker-t" x="136" y="82">2 ** 3</text>
+            <text class="py-sticker-t big" x="136" y="120">= 8</text>
+          </g>
+          <path class="py-twinkle" d="M870 70l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+          <path class="py-twinkle late" d="M880 200l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+        </svg>
+      </div>
+      <div class="py-notes">
+        <article class="py-note">
+          <pre class="py-code" data-py># one idea at a time
+x = 10   # a name for a value</pre>
+          <h3>Read a little</h3>
+          <p>Short lessons with code you can follow, one idea at a time.</p>
+        </article>
+        <article class="py-note">
+          <pre class="py-code" data-py>print(2 ** 3)   # what comes out?</pre>
+          <h3>Predict the output</h3>
+          <p>Read the code the way Python would, then say what it prints.</p>
+        </article>
+        <article class="py-note">
+          <pre class="py-code" data-py>for n in nums:
+    total = n   # spot the bug</pre>
+          <h3>Find the bug</h3>
+          <p>One line is wrong. Find it, and learn the mistake before it costs you an afternoon.</p>
+        </article>
+        <article class="py-note">
+          <pre class="py-code" data-py>for ___ in range(3):
+    print(___)</pre>
+          <h3>Fill the gaps</h3>
+          <p>Pick the right words to finish the code.</p>
+        </article>
+        <article class="py-note">
+          <pre class="py-code" data-py>    return x * 2
+def double(x):</pre>
+          <h3>Put lines in order</h3>
+          <p>The lines are scrambled. Put them back so the code works.</p>
+        </article>
+        <article class="py-note">
+          <pre class="py-code" data-py># type of (1, 2)?
+# list, tuple or set</pre>
+          <h3>Choose the answer</h3>
+          <p>A straight question with one clear answer.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-tour-sec">
+    <div class="wrap">
+      <div class="py-head">
+        <p class="py-prompt">&gt;&gt;&gt; app.tour()</p>
+        <h2>Take a <em>look inside</em></h2>
+        <p>Pick a part of the app to see it.</p>
+      </div>
+      <div class="py-tour">
+        <div class="py-tabs" role="tablist" aria-label="Parts of the app" aria-orientation="vertical">
+          <button type="button" class="py-tab" role="tab" aria-selected="true" aria-controls="py-shot" data-shot="../assets/apps/python-guide/path.webp" data-alt="The learning path with completed Python sections"><span class="num">01</span><strong>Your learning path</strong><span>Every section with your progress on it, so you always know what's next.</span></button>
+          <button type="button" class="py-tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="py-shot" data-shot="../assets/apps/python-guide/lesson.webp" data-alt="A lesson about variables and types"><span class="num">02</span><strong>Lessons</strong><span>Short reads with code you can follow, one idea at a time.</span></button>
+          <button type="button" class="py-tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="py-shot" data-shot="../assets/apps/python-guide/exercise.webp" data-alt="An exercise on list comprehensions"><span class="num">03</span><strong>Exercises</strong><span>Predict the output, fill the gaps and put the lines in order.</span></button>
+          <button type="button" class="py-tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="py-shot" data-shot="../assets/apps/python-guide/bug-fix.webp" data-alt="Finding the bug in a function"><span class="num">04</span><strong>Find the bug</strong><span>Debugging challenges for junior, medior and senior levels.</span></button>
+          <button type="button" class="py-tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="py-shot" data-shot="../assets/apps/python-guide/algorithms.webp" data-alt="Algorithms by difficulty"><span class="num">05</span><strong>Algorithms</strong><span>Classic algorithms traced step by step, so you see what each line does to the data.</span></button>
+          <button type="button" class="py-tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="py-shot" data-shot="../assets/apps/python-guide/design-patterns.webp" data-alt="The Builder design pattern"><span class="num">06</span><strong>Design patterns</strong><span>The common patterns, with the problem each one solves and how it looks in Python.</span></button>
+          <button type="button" class="py-tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="py-shot" data-shot="../assets/apps/python-guide/interview.webp" data-alt="Interview questions and answers"><span class="num">07</span><strong>Interview prep</strong><span>199 questions for junior, medior and senior roles, with answers you can mark as mastered.</span></button>
+          <button type="button" class="py-tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="py-shot" data-shot="../assets/apps/python-guide/cheat-sheets.webp" data-alt="Cheat sheets by category"><span class="num">08</span><strong>Cheat sheets</strong><span>The syntax you keep forgetting, collected by topic and ready when you need it.</span></button>
+        </div>
+        <div class="py-phone" id="py-shot" role="tabpanel">
+          <img src="../assets/apps/python-guide/path.webp" width="1080" height="2206" alt="The learning path with completed Python sections">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-plan">
+    <div class="wrap py-plan-grid">
+      <div>
+        <p class="py-prompt">&gt;&gt;&gt; help(plan)</p>
+        <h2>Start free, <em>pay once</em></h2>
+        <p>Start for free. Pro unlocks the full curriculum and everything else in the app, for a single payment that's yours to keep. No ads, and no subscription.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.ognje.py" target="_blank" rel="noopener">
+            <span class="ico i-google-play" aria-hidden="true"></span>
+            <span><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </div>
+      <div class="py-card py-repl">
+        <pre class="py-code"><span class="p">&gt;&gt;&gt;</span> plan = {<span class="st">"start"</span>: <span class="st">"free"</span>, <span class="st">"pro"</span>: <span class="st">"one-time"</span>, <span class="st">"ads"</span>: <span class="nu">0</span>}
+<span class="p">&gt;&gt;&gt;</span> plan[<span class="st">"ads"</span>]
+<span class="nu">0</span>
+<span class="p">&gt;&gt;&gt;</span> plan[<span class="st">"subscription"</span>]
+<span class="err">KeyError: 'subscription'</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-end">
+    <div class="wrap">
+      <div class="py-card py-next-app">
+        <div>
+          <p class="py-prompt">&gt;&gt;&gt; import cpp</p>
+          <h2>Learning C++ too?</h2>
+          <p>The C++ Learning Guide works the same way, with its own lessons, challenges and interview questions.</p>
+        </div>
+        <div class="buttons">
+          <a class="btn" href="../cpp-guide/">
+            <span class="ico i-arrow-right" aria-hidden="true"></span>
+            <span><small>See the</small><strong>C++ Learning Guide</strong></span>
+          </a>
+        </div>
+      </div>
+      <div class="legal-links">
+        <a class="text-link" href="privacy.html">Privacy policy</a>
+        <a class="text-link" href="terms.html">Terms of use</a>
+        <a class="text-link" href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/topicdev-logo.png" width="150" height="150" alt="TopicDev">
+        <p>Carefully crafted apps for Windows, Android and Android TV.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Apps</h2>
+        <ul>
+          <li><a href="https://makimedia.org/" target="_blank" rel="noopener">Makimedia</a></li>
+          <li><a href="../reroll/">Reroll</a></li>
+          <li><a href="../md-editor/">MD Editor</a></li>
+          <li><a href="../topic-finance/">Topic Finance</a></li>
+          <li><a href="../cpp-guide/">C++ Learning Guide</a></li>
+          <li><a href="../python-guide/" aria-current="page">Python Learning Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Studio</h2>
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="https://play.google.com/store/apps/dev?id=6943416935116197981" target="_blank" rel="noopener">Google Play</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="../privacy.html">Website privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TopicDev</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../nav.js?v=1"></script>
+<script src="../guide-demo.js?v=2"></script>
+<script src="../guide-qa.js?v=1"></script>
+<script src="python.js?v=4"></script>
+</body>
+</html>

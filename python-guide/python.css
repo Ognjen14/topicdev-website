@@ -1,0 +1,1041 @@
+body.py {
+  --bg: #FFFBF2;
+  --surface: #FFFFFF;
+  --surface-2: #FFF3D6;
+  --line: #EADFC6;
+  --text: #1D2433;
+  --text-2: #5B6475;
+  --accent: #2F6EA8;
+  --accent-strong: #1F4F7D;
+  --accent-soft: #E3EEF8;
+  --on-accent: #FFFFFF;
+  --ink: #1D2433;
+  --on-ink: #FFFBF2;
+  --py-yellow: #FFD43B;
+  --py-edge: #1D2433;
+  --py-drop: #1D2433;
+  --py-out: #C0504D;
+  --py-good: #2E8B57;
+  --py-bad: #D0453A;
+  --py-mark: rgba(255, 212, 59, 0.75);
+  --py-rule: rgba(47, 110, 168, 0.12);
+  --py-margin: rgba(208, 69, 58, 0.35);
+  --py-kw: #A626A4;
+  --py-str: #50A14F;
+  --py-num: #986801;
+  --py-fn: #4078F2;
+  --py-com: #A0A1A7;
+  --py-mono: "Cascadia Code", "Cascadia Mono", "JetBrains Mono", Consolas, ui-monospace, monospace;
+  --py-note-1: #FFF1A8;
+  --py-note-2: #D6E9FB;
+  --py-note-3: #D4F3E2;
+  --py-note-4: #FBDDE6;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.py {
+    --bg: #11151C;
+    --surface: #181E28;
+    --surface-2: #222A37;
+    --line: #2C3545;
+    --text: #EEF1F6;
+    --text-2: #A3ADBD;
+    --accent: #6FA8DC;
+    --accent-strong: #A6CBEE;
+    --accent-soft: #1B2C40;
+    --on-accent: #0D1520;
+    --ink: #EEF1F6;
+    --on-ink: #11151C;
+    --py-edge: #4A5670;
+    --py-drop: #000000;
+    --py-out: #F08A7E;
+    --py-good: #5FD39A;
+    --py-bad: #F07A6E;
+    --py-mark: rgba(255, 212, 59, 0.32);
+    --py-rule: rgba(111, 168, 220, 0.12);
+    --py-margin: rgba(240, 122, 110, 0.35);
+    --py-kw: #C678DD;
+    --py-str: #98C379;
+    --py-num: #D19A66;
+    --py-fn: #61AFEF;
+    --py-com: #7F848E;
+    --py-note-1: #3A3418;
+    --py-note-2: #1C2D40;
+    --py-note-3: #183428;
+    --py-note-4: #3A1E28;
+  }
+}
+
+.py section {
+  padding: 104px 0;
+}
+
+.py main h1 em,
+.py main h2 em {
+  color: inherit;
+  font-style: normal;
+  background: linear-gradient(transparent 58%, var(--py-mark) 58%, var(--py-mark) 92%, transparent 92%);
+  padding: 0 0.08em;
+}
+
+.py main h2 {
+  font-size: clamp(30px, 4.2vw, 46px);
+  line-height: 1.08;
+}
+
+.py-head {
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+
+.py-head.centered {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.py-head p:not(.py-prompt) {
+  margin: 16px 0 0;
+  color: var(--text-2);
+}
+
+.py-prompt {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-family: var(--py-mono);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.py .btn {
+  border: 2px solid var(--py-edge);
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 var(--py-drop);
+}
+
+.py .btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--py-drop);
+}
+
+.py .btn.primary {
+  border-color: var(--py-edge);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.py-card {
+  border: 2px solid var(--py-edge);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 6px 6px 0 var(--py-drop);
+}
+
+.py-code {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--py-mono);
+  font-size: 14.5px;
+  font-variant-ligatures: none;
+  line-height: 1.65;
+  white-space: pre;
+}
+
+.py-code .kw { color: var(--py-kw); }
+.py-code .st { color: var(--py-str); }
+.py-code .nu { color: var(--py-num); }
+.py-code .fn { color: var(--py-fn); }
+.py-code .co { color: var(--py-com); font-style: italic; }
+
+.py .py-hero {
+  position: relative;
+  padding: 72px 0 96px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.py-hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -140px;
+  z-index: -1;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--py-yellow) 30%, transparent), transparent 65%);
+}
+
+.py-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -160px;
+  left: -160px;
+  z-index: -1;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 22%, transparent), transparent 65%);
+}
+
+.py-hero .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 500px);
+  gap: 56px;
+  align-items: center;
+}
+
+.py-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+  padding: 6px 18px 6px 6px;
+  border: 2px solid var(--py-edge);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: 3px 3px 0 var(--py-drop);
+  font-weight: 700;
+}
+
+.py-mark img {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.py-hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.py-notebook {
+  position: relative;
+}
+
+.py-nb {
+  overflow: hidden;
+  padding: 0 0 22px;
+}
+
+.py-nb-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-bottom: 2px solid var(--py-edge);
+  background: var(--surface-2);
+  font-family: var(--py-mono);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.py-nb-bar i {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--py-edge);
+  border-radius: 50%;
+  background: var(--py-yellow);
+}
+
+.py-nb-bar i + i {
+  background: var(--accent);
+}
+
+.py-nb-bar span {
+  margin-left: 6px;
+}
+
+.py-cell {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 4px 0;
+  padding: 14px 18px 0 0;
+}
+
+.py-cell .lbl {
+  padding-top: 2px;
+  font-family: var(--py-mono);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-align: right;
+  padding-right: 12px;
+}
+
+.py-cell .in {
+  color: var(--accent);
+}
+
+.py-cell .out {
+  color: var(--py-out);
+}
+
+.py-cell .src {
+  padding: 8px 12px;
+  overflow-x: auto;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+}
+
+.py-cell .res {
+  padding: 2px 12px 0;
+  color: var(--text);
+  font-family: var(--py-mono);
+  font-size: 14px;
+  white-space: pre;
+}
+
+.py-notebook.is-armed .py-cell {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.py-notebook.is-armed .py-cell.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+.py-sticker {
+  position: absolute;
+  z-index: 2;
+  padding: 8px 14px;
+  border: 2px solid var(--py-edge);
+  border-radius: 12px;
+  background: var(--py-yellow);
+  box-shadow: 3px 3px 0 var(--py-drop);
+  color: #1D2433;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.py-sticker.s1 {
+  top: -18px;
+  right: 22px;
+  transform: rotate(6deg);
+}
+
+.py-sticker.s2 {
+  right: -14px;
+  bottom: -20px;
+  background: var(--accent-soft);
+  color: var(--text);
+  transform: rotate(-5deg);
+}
+
+.py .py-facts {
+  padding: 8px 0 32px;
+}
+
+.py-stickers {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.py-stickers li {
+  padding: 22px 22px 20px;
+  border: 2px solid var(--py-edge);
+  border-radius: 18px;
+  box-shadow: 5px 5px 0 var(--py-drop);
+  transition: transform 0.2s ease;
+}
+
+.py-stickers li:nth-child(1) { background: var(--py-note-1); transform: rotate(-1.5deg); }
+.py-stickers li:nth-child(2) { background: var(--py-note-2); transform: rotate(1deg); }
+.py-stickers li:nth-child(3) { background: var(--py-note-3); transform: rotate(-0.8deg); }
+.py-stickers li:nth-child(4) { background: var(--py-note-4); transform: rotate(1.4deg); }
+
+.py-stickers li:hover {
+  transform: rotate(0) translateY(-3px);
+}
+
+.py-stickers .ico {
+  width: 28px;
+  height: 28px;
+}
+
+.py-stickers strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 19px;
+}
+
+.py-stickers span {
+  display: block;
+  margin-top: 2px;
+  color: var(--text-2);
+  font-size: 14.5px;
+}
+
+.py-tab:focus-visible {
+  outline: 3px solid var(--py-yellow);
+  outline-offset: 3px;
+}
+
+.py-gd {
+  --gd-bg: var(--surface);
+  --gd-surface: var(--surface);
+  --gd-line: var(--line);
+  --gd-accent: var(--accent);
+  --gd-on-accent: var(--on-accent);
+  --gd-good: var(--py-good);
+  --gd-bad: var(--py-bad);
+  --gd-code-bg: var(--bg);
+  --gd-mono: var(--py-mono);
+  --gd-radius: 14px;
+  --gd-border: 2px;
+  --gd-shadow: 6px 6px 0 var(--py-drop);
+  border-color: var(--py-edge);
+}
+
+.py-gd .gd-bar i {
+  height: 10px;
+  border: 2px solid var(--py-edge);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.py-gd .gd-bar i.done {
+  background: var(--py-yellow);
+}
+
+.py-gd .gd-bar i.now {
+  background: color-mix(in srgb, var(--py-yellow) 40%, var(--surface));
+}
+
+.py-gd .gd-opt,
+.py-gd .gd-card,
+.py-gd .gd-pair,
+.py-gd .gd-chip {
+  box-shadow: 3px 3px 0 color-mix(in srgb, var(--py-drop) 85%, transparent);
+}
+
+.py-gd .gd-opt:not(:disabled):active,
+.py-gd .gd-card:active,
+.py-gd .gd-pair:active,
+.py-gd .gd-chip:not(:disabled):active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--py-drop);
+}
+
+.py-gd .gd-main {
+  border: 2px solid var(--py-edge);
+  background: var(--py-yellow);
+  box-shadow: 3px 3px 0 var(--py-drop);
+  color: #1D2433;
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+.py-gd .gd-main:not(:disabled):active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--py-drop);
+}
+
+.py-gd .gd-main:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.py-gq {
+  --gq-bg: var(--surface);
+  --gq-surface: var(--surface);
+  --gq-line: var(--line);
+  --gq-code-bg: var(--bg);
+  --gq-mono: var(--py-mono);
+  --gq-radius: 14px;
+  --gq-border: 2px;
+  --gq-shadow: 6px 6px 0 var(--py-drop);
+  --gq-junior: var(--py-good);
+  --gq-medior: #C98A00;
+  --gq-senior: var(--py-bad);
+}
+
+.py-gq .gq-stats,
+.py-gq .gq {
+  border-color: var(--py-edge);
+}
+
+.py-gq .gq-bars i {
+  border: 2px solid var(--py-edge);
+  height: 14px;
+  border-radius: 7px;
+}
+
+.py-gq .gq-tab[aria-pressed="true"] {
+  border-color: var(--py-edge);
+  background: var(--py-yellow);
+  color: #1D2433;
+}
+
+.py-gq .gq-item {
+  box-shadow: 3px 3px 0 color-mix(in srgb, var(--py-drop) 85%, transparent);
+}
+
+.py-gq .gq-item.is-open {
+  border-color: var(--py-edge);
+}
+
+.py-gd .gd-feedback.is-right,
+.py-gd .gd-feedback.is-wrong {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.py-paper {
+  position: relative;
+  padding: 44px 40px 40px 84px;
+  border: 2px solid var(--py-edge);
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, transparent 60px, var(--py-margin) 60px, var(--py-margin) 62px, transparent 62px),
+    repeating-linear-gradient(transparent 0 39px, var(--py-rule) 39px 40px),
+    var(--surface);
+  box-shadow: 6px 6px 0 var(--py-drop);
+}
+
+.py-paper h3 {
+  margin-bottom: 4px;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.py-toc {
+  columns: 2;
+  column-gap: 48px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.py-toc li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 40px;
+  break-inside: avoid;
+  font-size: 16.5px;
+}
+
+.py-toc li::before {
+  content: "";
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--text-2);
+  border-radius: 5px;
+}
+
+.py-toc li.done::before {
+  border-color: var(--py-good);
+  background:
+    linear-gradient(45deg, transparent 44%, var(--py-good) 44%, var(--py-good) 58%, transparent 58%) 2px 5px / 6px 7px no-repeat,
+    linear-gradient(-45deg, transparent 42%, var(--py-good) 42%, var(--py-good) 56%, transparent 56%) 6px 1px / 9px 12px no-repeat;
+}
+
+.py-toc li.done {
+  color: var(--text-2);
+}
+
+.py-toc li.now {
+  font-weight: 700;
+}
+
+.py-toc li.now::after {
+  content: "you are here";
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--py-yellow);
+  color: #1D2433;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.py-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.py-note {
+  padding: 24px 24px 26px;
+  border: 2px solid var(--py-edge);
+  border-radius: 6px 18px 18px 18px;
+  box-shadow: 5px 5px 0 var(--py-drop);
+}
+
+.py-note:nth-child(4n + 1) { background: var(--py-note-1); transform: rotate(-1deg); }
+.py-note:nth-child(4n + 2) { background: var(--py-note-2); transform: rotate(0.8deg); }
+.py-note:nth-child(4n + 3) { background: var(--py-note-3); transform: rotate(-0.6deg); }
+.py-note:nth-child(4n + 4) { background: var(--py-note-4); transform: rotate(1.2deg); }
+
+.py-note .py-code {
+  font-size: 13.5px;
+  white-space: pre-wrap;
+}
+
+.py-note h3 {
+  margin-top: 14px;
+  font-size: 20px;
+}
+
+.py-note p {
+  margin: 6px 0 0;
+  color: var(--text-2);
+  font-size: 15.5px;
+}
+
+.py-tour {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+  gap: 56px;
+  align-items: center;
+}
+
+.py-tabs {
+  display: grid;
+  gap: 10px;
+}
+
+.py-tab {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 2px 14px;
+  align-items: center;
+  padding: 14px 18px;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.py-tab:hover {
+  background: var(--surface);
+}
+
+.py-tab[aria-selected="true"] {
+  border-color: var(--py-edge);
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--py-drop);
+}
+
+.py-tab .num {
+  grid-row: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--py-edge);
+  border-radius: 12px;
+  background: var(--surface-2);
+  font-family: var(--py-mono);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.py-tab[aria-selected="true"] .num {
+  background: var(--py-yellow);
+  color: #1D2433;
+}
+
+.py-tab strong {
+  font-size: 17px;
+}
+
+.py-tab span:last-child {
+  color: var(--text-2);
+  font-size: 14.5px;
+}
+
+.py-tab:not([aria-selected="true"]) span:last-child {
+  display: none;
+}
+
+.py-phone {
+  justify-self: center;
+  width: 300px;
+  padding: 10px;
+  border: 2px solid var(--py-edge);
+  border-radius: 40px;
+  background: #1D2433;
+  box-shadow: 8px 8px 0 var(--py-drop);
+  transform: rotate(2deg);
+}
+
+.py-phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  transition: opacity 0.2s ease;
+}
+
+.py-phone img.is-swapping {
+  opacity: 0;
+}
+
+.py-plan-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.py-plan-grid > div > p:not(.py-prompt) {
+  margin: 16px 0 0;
+  color: var(--text-2);
+}
+
+.py-repl {
+  padding: 22px 24px;
+  overflow-x: auto;
+}
+
+.py-repl .py-code .err {
+  color: var(--py-bad);
+  font-weight: 700;
+}
+
+.py-repl .py-code .p {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.py-next-app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: center;
+  padding: 40px 44px;
+  background: var(--py-note-2);
+}
+
+.py-next-app h2 {
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+.py-next-app p:not(.py-prompt) {
+  margin: 10px 0 0;
+  color: var(--text-2);
+}
+
+.py-next-app .buttons {
+  margin-top: 0;
+}
+
+.py-hero .wrap {
+  position: relative;
+}
+
+.py-doodles {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+@media (max-width: 1239px) {
+  .py-doodles {
+    display: none;
+  }
+}
+
+.py-paperbg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent 0, transparent 64px, var(--py-margin) 64px, var(--py-margin) 66px, transparent 66px),
+    repeating-linear-gradient(180deg, transparent 0, transparent 35px, var(--py-rule) 35px, var(--py-rule) 36px);
+  -webkit-mask-image: radial-gradient(ellipse 85% 90% at 40% 45%, #000 35%, transparent 85%);
+  mask-image: radial-gradient(ellipse 85% 90% at 40% 45%, #000 35%, transparent 85%);
+}
+
+.py-doodles .pen {
+  fill: none;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  opacity: 0.55;
+  animation: py-pen 1.4s ease-out var(--d, 0s) both;
+}
+
+.py-doodles .blue { stroke: var(--accent); }
+.py-doodles .yellow { stroke: #D19A12; }
+.py-doodles .green { stroke: var(--py-good); }
+.py-doodles .red { stroke: var(--py-bad); }
+
+@keyframes py-pen {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+.py-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.py-road-art,
+.py-run-art {
+  max-width: 1000px;
+  margin: -8px auto 44px;
+}
+
+.py-road-edge { fill: none; stroke: var(--py-edge); stroke-width: 32; stroke-linecap: round; }
+.py-road { fill: none; stroke: var(--py-yellow); stroke-width: 25; stroke-linecap: round; }
+.py-road-dash { fill: none; stroke: #FFFFFF; stroke-opacity: 0.75; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 16; }
+.py-stop .base { fill: var(--surface); stroke: var(--py-edge); stroke-width: 3; }
+.py-stop .lit { stroke: var(--py-edge); stroke-width: 3; }
+.py-stop .c1 { fill: #FFD43B; }
+.py-stop .c2 { fill: #8EC5F0; }
+.py-stop .c3 { fill: #7FD3A6; }
+.py-stop .c4 { fill: #F5A3B8; }
+.py-stop text { fill: var(--text); font-family: var(--py-mono); font-size: 16px; font-weight: 700; text-anchor: middle; }
+.py-ticks path { fill: none; stroke: #1D2433; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+.py-avatar .face { fill: #FFD43B; stroke: var(--py-edge); stroke-width: 3; }
+.py-avatar .eye { fill: #1D2433; }
+.py-avatar .smile { fill: none; stroke: #1D2433; stroke-width: 2.5; stroke-linecap: round; }
+.py-flame .out { fill: #F08A3C; stroke: var(--py-edge); stroke-width: 2.5; stroke-linejoin: round; }
+.py-flame .in { fill: #FFD43B; }
+.py-streak { fill: var(--text); font-family: var(--py-mono); font-size: 14px; font-weight: 700; text-anchor: middle; }
+
+.py-flame {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: py-flicker 1.6s ease-in-out infinite;
+}
+
+@keyframes py-flicker {
+  0%, 100% { transform: scale(1, 1); }
+  30% { transform: scale(0.94, 1.08); }
+  60% { transform: scale(1.04, 0.96); }
+}
+
+.py-sheet-shadow { fill: var(--py-drop); }
+.py-sheet { fill: var(--surface); stroke: var(--py-edge); stroke-width: 3; }
+.py-rule { fill: none; stroke: var(--py-rule); stroke-width: 2; }
+.py-margin { fill: none; stroke: var(--py-margin); stroke-width: 2; }
+.py-in { font-family: var(--py-mono); font-size: 17px; font-weight: 700; fill: var(--accent); }
+.py-cellbox { fill: var(--bg); stroke: var(--line); stroke-width: 2; }
+.py-src { fill: var(--text); font-family: var(--py-mono); font-size: 18px; }
+.py-src .fn { fill: var(--py-fn); }
+.py-src .st { fill: var(--py-str); }
+.py-runbtn circle { fill: var(--py-yellow); stroke: var(--py-edge); stroke-width: 3; }
+.py-runbtn path { fill: #1D2433; }
+.py-out { fill: var(--text); font-family: var(--py-mono); font-size: 19px; font-weight: 600; }
+.py-star path { fill: #FFD43B; stroke: var(--py-edge); stroke-width: 3; stroke-linejoin: round; }
+.py-cursor path { fill: #FFFFFF; stroke: #1D2433; stroke-width: 2; stroke-linejoin: round; }
+.py-postit rect { fill: var(--py-note-1); stroke: var(--py-edge); stroke-width: 2.5; }
+.py-sticker-t { fill: var(--text); font-family: var(--py-mono); font-size: 18px; font-weight: 700; text-anchor: middle; }
+.py-sticker-t.big { font-size: 26px; }
+.py-twinkle { fill: var(--accent); }
+
+.py-postit,
+.py-runbtn,
+.py-star,
+.py-twinkle {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.py-postit {
+  animation: py-postit 4s ease-in-out infinite;
+}
+
+@keyframes py-postit {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(-2deg) translateY(-6px); }
+}
+
+.py-in.t0 { animation: py-t0 6s linear infinite; }
+.py-in.t1 { opacity: 0; animation: py-t1 6s linear infinite; }
+.py-in.t2 { opacity: 0; animation: py-t2 6s linear infinite; }
+
+@keyframes py-t0 { 0%, 27% { opacity: 1; } 28%, 95% { opacity: 0; } 96%, 100% { opacity: 1; } }
+@keyframes py-t1 { 0%, 27% { opacity: 0; } 28%, 46% { opacity: 1; } 47%, 100% { opacity: 0; } }
+@keyframes py-t2 { 0%, 46% { opacity: 0; } 47%, 95% { opacity: 1; } 96%, 100% { opacity: 0; } }
+
+.py-cursor {
+  animation: py-cursor 6s ease-in-out infinite;
+}
+
+@keyframes py-cursor {
+  0% { opacity: 0; transform: translate(600px, 220px); }
+  6% { opacity: 1; transform: translate(600px, 210px); }
+  24%, 30% { opacity: 1; transform: translate(738px, 94px); }
+  40%, 100% { opacity: 0; transform: translate(760px, 120px); }
+}
+
+.py-runbtn {
+  animation: py-press 6s ease-in-out infinite;
+}
+
+@keyframes py-press {
+  0%, 25%, 32%, 100% { transform: scale(1); }
+  28% { transform: scale(0.86); }
+}
+
+.py-out {
+  animation: py-out 6s ease-out infinite;
+}
+
+@keyframes py-out {
+  0%, 48% { opacity: 0; transform: translateY(8px); }
+  54%, 94% { opacity: 1; transform: none; }
+  98%, 100% { opacity: 0; }
+}
+
+.py-star {
+  animation: py-star 6s ease-out infinite;
+}
+
+@keyframes py-star {
+  0%, 58% { opacity: 0; transform: scale(2.2) rotate(-40deg); }
+  64% { opacity: 1; transform: scale(0.92) rotate(8deg); }
+  68%, 94% { opacity: 1; transform: scale(1) rotate(0); }
+  98%, 100% { opacity: 0; }
+}
+
+.py-twinkle {
+  animation: py-twinkle 2.6s ease-in-out infinite;
+}
+
+.py-twinkle.late {
+  animation-delay: 1.3s;
+}
+
+@keyframes py-twinkle {
+  50% { opacity: 0.3; transform: scale(0.6); }
+}
+
+.py-ready .py-anim:not(.is-in) * {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .py-anim *,
+  .py-anim {
+    animation: none !important;
+  }
+
+  .py-in.t0, .py-in.t1, .py-cursor { opacity: 0; }
+  .py-in.t2, .py-out, .py-star { opacity: 1; }
+}
+
+@media (max-width: 1000px) {
+  .py-hero .wrap,
+  .py-plan-grid,
+  .py-tour {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .py-stickers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .py-notes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .py-next-app {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .py section {
+    padding: 72px 0;
+  }
+
+  .py .py-hero {
+    padding: 44px 0 64px;
+  }
+
+  .py-cell {
+    grid-template-columns: 54px minmax(0, 1fr);
+    padding-right: 12px;
+  }
+
+  .py-cell .lbl {
+    padding-right: 8px;
+    font-size: 11px;
+  }
+
+  .py-code {
+    font-size: 13px;
+  }
+
+  .py-sticker.s2 {
+    right: 6px;
+  }
+
+  .py-stickers {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .py-stickers li {
+    padding: 16px 14px;
+  }
+
+  .py-gd {
+    box-shadow: 4px 4px 0 var(--py-drop);
+  }
+
+  .py-paper {
+    padding: 28px 18px 24px 54px;
+    background:
+      linear-gradient(90deg, transparent 36px, var(--py-margin) 36px, var(--py-margin) 38px, transparent 38px),
+      repeating-linear-gradient(transparent 0 39px, var(--py-rule) 39px 40px),
+      var(--surface);
+  }
+
+  .py-toc {
+    columns: 1;
+  }
+
+  .py-toc li {
+    font-size: 15.5px;
+  }
+
+  .py-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .py-phone {
+    width: 250px;
+  }
+
+  .py-next-app {
+    padding: 28px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .py-notebook.is-armed .py-cell {
+    opacity: 1;
+    transform: none;
+  }
+}

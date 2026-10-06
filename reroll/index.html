@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reroll - what to watch tonight | TopicDev</title>
+  <meta name="description" content="Can't decide what to watch? Reroll picks one film or TV show at a time, and you reroll until something sticks. Free, with no ads and no account.">
+  <meta name="theme-color" content="#090A0C">
+  <link rel="canonical" href="https://topicdev.com/reroll/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TopicDev">
+  <meta property="og:title" content="Reroll: what to watch tonight">
+  <meta property="og:description" content="One film or TV show at a time. Not feeling it? Reroll for another. Free, with no ads and no account.">
+  <meta property="og:url" content="https://topicdev.com/reroll/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/apps/reroll/icon-256.png">
+  <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="reroll.css?v=4">
+</head>
+<body class="app-reroll rr">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/topicdev-mark-76.png" width="38" height="38" alt="">
+      <span>TOPIC<span class="brand-dev">DEV</span></span>
+    </a>
+    <a class="app-crumb" href="./"><img src="../assets/apps/reroll/icon-136.png" width="26" height="26" alt=""><span>Reroll</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="../index.html#apps">All apps</a>
+      <a href="../index.html#about">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="#get"><span class="ico i-download" aria-hidden="true"></span>Get Reroll</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="ico i-menu icon-open" aria-hidden="true"></span><span class="ico i-close icon-close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="rr-hero" id="get">
+    <div class="rr-backdrop" aria-hidden="true"><img src="../assets/apps/reroll/home-requiem.webp" alt=""></div>
+    <div class="wrap">
+      <div class="rr-intro">
+        <p class="rr-brand"><img src="../assets/apps/reroll/icon-136.png" width="40" height="40" alt="">REROLL</p>
+        <h1>One pick at a time. <em>Reroll until it sticks.</em></h1>
+        <p class="lead">Reroll shows you one film or TV show. Like it? Save it or watch the trailer. Not feeling it? Tap the red button for another. No endless grid of posters, and no forty minutes of scrolling before you give up.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.topicdev.reroll" target="_blank" rel="noopener">
+            <span class="ico i-google-play" aria-hidden="true"></span>
+            <span><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <p class="meta">For Android phones and tablets. Free, with no ads, no account and no in-app purchases.</p>
+      </div>
+
+      <div class="rr-try">
+        <div class="rr-app" aria-label="The Reroll home screen">
+          <div class="rr-screen">
+            <img class="is-on" src="../assets/apps/reroll/home-requiem.webp" alt="Reroll suggesting Requiem for a Dream, with its rating, genres and story">
+            <img src="../assets/apps/reroll/home-memory.webp" alt="Reroll suggesting Memory, with its rating, genres, story and streaming services">
+            <img src="../assets/apps/reroll/home-departed.webp" alt="Reroll suggesting The Departed, with its rating, genres, story and streaming services">
+          </div>
+          <div class="rr-bar">
+            <button type="button" data-say="Saved to My list for another night" aria-label="Save to watchlist"><span class="ico i-watchlist" aria-hidden="true"></span></button>
+            <button type="button" data-say="The trailer plays right in the app" aria-label="Play the trailer"><span class="ico i-play" aria-hidden="true"></span></button>
+            <button type="button" class="rr-roll" aria-label="Reroll for another pick"><span class="ico i-reroll" aria-hidden="true"></span></button>
+            <button type="button" data-say="Marked as watched, so it won't come back" aria-label="Mark as watched"><span class="ico i-eye" aria-hidden="true"></span></button>
+            <button type="button" data-say="Hidden for good. Here's another" data-next aria-label="Never show this again"><span class="ico i-close" aria-hidden="true"></span></button>
+          </div>
+          <div class="rr-nav" aria-hidden="true"><img src="../assets/apps/reroll/home-requiem.webp" alt=""></div>
+          <p class="rr-toast" aria-live="polite"></p>
+        </div>
+        <p class="rr-hint"><span class="ico i-reroll" aria-hidden="true"></span>Go on, tap the buttons. These are real screens from the app.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rr-facts">
+    <div class="wrap">
+      <ul>
+        <li><span class="ico i-heart" aria-hidden="true"></span><strong>Free</strong><span>No purchases, no subscription</span></li>
+        <li><span class="ico i-no-ads" aria-hidden="true"></span><strong>No ads</strong><span>Not one, anywhere</span></li>
+        <li><span class="ico i-no-account" aria-hidden="true"></span><strong>No account</strong><span>Open it and roll</span></li>
+        <li><span class="ico i-open-source" aria-hidden="true"></span><strong>Open source</strong><span>GNU GPL version 3</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="rr-how">
+    <div class="wrap">
+      <div class="rr-head">
+        <p class="rr-kicker">How it works</p>
+        <h2>Tonight's film in three taps</h2>
+      </div>
+      <ol class="rr-steps">
+        <li>
+          <div class="rr-crop is-sheet"><img src="../assets/apps/reroll/filters.webp" alt="Filters for movies or shows, years, rating and genres" loading="lazy"></div>
+          <div class="rr-step-text">
+            <span class="rr-num">1</span>
+            <h3>Set your mood</h3>
+            <p>Movies, shows or both, the genres you're in the mood for, the years and a minimum rating.</p>
+          </div>
+        </li>
+        <li>
+          <div class="rr-crop"><img src="../assets/apps/reroll/home-memory.webp" alt="One suggestion with its rating, genres and story" loading="lazy"></div>
+          <div class="rr-step-text">
+            <span class="rr-num">2</span>
+            <h3>Reroll</h3>
+            <p>Get one pick. Not feeling it? Tap reroll for another, as many times as you like.</p>
+          </div>
+        </li>
+        <li>
+          <div class="rr-crop"><img src="../assets/apps/reroll/my-list.webp" alt="My list with saved and watched titles" loading="lazy"></div>
+          <div class="rr-step-text">
+            <span class="rr-num">3</span>
+            <h3>Watch or save it</h3>
+            <p>See where it's streaming, play the trailer, or save it to your list for another night.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="rr-features">
+    <div class="wrap">
+      <div class="rr-head">
+        <p class="rr-kicker">In the app</p>
+        <h2>Made to get out of the way</h2>
+        <p>Open it, roll, decide, watch.</p>
+      </div>
+      <div class="rr-scene">
+        <svg class="rr-art" viewBox="0 0 1000 340" role="img" aria-label="Your filters feed a deck of posters, the red button rerolls a new pick, and the pick can be saved, previewed or watched where it streams">
+          <defs>
+            <linearGradient id="rr-g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3A67"/><stop offset="1" stop-color="#E25149"/></linearGradient>
+            <linearGradient id="rr-g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F3443"/><stop offset="1" stop-color="#2E9E83"/></linearGradient>
+            <linearGradient id="rr-g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A1B55"/><stop offset="1" stop-color="#C2577A"/></linearGradient>
+            <linearGradient id="rr-g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A404A"/><stop offset="1" stop-color="#20242B"/></linearGradient>
+            <clipPath id="rr-pclip"><rect x="425" y="44" width="150" height="220" rx="12"/></clipPath>
+          </defs>
+          <ellipse class="rr-glow" cx="500" cy="172" rx="480" ry="150"/>
+
+          <rect class="rr-panel" x="30" y="46" width="260" height="248" rx="20"/>
+          <rect class="rr-track" x="50" y="68" width="220" height="34" rx="17"/>
+          <rect class="rr-acc rr-seg" x="54" y="72" width="70" height="26" rx="13"/>
+          <text class="rr-t" x="89" y="90" text-anchor="middle">Movies</text>
+          <text class="rr-t dim" x="160" y="90" text-anchor="middle">Shows</text>
+          <text class="rr-t dim" x="232" y="90" text-anchor="middle">Both</text>
+          <rect class="rr-track" x="50" y="132" width="220" height="6" rx="3"/>
+          <rect class="rr-acc rr-range" x="110" y="132" width="100" height="6" rx="3"/>
+          <circle class="rr-knob rr-k1" cx="110" cy="135" r="9"/>
+          <circle class="rr-knob rr-k2" cx="210" cy="135" r="9"/>
+          <g class="rr-stars">
+            <path class="on" transform="translate(62 172)" d="M0-9l2.7 5.6 6.1.9-4.4 4.3 1 6.1L0 4.9l-5.4 3 1-6.1-4.4-4.3 6.1-.9z"/>
+            <path class="on" transform="translate(88 172)" d="M0-9l2.7 5.6 6.1.9-4.4 4.3 1 6.1L0 4.9l-5.4 3 1-6.1-4.4-4.3 6.1-.9z"/>
+            <path class="on" transform="translate(114 172)" d="M0-9l2.7 5.6 6.1.9-4.4 4.3 1 6.1L0 4.9l-5.4 3 1-6.1-4.4-4.3 6.1-.9z"/>
+            <path class="on late" transform="translate(140 172)" d="M0-9l2.7 5.6 6.1.9-4.4 4.3 1 6.1L0 4.9l-5.4 3 1-6.1-4.4-4.3 6.1-.9z"/>
+            <path transform="translate(166 172)" d="M0-9l2.7 5.6 6.1.9-4.4 4.3 1 6.1L0 4.9l-5.4 3 1-6.1-4.4-4.3 6.1-.9z"/>
+          </g>
+          <rect class="rr-chip on" x="50" y="204" width="70" height="28" rx="14"/><text class="rr-t" x="85" y="223" text-anchor="middle">Crime</text>
+          <rect class="rr-chip" x="128" y="204" width="76" height="28" rx="14"/><text class="rr-t dim" x="166" y="223" text-anchor="middle">Comedy</text>
+          <rect class="rr-chip rr-blink" x="212" y="204" width="58" height="28" rx="14"/><text class="rr-t dim" x="241" y="223" text-anchor="middle">War</text>
+          <rect class="rr-chip" x="50" y="242" width="64" height="28" rx="14"/><text class="rr-t dim" x="82" y="261" text-anchor="middle">Horror</text>
+          <rect class="rr-chip on rr-blink late" x="122" y="242" width="72" height="28" rx="14"/><text class="rr-t" x="158" y="261" text-anchor="middle">Drama</text>
+          <rect class="rr-chip" x="202" y="242" width="68" height="28" rx="14"/><text class="rr-t dim" x="236" y="261" text-anchor="middle">Sci-Fi</text>
+
+          <path class="rr-flow" d="M296 170C330 170 360 160 404 150"/>
+
+          <rect class="rr-back" x="425" y="44" width="150" height="220" rx="12" transform="rotate(-9 500 154)"/>
+          <rect class="rr-back" x="425" y="44" width="150" height="220" rx="12" transform="rotate(7 500 154)"/>
+          <g clip-path="url(#rr-pclip)">
+            <g class="rr-poster p1">
+              <rect x="425" y="44" width="150" height="220" fill="url(#rr-g1)"/>
+              <circle cx="500" cy="140" r="30" fill="#FFD6A5"/>
+              <path d="M425 220L470 176L505 204L540 168L575 200V264H425Z" fill="#1B1F33"/>
+            </g>
+            <g class="rr-poster p2">
+              <rect x="425" y="44" width="150" height="220" fill="url(#rr-g2)"/>
+              <circle cx="540" cy="92" r="14" fill="#E8F5E9"/>
+              <path d="M440 236L462 186L484 236Z M470 236L496 170L522 236Z M508 236L534 190L560 236Z" fill="#0B2A22"/>
+              <rect x="425" y="236" width="150" height="28" fill="#0B2A22"/>
+            </g>
+            <g class="rr-poster p3">
+              <rect x="425" y="44" width="150" height="220" fill="url(#rr-g3)"/>
+              <circle cx="470" cy="100" r="22" fill="#F8C8DC"/>
+              <path d="M425 264V196H445V170H462V206H480V150H500V214H516V182H536V200H556V160H575V264Z" fill="#1A1033"/>
+            </g>
+          </g>
+          <rect class="rr-frame" x="425" y="44" width="150" height="220" rx="12"/>
+          <g class="rr-btn">
+            <circle class="rr-acc" cx="500" cy="292" r="30"/>
+            <g class="rr-spin">
+              <path class="rr-arrow" d="M488 284a14 14 0 0 1 24-4"/>
+              <path class="rr-arrow" d="M512 300a14 14 0 0 1-24 4"/>
+              <path class="rr-head-a" d="M514 270v12h-12"/>
+              <path class="rr-head-a" d="M486 314v-12h12"/>
+            </g>
+          </g>
+
+          <path class="rr-flow" d="M596 150C640 120 664 100 700 92"/>
+          <path class="rr-flow" d="M596 162H700"/>
+          <path class="rr-flow" d="M596 174C640 204 664 224 700 232"/>
+
+          <g class="rr-out o1">
+            <rect class="rr-pill" x="704" y="66" width="266" height="52" rx="26"/>
+            <circle class="rr-ic" cx="734" cy="92" r="17"/>
+            <path class="rr-glyph" d="M727 82h14v20l-7-5-7 5z"/>
+            <text class="rr-t big" x="762" y="98">Save it for later</text>
+          </g>
+          <g class="rr-out o2">
+            <rect class="rr-pill" x="704" y="136" width="266" height="52" rx="26"/>
+            <circle class="rr-ic" cx="734" cy="162" r="17"/>
+            <path class="rr-glyph solid" d="M729 153v18l14-9z"/>
+            <text class="rr-t big" x="762" y="168">Watch the trailer</text>
+          </g>
+          <g class="rr-out o3">
+            <rect class="rr-pill" x="704" y="206" width="266" height="52" rx="26"/>
+            <circle class="rr-ic" cx="734" cy="232" r="17"/>
+            <rect class="rr-glyph" x="724" y="224" width="20" height="13" rx="2"/>
+            <path class="rr-glyph" d="M730 241h8"/>
+            <text class="rr-t big" x="762" y="238">See where it streams</text>
+          </g>
+        </svg>
+      </div>
+      <ul class="rr-list">
+        <li><span class="rr-dot"><span class="ico i-reroll" aria-hidden="true"></span></span><div><h3>One pick at a time</h3><p>One film or show per screen, with its poster, rating, genres and a short story.</p></div></li>
+        <li><span class="rr-dot"><span class="ico i-filter" aria-hidden="true"></span></span><div><h3>Filters for your mood</h3><p>Movies, shows or both, the genres you like, a range of years and a minimum rating. Every reroll stays inside them.</p></div></li>
+        <li><span class="rr-dot"><span class="ico i-streaming" aria-hidden="true"></span></span><div><h3>See where it's streaming</h3><p>Every pick shows the services it's on in your country, so you know straight away whether you can watch it tonight.</p></div></li>
+        <li><span class="rr-dot"><span class="ico i-play" aria-hidden="true"></span></span><div><h3>Trailers in a tap</h3><p>Not sure from the poster? Play the trailer right from the pick, then decide.</p></div></li>
+        <li><span class="rr-dot"><span class="ico i-eye" aria-hidden="true"></span></span><div><h3>Watchlist and watched</h3><p>Save a pick for later, mark what you've seen so it stops coming back, and hide titles you never want to see again.</p></div></li>
+        <li><span class="rr-dot"><span class="ico i-compass" aria-hidden="true"></span></span><div><h3>Discover</h3><p>Trending and popular films and shows, browsing by genre and search, for nights when you'd rather look around.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="wrap screenshots" id="screenshots">
+    <div class="rr-head">
+      <p class="rr-kicker">Screenshots</p>
+      <h2>On your phone and tablet</h2>
+    </div>
+    <div class="gallery phone">
+      <h3>Phone</h3>
+      <div class="strip">
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/home-requiem.webp" alt="A single suggestion with the reroll button" loading="lazy"></div>
+          <figcaption>Tonight's pick</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/home-memory.webp" alt="A suggestion with its rating, genres, story and streaming services" loading="lazy"></div>
+          <figcaption>Everything you need to decide</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/filters.webp" alt="Filters for movies or shows, years, rating and genres" loading="lazy"></div>
+          <figcaption>Filters for your mood</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/home-departed.webp" alt="A suggestion marked as watched" loading="lazy"></div>
+          <figcaption>Seen it? Mark it</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/discover.webp" alt="Discover with genres and trending titles" loading="lazy"></div>
+          <figcaption>Discover</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/my-list.webp" alt="My list with saved and watched titles" loading="lazy"></div>
+          <figcaption>My list</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/settings.webp" alt="Settings with theme, accent colour and text size" loading="lazy"></div>
+          <figcaption>Make it yours</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="gallery tablet">
+      <h3>Tablet</h3>
+      <div class="strip">
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/tablet/home-fury.webp" alt="A single suggestion on a tablet with the reroll button" loading="lazy"></div>
+          <figcaption>Tonight's pick</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/tablet/home-godfather.webp" alt="A suggestion on a tablet with the services it is streaming on" loading="lazy"></div>
+          <figcaption>See where it's streaming</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/tablet/filters.webp" alt="Filters on a tablet for movies or shows, years, rating and genres" loading="lazy"></div>
+          <figcaption>Filters for your mood</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/tablet/discover.webp" alt="Discover on a tablet with genres and trending titles" loading="lazy"></div>
+          <figcaption>Discover</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/tablet/my-list.webp" alt="My list on a tablet with saved and watched titles" loading="lazy"></div>
+          <figcaption>My list</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/reroll/tablet/settings.webp" alt="Settings on a tablet with theme, accent colour and text size" loading="lazy"></div>
+          <figcaption>Make it yours</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <section class="rr-pair">
+    <div class="wrap">
+      <div class="rr-head">
+        <p class="rr-kicker">Also from TopicDev</p>
+        <h2>Two apps for movie night</h2>
+        <p>Two separate apps for two different nights.</p>
+      </div>
+      <div class="rr-double">
+        <article class="rr-double-card">
+          <svg class="rr-art rr-mini" viewBox="0 0 300 150" role="img" aria-label="A pick playing on a TV, with streaming waves">
+            <ellipse class="rr-glow" cx="150" cy="80" rx="140" ry="66"/>
+            <g class="rr-waves">
+              <path class="w1" d="M44 52a16 16 0 0 1 16-16"/>
+              <path class="w2" d="M36 52a24 24 0 0 1 24-24"/>
+              <path class="w3" d="M28 52a32 32 0 0 1 32-32"/>
+            </g>
+            <circle class="rr-dot" cx="60" cy="52" r="4"/>
+            <rect class="rr-tv" x="76" y="18" width="160" height="100" rx="10"/>
+            <rect x="86" y="28" width="140" height="80" rx="6" fill="url(#rr-g1)"/>
+            <circle cx="156" cy="64" r="14" fill="#FFD6A5"/>
+            <path d="M86 98L112 76L132 92L158 70L188 94L226 72V102a6 6 0 0 1-6 6H92a6 6 0 0 1-6-6Z" fill="#1B1F33"/>
+            <path class="rr-stand" d="M140 118l-8 16h48l-8-16"/>
+            <circle class="rr-acc" cx="236" cy="112" r="20"/>
+            <g class="rr-spin slow">
+              <path class="rr-arrow thin" d="M228 107a9 9 0 0 1 15-3"/>
+              <path class="rr-arrow thin" d="M244 117a9 9 0 0 1-15 3"/>
+            </g>
+          </svg>
+          <img src="../assets/apps/reroll/icon-136.png" width="56" height="56" alt="">
+          <small>Streaming tonight?</small>
+          <h3>Reroll</h3>
+          <p>Picks one film or show for you and shows the official services it's on in your country.</p>
+          <div class="buttons">
+            <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.topicdev.reroll" target="_blank" rel="noopener">
+              <span class="ico i-google-play" aria-hidden="true"></span>
+              <span><small>Get it on</small><strong>Google Play</strong></span>
+            </a>
+          </div>
+        </article>
+        <article class="rr-double-card">
+          <svg class="rr-art rr-mini" viewBox="0 0 300 150" role="img" aria-label="A shelf of your own films and a spinning film reel">
+            <ellipse class="rr-glow" cx="150" cy="80" rx="140" ry="66"/>
+            <rect class="rr-case" x="56" y="34" width="22" height="88" rx="3" fill="#3B5BA5"/>
+            <rect class="rr-case" x="80" y="40" width="20" height="82" rx="3" fill="#C2577A"/>
+            <g class="rr-pull"><rect class="rr-case" x="102" y="30" width="24" height="92" rx="3" fill="#E5A63C"/><rect x="108" y="44" width="12" height="4" rx="2" fill="#20242B" opacity="0.5"/></g>
+            <rect class="rr-case" x="128" y="38" width="20" height="84" rx="3" fill="#2E9E83"/>
+            <rect class="rr-case" x="150" y="44" width="22" height="78" rx="3" fill="#6F5CEB"/>
+            <rect class="rr-case" x="174" y="36" width="18" height="86" rx="3" fill="#A5AAB3"/>
+            <rect class="rr-shelf" x="44" y="122" width="160" height="8" rx="3"/>
+            <g class="rr-reel">
+              <circle cx="238" cy="84" r="34" class="rr-reel-body"/>
+              <circle cx="238" cy="84" r="7" class="rr-reel-hub"/>
+              <circle cx="238" cy="62" r="8" class="rr-reel-hole"/>
+              <circle cx="257" cy="95" r="8" class="rr-reel-hole"/>
+              <circle cx="219" cy="95" r="8" class="rr-reel-hole"/>
+            </g>
+          </svg>
+          <img src="../assets/apps/makimedia/icon-136.png" width="56" height="56" alt="">
+          <small>Your own collection?</small>
+          <h3>Makimedia</h3>
+          <p>Turns the films and shows you already own into a library, and plays them on your PC, phone, tablet and TV.</p>
+          <div class="buttons">
+            <a class="btn" href="https://makimedia.org/" target="_blank" rel="noopener">
+              <span class="ico i-arrow-right" aria-hidden="true"></span>
+              <span><small>Visit</small><strong>makimedia.org</strong></span>
+            </a>
+          </div>
+        </article>
+      </div>
+      <p class="fine-print">The two apps work separately: Reroll doesn't look inside your Makimedia library, and Makimedia doesn't play what Reroll suggests. Reroll suggests titles from TMDB's catalogue and doesn't provide or stream any films or shows. The screens on this page are from the app; titles, posters and artwork in them belong to their owners. Your watchlist and settings stay on your device.</p>
+      <div class="legal-links">
+        <a class="text-link" href="privacy.html">Privacy policy</a>
+        <a class="text-link" href="terms.html">Terms of use</a>
+        <a class="text-link" href="https://github.com/Ognjen14/reroll" target="_blank" rel="noopener">Source code</a>
+        <a class="text-link" href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/topicdev-logo.png" width="150" height="150" alt="TopicDev">
+        <p>Carefully crafted apps for Windows, Android and Android TV.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Apps</h2>
+        <ul>
+          <li><a href="https://makimedia.org/" target="_blank" rel="noopener">Makimedia</a></li>
+          <li><a href="../reroll/" aria-current="page">Reroll</a></li>
+          <li><a href="../md-editor/">MD Editor</a></li>
+          <li><a href="../topic-finance/">Topic Finance</a></li>
+          <li><a href="../cpp-guide/">C++ Learning Guide</a></li>
+          <li><a href="../python-guide/">Python Learning Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Studio</h2>
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="https://play.google.com/store/apps/dev?id=6943416935116197981" target="_blank" rel="noopener">Google Play</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="../privacy.html">Website privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TopicDev</p>
+      <p class="tmdb-note"><img src="../assets/tmdb-logo.svg" alt="TMDB">This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js?v=1"></script>
+<script src="../nav.js?v=1"></script>
+<script src="reroll.js?v=3"></script>
+</body>
+</html>

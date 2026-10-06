@@ -1,0 +1,11 @@
+/website-originals/
+_check.html
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*~

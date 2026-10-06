@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - TopicDev</title>
+  <meta name="description" content="Questions, bug reports or ideas about any TopicDev app: get in touch.">
+  <meta name="theme-color" content="#004A7E">
+  <link rel="canonical" href="https://topicdev.com/contact.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/topicdev-mark-76.png" width="38" height="38" alt="">
+      <span>TOPIC<span class="brand-dev">DEV</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html#apps">Apps</a>
+      <a href="index.html#values">How we build</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="index.html#apps">See the apps</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="ico i-menu icon-open" aria-hidden="true"></span><span class="ico i-close icon-close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="contact-page wrap">
+  <div class="contact-head">
+    <h1>Get in touch</h1>
+    <p>Questions, bug reports or ideas about any of the apps. Every message is read and answered.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="form-card">
+      <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="8d3122ef-68df-480b-bede-351dc4972015">
+        <input type="hidden" name="subject" value="TopicDev: message from the website">
+        <input type="hidden" name="from_name" value="topicdev.com contact form">
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="field-row">
+          <div class="field">
+            <label for="contact-name">Name <span class="optional">optional</span></label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100">
+          </div>
+          <div class="field">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="200">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="contact-app">App</label>
+            <select id="contact-app" name="app" required>
+              <option value="" selected disabled>Choose an app</option>
+              <option>Makimedia</option>
+              <option>Reroll</option>
+              <option>MD Editor</option>
+              <option>Topic Finance</option>
+              <option>C++ Learning Guide</option>
+              <option>Python Learning Guide</option>
+              <option>Not about an app</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contact-topic">Topic</label>
+            <select id="contact-topic" name="topic" required>
+              <option value="" selected disabled>Choose a topic</option>
+              <option>Question</option>
+              <option>Bug report</option>
+              <option>Feature idea</option>
+              <option>Purchase or subscription</option>
+              <option>Privacy or my data</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="7" required minlength="10" maxlength="5000" placeholder="For a bug, say which device you use, what you did, what you expected and what happened instead."></textarea>
+        </div>
+
+        <p class="form-note">Your message is sent to our inbox through <a href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms</a>. We use your email address only to reply to you. See the <a href="privacy.html">website privacy policy</a>.</p>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-button">
+            <span class="ico i-send" aria-hidden="true"></span>
+            <span>Send message</span>
+          </button>
+          <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="form-sent" id="contact-sent" hidden>
+        <div class="sent-icon"><span class="ico i-check" aria-hidden="true"></span></div>
+        <h2 tabindex="-1">Message sent</h2>
+        <p>Thanks for writing. We'll reply to the email address you gave, usually within a few days.</p>
+        <button type="button" class="text-button" id="contact-again">Send another message</button>
+      </div>
+    </div>
+
+    <aside class="contact-aside">
+      <div class="aside-item">
+        <span class="ico i-mail" aria-hidden="true"></span>
+        <div>
+          <h2>Prefer email?</h2>
+          <p>Write to <a href="mailto:support@topicdev.com">support@topicdev.com</a>. It reaches the same inbox.</p>
+        </div>
+      </div>
+      <div class="aside-item">
+        <span class="ico i-bug" aria-hidden="true"></span>
+        <div>
+          <h2>Reporting a bug?</h2>
+          <p>Say which app and version, which device, and what you did just before. A screenshot helps a lot.</p>
+        </div>
+      </div>
+      <div class="aside-item">
+        <span class="ico i-google-play" aria-hidden="true"></span>
+        <div>
+          <h2>Purchases</h2>
+          <p>Refunds and subscriptions bought through Google Play are handled in your <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">Google Play account</a>. We're happy to help if something went wrong.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/topicdev-logo.png" width="150" height="150" alt="TopicDev">
+        <p>Carefully crafted apps for Windows, Android and Android TV.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Apps</h2>
+        <ul>
+          <li><a href="https://makimedia.org/" target="_blank" rel="noopener">Makimedia</a></li>
+          <li><a href="reroll/">Reroll</a></li>
+          <li><a href="md-editor/">MD Editor</a></li>
+          <li><a href="topic-finance/">Topic Finance</a></li>
+          <li><a href="cpp-guide/">C++ Learning Guide</a></li>
+          <li><a href="python-guide/">Python Learning Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Studio</h2>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="https://play.google.com/store/apps/dev?id=6943416935116197981" target="_blank" rel="noopener">Google Play</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Website privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TopicDev</p>
+    </div>
+  </div>
+</footer>
+
+<script src="contact.js?v=2"></script>
+<script src="nav.js?v=1"></script>
+</body>
+</html>

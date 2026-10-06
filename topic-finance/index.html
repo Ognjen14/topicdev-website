@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Topic Finance - expense and budget tracker | TopicDev</title>
+  <meta name="description" content="Topic Finance tracks your spending, income and budgets by category, with clear statistics, your own accounts and categories, 155 currencies with exchange on entry, and 46 languages. No ads. Free 21-day trial.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://topicdev.com/topic-finance/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TopicDev">
+  <meta property="og:title" content="Topic Finance: expense and budget tracker">
+  <meta property="og:description" content="Spending history, categories, income and budgets, with clear statistics. Any account, any currency, 46 languages. No ads.">
+  <meta property="og:url" content="https://topicdev.com/topic-finance/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/apps/budget-tracker/icon-256.png">
+  <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="finance.css?v=8">
+</head>
+<body class="app-budget tf">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/topicdev-mark-76.png" width="38" height="38" alt="">
+      <span>TOPIC<span class="brand-dev">DEV</span></span>
+    </a>
+    <a class="app-crumb" href="./"><img src="../assets/apps/budget-tracker/icon-136.png" width="26" height="26" alt=""><span>Topic Finance</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="../index.html#apps">All apps</a>
+      <a href="../index.html#about">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="#get"><span class="ico i-download" aria-hidden="true"></span>Get the app</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="ico i-menu icon-open" aria-hidden="true"></span><span class="ico i-close icon-close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="tf-hero" id="get">
+    <div class="wrap">
+      <div class="tf-intro">
+        <p class="tf-brand"><img src="../assets/apps/budget-tracker/icon-136.png" width="40" height="40" alt="">Topic Finance</p>
+        <h1>Every expense, every budget, <em>one clear picture.</em></h1>
+        <p class="lead">Log what you spend and earn in a few taps, give it a category, set budgets that warn you in time, and watch your money on clear statistics. On your own accounts, in any currency, in your language.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.ognje.budget" target="_blank" rel="noopener">
+            <span class="ico i-google-play" aria-hidden="true"></span>
+            <span><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <p class="meta">For Android. Free for 21 days, then Premium by the month, the year or once for life. No ads.</p>
+      </div>
+
+      <div class="tf-art hero">
+        <svg viewBox="0 0 520 440" role="img" aria-label="Coins dropping into a jar for each category, with a line rising behind them">
+          <defs>
+            <clipPath id="tf-jar1"><rect x="40" y="250" width="92" height="150" rx="24"/></clipPath>
+            <clipPath id="tf-jar2"><rect x="152" y="250" width="92" height="150" rx="24"/></clipPath>
+            <clipPath id="tf-jar3"><rect x="264" y="250" width="92" height="150" rx="24"/></clipPath>
+            <clipPath id="tf-jar4"><rect x="376" y="250" width="92" height="150" rx="24"/></clipPath>
+            <clipPath id="tf-hero-blob"><circle cx="262" cy="230" r="205"/></clipPath>
+          </defs>
+          <circle class="a-blob" cx="262" cy="230" r="205"/>
+          <path class="a-area grow-area" clip-path="url(#tf-hero-blob)" d="M24 214L100 196L176 204L252 160L328 170L404 108L496 64V440H24Z"/>
+          <path class="a-trend draw" pathLength="1" d="M24 214L100 196L176 204L252 160L328 170L404 108L496 64"/>
+          <circle class="a-acc pulse" cx="496" cy="64" r="8"/>
+
+          <g class="drop" style="--d: 0s"><g transform="translate(86 0)"><circle class="a-coin" cx="0" cy="190" r="15"/><text class="a-coin-t" x="0" y="196" text-anchor="middle">&euro;</text></g></g>
+          <g class="drop" style="--d: 0.9s"><g transform="translate(198 0)"><circle class="a-coin" cx="0" cy="190" r="15"/><text class="a-coin-t" x="0" y="196" text-anchor="middle">&euro;</text></g></g>
+          <g class="drop" style="--d: 1.8s"><g transform="translate(310 0)"><circle class="a-coin" cx="0" cy="190" r="15"/><text class="a-coin-t" x="0" y="196" text-anchor="middle">&euro;</text></g></g>
+          <g class="drop" style="--d: 2.7s"><g transform="translate(422 0)"><circle class="a-coin" cx="0" cy="190" r="15"/><text class="a-coin-t" x="0" y="196" text-anchor="middle">&euro;</text></g></g>
+
+          <rect class="a-glass" x="40" y="250" width="92" height="150" rx="24"/>
+          <g clip-path="url(#tf-jar1)"><rect class="liquid" style="--d: 0.2s" x="40" y="300" width="92" height="100" fill="#FBBC67"/></g>
+          <rect class="a-rim" x="50" y="240" width="72" height="14" rx="7"/>
+          <circle cx="86" cy="342" r="21" fill="#FBBC67" class="a-badge"/>
+          <image href="../assets/apps/budget-tracker/icons/food_and_groceries.svg" x="74" y="330" width="24" height="24"/>
+
+          <rect class="a-glass" x="152" y="250" width="92" height="150" rx="24"/>
+          <g clip-path="url(#tf-jar2)"><rect class="liquid" style="--d: 0.4s" x="152" y="336" width="92" height="64" fill="#FFBC9A"/></g>
+          <rect class="a-rim" x="162" y="240" width="72" height="14" rx="7"/>
+          <circle cx="198" cy="342" r="21" fill="#FFBC9A" class="a-badge"/>
+          <image href="../assets/apps/budget-tracker/icons/home.svg" x="186" y="330" width="24" height="24"/>
+
+          <rect class="a-glass" x="264" y="250" width="92" height="150" rx="24"/>
+          <g clip-path="url(#tf-jar3)"><rect class="liquid" style="--d: 0.6s" x="264" y="284" width="92" height="116" fill="#90BFE0"/></g>
+          <rect class="a-rim" x="274" y="240" width="72" height="14" rx="7"/>
+          <circle cx="310" cy="342" r="21" fill="#90BFE0" class="a-badge"/>
+          <image href="../assets/apps/budget-tracker/icons/transport.svg" x="298" y="330" width="24" height="24"/>
+
+          <rect class="a-glass" x="376" y="250" width="92" height="150" rx="24"/>
+          <g clip-path="url(#tf-jar4)"><rect class="liquid" style="--d: 0.8s" x="376" y="318" width="92" height="82" fill="#7DCBA8"/></g>
+          <rect class="a-rim" x="386" y="240" width="72" height="14" rx="7"/>
+          <circle cx="422" cy="342" r="21" fill="#7DCBA8" class="a-badge"/>
+          <image href="../assets/apps/budget-tracker/icons/account-saving.svg" x="410" y="330" width="24" height="24"/>
+
+          <g class="bob" style="--d: 0.4s">
+            <circle class="a-coin big" cx="78" cy="96" r="30"/>
+            <text class="a-coin-t big" x="78" y="107" text-anchor="middle">&euro;</text>
+          </g>
+          <path class="a-spark twinkle" d="M150 60l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+          <path class="a-spark twinkle late" d="M470 150l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="tf-facts">
+    <div class="wrap">
+      <ul>
+        <li><strong>82</strong><span>built-in categories, plus your own</span></li>
+        <li><strong>155</strong><span>currencies, with exchange as you add</span></li>
+        <li><strong>46</strong><span>languages</span></li>
+        <li><strong>0</strong><span>ads, in the trial and after</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="tf-sec" id="history">
+    <div class="wrap tf-split">
+      <div class="tf-copy">
+        <p class="tf-kicker">Spending history</p>
+        <h2>See exactly where it went</h2>
+        <p>Every expense, income and transfer lands in your history, grouped by day with its category, account and amount. Filter it down to a category or a date range and the total follows.</p>
+        <ul class="tf-points">
+          <li>The day, week, month or year at a glance, or everything you've ever logged</li>
+          <li>A calendar view that shows which days you spent on</li>
+          <li>Rent, salary and bills repeat on their own: weekly, every two weeks, monthly or yearly</li>
+          <li>Tap the spending breakdown for the full history behind it</li>
+        </ul>
+      </div>
+      <div class="tf-art">
+        <svg viewBox="0 0 480 420" role="img" aria-label="A receipt printing out a list of expenses by day, with a magnifying glass and a calendar">
+          <defs>
+            <clipPath id="tf-paper"><rect x="120" y="88" width="240" height="320"/></clipPath>
+          </defs>
+          <circle class="a-blob" cx="240" cy="226" r="185"/>
+          <g clip-path="url(#tf-paper)">
+            <g class="receipt">
+              <path class="a-paper" d="M150 70H330V352L315 364L300 352L285 364L270 352L255 364L240 352L225 364L210 352L195 364L180 352L165 364L150 352Z"/>
+              <rect class="a-acc soft" x="166" y="104" width="54" height="9" rx="4.5"/>
+              <g class="row" style="--i: 1"><circle cx="176" cy="134" r="10" fill="#FFBC9A"/><rect class="a-line" x="194" y="127" width="66" height="7" rx="3.5"/><rect class="a-line soft" x="194" y="138" width="40" height="5" rx="2.5"/><rect class="a-exp" x="280" y="130" width="34" height="8" rx="4"/></g>
+              <g class="row" style="--i: 2"><circle cx="176" cy="164" r="10" fill="#7DCBA8"/><rect class="a-line" x="194" y="157" width="58" height="7" rx="3.5"/><rect class="a-line soft" x="194" y="168" width="44" height="5" rx="2.5"/><rect class="a-inc" x="272" y="160" width="42" height="8" rx="4"/></g>
+              <g class="row" style="--i: 3"><circle cx="176" cy="194" r="10" fill="#B3E5FC"/><rect class="a-line" x="194" y="187" width="72" height="7" rx="3.5"/><rect class="a-line soft" x="194" y="198" width="36" height="5" rx="2.5"/><rect class="a-exp" x="290" y="190" width="24" height="8" rx="4"/></g>
+              <rect class="a-acc soft" x="166" y="218" width="64" height="9" rx="4.5"/>
+              <g class="row" style="--i: 4"><circle cx="176" cy="248" r="10" fill="#FBBC67"/><rect class="a-line" x="194" y="241" width="50" height="7" rx="3.5"/><rect class="a-line soft" x="194" y="252" width="42" height="5" rx="2.5"/><rect class="a-exp" x="284" y="244" width="30" height="8" rx="4"/></g>
+              <g class="row" style="--i: 5"><circle cx="176" cy="278" r="10" fill="#A1887F"/><rect class="a-line" x="194" y="271" width="60" height="7" rx="3.5"/><rect class="a-line soft" x="194" y="282" width="30" height="5" rx="2.5"/><rect class="a-exp" x="296" y="274" width="18" height="8" rx="4"/></g>
+              <rect class="a-acc soft" x="166" y="302" width="48" height="9" rx="4.5"/>
+              <g class="row" style="--i: 6"><circle cx="176" cy="332" r="10" fill="#F0A0C0"/><rect class="a-line" x="194" y="325" width="64" height="7" rx="3.5"/><rect class="a-line soft" x="194" y="336" width="38" height="5" rx="2.5"/><rect class="a-exp" x="276" y="328" width="38" height="8" rx="4"/></g>
+            </g>
+          </g>
+          <rect class="a-acc" x="104" y="40" width="272" height="58" rx="20"/>
+          <rect class="a-slot" x="136" y="82" width="208" height="9" rx="4.5"/>
+          <circle class="a-led blink" cx="344" cy="62" r="6"/>
+
+          <g class="bob" style="--d: 0.3s">
+            <rect class="a-card" x="22" y="150" width="104" height="38" rx="19"/>
+            <circle cx="46" cy="169" r="8" fill="#FBBC67"/>
+            <circle cx="70" cy="169" r="8" fill="#90BFE0"/>
+            <circle cx="94" cy="169" r="8" fill="#F0A0C0"/>
+          </g>
+
+          <g class="bob" style="--d: 1.1s">
+            <rect class="a-card" x="24" y="282" width="112" height="100" rx="16"/>
+            <rect class="a-acc" x="24" y="282" width="112" height="22" rx="11"/>
+            <rect class="a-acc" x="24" y="294" width="112" height="10"/>
+            <g class="a-cal">
+              <rect x="38" y="314" width="16" height="14" rx="4"/><rect class="hit" x="60" y="314" width="16" height="14" rx="4"/><rect x="82" y="314" width="16" height="14" rx="4"/><rect class="hit" x="104" y="314" width="16" height="14" rx="4"/>
+              <rect class="hit" x="38" y="334" width="16" height="14" rx="4"/><rect x="60" y="334" width="16" height="14" rx="4"/><rect class="hit" x="82" y="334" width="16" height="14" rx="4"/><rect x="104" y="334" width="16" height="14" rx="4"/>
+              <rect x="38" y="354" width="16" height="14" rx="4"/><rect class="hit" x="60" y="354" width="16" height="14" rx="4"/><rect x="82" y="354" width="16" height="14" rx="4"/><rect x="104" y="354" width="16" height="14" rx="4"/>
+            </g>
+          </g>
+
+          <g class="sweep">
+            <circle class="a-lens" cx="372" cy="250" r="40"/>
+            <path class="a-handle" d="M401 279L432 310"/>
+          </g>
+
+          <g class="bob" style="--d: 0.7s">
+            <circle cx="404" cy="132" r="26" fill="#C4B0FB"/>
+            <image href="../assets/apps/budget-tracker/icons/reccuring.svg" x="390" y="118" width="28" height="28"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="tf-sec alt" id="categories">
+    <div class="wrap tf-split reverse">
+      <div class="tf-copy">
+        <p class="tf-kicker">Categories</p>
+        <h2>75 for spending, 7 for income, and <em>yours</em></h2>
+        <p>Categories come ready, sorted into groups like Food and drink, Transport, Home and living, Bills, Shopping and Health. Pin the ones you use most, so they're first when you add an expense.</p>
+        <ul class="tf-points">
+          <li>Make your own with a name, one of 55 icons and any colour</li>
+          <li>Income has its own: Salary, Freelance, Gift, Investments, Rental, Refund and Other</li>
+          <li>Every chart and budget works per category, yours included</li>
+        </ul>
+      </div>
+      <div class="tf-art">
+        <svg viewBox="0 0 480 420" role="img" aria-label="Colourful category bubbles floating, and a new one of your own popping in">
+          <circle class="a-blob" cx="240" cy="214" r="190"/>
+          <g class="bob" style="--d: 0s"><circle cx="150" cy="118" r="38" fill="#FBBC67"/><image href="../assets/apps/budget-tracker/icons/food_and_groceries.svg" x="130" y="98" width="40" height="40"/></g>
+          <g class="bob" style="--d: 0.6s"><circle cx="262" cy="86" r="31" fill="#90BFE0"/><image href="../assets/apps/budget-tracker/icons/transport.svg" x="246" y="70" width="32" height="32"/></g>
+          <g class="bob" style="--d: 1.2s"><circle cx="366" cy="136" r="40" fill="#FFBC9A"/><image href="../assets/apps/budget-tracker/icons/home.svg" x="345" y="115" width="42" height="42"/></g>
+          <g class="bob" style="--d: 0.3s"><circle cx="96" cy="228" r="30" fill="#A1887F"/><image href="../assets/apps/budget-tracker/icons/coffee.svg" x="80" y="212" width="32" height="32"/></g>
+          <g class="bob" style="--d: 0.9s"><circle cx="214" cy="208" r="46" fill="#F0A0C0"/><image href="../assets/apps/budget-tracker/icons/shopping_and_clothing.svg" x="190" y="184" width="48" height="48"/></g>
+          <g class="bob" style="--d: 1.5s"><circle cx="330" cy="250" r="33" fill="#FFD54F"/><image href="../assets/apps/budget-tracker/icons/electricity.svg" x="313" y="233" width="34" height="34"/></g>
+          <g class="bob" style="--d: 0.45s"><circle cx="150" cy="330" r="35" fill="#F49A98"/><image href="../assets/apps/budget-tracker/icons/health_and_medical.svg" x="132" y="312" width="36" height="36"/></g>
+          <g class="bob" style="--d: 1.05s"><circle cx="268" cy="334" r="30" fill="#80DCE8"/><image href="../assets/apps/budget-tracker/icons/travel.svg" x="252" y="318" width="32" height="32"/></g>
+          <g class="bob" style="--d: 0.75s"><circle cx="58" cy="128" r="22" fill="#7DCBA8"/><image href="../assets/apps/budget-tracker/icons/income-salary.svg" x="46" y="116" width="24" height="24"/></g>
+
+          <circle class="a-ring spin" cx="404" cy="326" r="44"/>
+          <g class="pop">
+            <circle cx="404" cy="326" r="34" fill="#C4B0FB"/>
+            <image href="../assets/apps/budget-tracker/icons/custom-music.svg" x="386" y="308" width="36" height="36"/>
+          </g>
+          <g class="swatches">
+            <circle cx="350" cy="396" r="9" fill="#C4B0FB"/>
+            <circle cx="374" cy="396" r="9" fill="#80DCE8"/>
+            <circle cx="398" cy="396" r="9" fill="#A5D6A7"/>
+            <circle cx="422" cy="396" r="9" fill="#FBBC67"/>
+            <circle cx="446" cy="396" r="9" fill="#F49A98"/>
+          </g>
+          <path class="a-spark twinkle" d="M452 262l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
+          <path class="a-spark twinkle late" d="M40 330l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="tf-sec" id="budgets">
+    <div class="wrap tf-split">
+      <div class="tf-copy">
+        <p class="tf-kicker">Income and budgets</p>
+        <h2>Know what's left before the month ends</h2>
+        <p>Set a limit for any category, by the week or the month, plus a total budget. Each one fills up as you spend, and you see it coming before you go over.</p>
+        <ul class="tf-points">
+          <li>On track, close to the limit or over, at a glance</li>
+          <li>Every finished week or month is kept, so you see how you did over time</li>
+          <li>Income goes in by category too, and the overview shows how much of it you've spent</li>
+        </ul>
+      </div>
+      <div class="tf-art">
+        <svg viewBox="0 0 520 420" role="img" aria-label="Income flowing into three category tubes; one is well under its limit line, one is close to it and one has gone over">
+          <defs>
+            <clipPath id="tf-tube1"><rect x="214" y="110" width="68" height="260" rx="22"/></clipPath>
+            <clipPath id="tf-tube2"><rect x="310" y="110" width="68" height="260" rx="22"/></clipPath>
+            <clipPath id="tf-tube3"><rect x="406" y="110" width="68" height="260" rx="22"/></clipPath>
+          </defs>
+          <circle class="a-blob" cx="270" cy="226" r="195"/>
+
+          <g class="bob" style="--d: 0.2s">
+            <rect x="34" y="214" width="124" height="64" rx="10" fill="#5DA889" transform="rotate(-8 96 246)"/>
+            <rect x="30" y="200" width="124" height="64" rx="10" fill="#7DCBA8"/>
+            <rect class="a-note" x="40" y="210" width="104" height="44" rx="6"/>
+            <circle cx="92" cy="232" r="14" fill="#7DCBA8"/>
+            <text class="a-plus" x="92" y="239" text-anchor="middle">+</text>
+          </g>
+          <path class="a-flow" d="M156 214C186 168 208 132 238 96"/>
+          <path class="a-flow" d="M156 224C210 170 280 110 340 96"/>
+          <path class="a-flow" d="M156 234C230 170 360 108 438 96"/>
+
+          <rect class="a-glass" x="214" y="110" width="68" height="260" rx="22"/>
+          <g clip-path="url(#tf-tube1)"><rect class="liquid" style="--d: 0.2s" x="214" y="250" width="68" height="120" fill="#FBBC67"/></g>
+          <rect class="a-glass" x="310" y="110" width="68" height="260" rx="22"/>
+          <g clip-path="url(#tf-tube2)"><rect class="liquid" style="--d: 0.5s" x="310" y="190" width="68" height="180" fill="#90BFE0"/></g>
+          <rect class="a-glass" x="406" y="110" width="68" height="260" rx="22"/>
+          <g clip-path="url(#tf-tube3)"><rect class="liquid" style="--d: 0.8s" x="406" y="140" width="68" height="230" fill="#FFAA8A"/></g>
+
+          <path class="a-limit" d="M200 170H488"/>
+          <rect class="a-flag" x="452" y="156" width="44" height="22" rx="11"/>
+          <text class="a-flag-t" x="474" y="171" text-anchor="middle">limit</text>
+
+          <circle cx="248" cy="320" r="20" fill="#FBBC67" class="a-badge"/>
+          <image href="../assets/apps/budget-tracker/icons/food_and_groceries.svg" x="237" y="309" width="22" height="22"/>
+          <circle cx="344" cy="320" r="20" fill="#90BFE0" class="a-badge"/>
+          <image href="../assets/apps/budget-tracker/icons/fuel.svg" x="333" y="309" width="22" height="22"/>
+          <circle cx="440" cy="320" r="20" fill="#FFAA8A" class="a-badge"/>
+          <image href="../assets/apps/budget-tracker/icons/restaurants_and_dining.svg" x="429" y="309" width="22" height="22"/>
+
+          <circle class="a-ok" cx="248" cy="398" r="9"/>
+          <circle class="a-warn" cx="344" cy="398" r="9"/>
+          <circle class="a-over blink" cx="440" cy="398" r="9"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="tf-sec alt" id="statistics">
+    <div class="wrap tf-split reverse">
+      <div class="tf-copy">
+        <p class="tf-kicker">Statistics and overview</p>
+        <h2>Your money, on clear charts</h2>
+        <p>The overview puts your net worth, income, expenses and budget on one screen. The statistics go deeper, for the day, the week, the month or the year.</p>
+        <ul class="tf-points">
+          <li>Income against expenses, period by period</li>
+          <li>Spending by category, and your top expenses</li>
+          <li>Your net worth over time, and what your subscriptions cost a month and a year</li>
+        </ul>
+      </div>
+      <div class="tf-art">
+        <svg viewBox="0 0 520 420" role="img" aria-label="Bar, donut and line charts drawing themselves">
+          <circle class="a-blob" cx="260" cy="214" r="190"/>
+          <rect class="a-card" x="30" y="98" width="304" height="236" rx="26"/>
+          <path class="a-axis" d="M58 300H306"/>
+          <g class="bars">
+            <rect class="a-inc grow" style="--d: 0.1s" x="66" y="170" width="14" height="130" rx="5"/><rect class="a-exp grow" style="--d: 0.15s" x="83" y="222" width="14" height="78" rx="5"/>
+            <rect class="a-inc grow" style="--d: 0.25s" x="108" y="164" width="14" height="136" rx="5"/><rect class="a-exp grow" style="--d: 0.3s" x="125" y="206" width="14" height="94" rx="5"/>
+            <rect class="a-inc grow" style="--d: 0.4s" x="150" y="150" width="14" height="150" rx="5"/><rect class="a-exp grow" style="--d: 0.45s" x="167" y="196" width="14" height="104" rx="5"/>
+            <rect class="a-inc grow" style="--d: 0.55s" x="192" y="168" width="14" height="132" rx="5"/><rect class="a-exp grow" style="--d: 0.6s" x="209" y="214" width="14" height="86" rx="5"/>
+            <rect class="a-inc grow" style="--d: 0.7s" x="234" y="176" width="14" height="124" rx="5"/><rect class="a-exp grow" style="--d: 0.75s" x="251" y="214" width="14" height="86" rx="5"/>
+            <rect class="a-inc grow" style="--d: 0.85s" x="276" y="168" width="14" height="132" rx="5"/><rect class="a-exp grow" style="--d: 0.9s" x="293" y="244" width="14" height="56" rx="5"/>
+          </g>
+          <rect class="a-line" x="58" y="122" width="96" height="9" rx="4.5"/>
+          <rect class="a-line soft" x="58" y="138" width="60" height="7" rx="3.5"/>
+
+          <circle class="a-card" cx="410" cy="150" r="88"/>
+          <g transform="rotate(-90 410 150)">
+            <circle class="a-track" cx="410" cy="150" r="56"/>
+            <circle class="seg" style="--v: 40; --o: 0; --d: 0.3s" cx="410" cy="150" r="56" stroke="#FFBC9A" pathLength="100"/>
+            <circle class="seg" style="--v: 26; --o: -40; --d: 0.6s" cx="410" cy="150" r="56" stroke="#F0A0C0" pathLength="100"/>
+            <circle class="seg" style="--v: 20; --o: -66; --d: 0.9s" cx="410" cy="150" r="56" stroke="#FBBC67" pathLength="100"/>
+            <circle class="seg" style="--v: 14; --o: -86; --d: 1.2s" cx="410" cy="150" r="56" stroke="#90BFE0" pathLength="100"/>
+          </g>
+          <text class="a-big-t" x="410" y="158" text-anchor="middle">35%</text>
+
+          <rect class="a-card" x="246" y="282" width="244" height="118" rx="22"/>
+          <path class="a-trend draw" style="--d: 0.6s" pathLength="1" d="M272 376L314 360L356 352L398 334L440 320L466 300"/>
+          <circle class="a-acc pulse" cx="466" cy="300" r="7"/>
+          <rect class="a-line" x="272" y="300" width="70" height="8" rx="4"/>
+          <path class="a-spark twinkle" d="M30 52l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="tf-sec" id="accounts">
+    <div class="wrap tf-split">
+      <div class="tf-copy">
+        <p class="tf-kicker">Accounts and currencies</p>
+        <h2>All your money, in every currency</h2>
+        <p>Turn on the accounts you really have and set their starting balances: checking, cash, savings, a credit card, foreign currency, PayPal, Revolut, investments or a crypto wallet. Or add your own with a name and an icon. Move money between them with a transfer and keep an eye on every balance and your net worth.</p>
+        <ul class="tf-points">
+          <li>Your own currency can be any of 155</li>
+          <li>Paid in another currency? Enter it as it was, and Topic Finance converts it to yours as you save, with the latest rates from Frankfurter</li>
+          <li>Each account has its own history of what came in and went out</li>
+        </ul>
+      </div>
+      <div class="tf-art">
+        <svg viewBox="0 0 520 440" role="img" aria-label="Coins in different currencies circling a globe, linked to a bank account, savings, cash and a card">
+          <circle class="a-blob" cx="260" cy="220" r="200"/>
+          <path class="a-link" d="M96 90L200 160"/>
+          <path class="a-link" d="M424 90L320 160"/>
+          <path class="a-link" d="M96 350L200 280"/>
+          <path class="a-link" d="M424 350L320 280"/>
+          <circle class="a-orbit" cx="260" cy="220" r="150"/>
+
+          <circle class="a-globe" cx="260" cy="220" r="86"/>
+          <g class="a-meridian">
+            <ellipse class="turn" cx="260" cy="220" rx="44" ry="86"/>
+            <ellipse class="turn late" cx="260" cy="220" rx="44" ry="86"/>
+            <path d="M174 220H346M184 178H336M184 262H336"/>
+          </g>
+
+          <g class="orbit">
+            <g class="upright"><circle class="a-coin" cx="410" cy="220" r="22"/><text class="a-coin-t mid" x="410" y="228" text-anchor="middle">&euro;</text></g>
+            <g class="upright"><circle class="a-coin" cx="260" cy="70" r="22"/><text class="a-coin-t mid" x="260" y="78" text-anchor="middle">$</text></g>
+            <g class="upright"><circle class="a-coin" cx="110" cy="220" r="22"/><text class="a-coin-t mid" x="110" y="228" text-anchor="middle">&pound;</text></g>
+            <g class="upright"><circle class="a-coin" cx="260" cy="370" r="22"/><text class="a-coin-t mid" x="260" y="378" text-anchor="middle">&yen;</text></g>
+            <g class="upright"><circle class="a-coin" cx="366" cy="114" r="18"/><text class="a-coin-t" x="366" y="120" text-anchor="middle">&#8377;</text></g>
+            <g class="upright"><circle class="a-coin" cx="154" cy="326" r="18"/><text class="a-coin-t" x="154" y="332" text-anchor="middle">&#8361;</text></g>
+          </g>
+
+          <g class="bob" style="--d: 0s"><rect class="a-tile" x="56" y="50" width="64" height="64" rx="18"/><image href="../assets/apps/budget-tracker/icons/account-checking.svg" x="70" y="64" width="36" height="36"/></g>
+          <g class="bob" style="--d: 0.6s"><rect class="a-tile" x="400" y="50" width="64" height="64" rx="18"/><image href="../assets/apps/budget-tracker/icons/account-saving.svg" x="414" y="64" width="36" height="36"/></g>
+          <g class="bob" style="--d: 1.2s"><rect class="a-tile" x="56" y="326" width="64" height="64" rx="18"/><image href="../assets/apps/budget-tracker/icons/account-cash.svg" x="70" y="340" width="36" height="36"/></g>
+          <g class="bob" style="--d: 1.8s"><rect class="a-tile" x="400" y="326" width="64" height="64" rx="18"/><image href="../assets/apps/budget-tracker/icons/account-foreign.svg" x="414" y="340" width="36" height="36"/></g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="tf-langs">
+        <div class="tf-langs-head">
+          <p class="tf-hello" aria-hidden="true"><span data-hello>Hello</span></p>
+          <div>
+            <h3>In 46 languages</h3>
+            <p>Choose yours in the app's settings.</p>
+          </div>
+        </div>
+        <ul class="tf-lang-cloud">
+          <li>English</li><li lang="zh-Hans">中文 (简体)</li><li lang="zh-Hant">中文 (繁體)</li><li lang="hi">हिन्दी</li><li lang="es">Español</li><li lang="es-MX">Español (MX)</li><li lang="ar">العربية</li><li lang="fr">Français</li><li lang="bn">বাংলা</li><li lang="pt-BR">Português (BR)</li><li lang="pt-PT">Português (PT)</li><li lang="ru">Русский</li><li lang="ur">اردو</li><li lang="id">Bahasa Indonesia</li><li lang="ms">Bahasa Melayu</li><li lang="de">Deutsch</li><li lang="ja">日本語</li><li lang="sw">Kiswahili</li><li lang="vi">Tiếng Việt</li><li lang="tr">Türkçe</li><li lang="ko">한국어</li><li lang="fa">فارسی</li><li lang="it">Italiano</li><li lang="fil">Filipino</li><li lang="th">ภาษาไทย</li><li lang="pl">Polski</li><li lang="nl">Nederlands</li><li lang="uk">Українська</li><li lang="ro">Română</li><li lang="el">Ελληνικά</li><li lang="hu">Magyar</li><li lang="cs">Čeština</li><li lang="sv">Svenska</li><li lang="bg">Български</li><li lang="sr">Srpski</li><li lang="hr">Hrvatski</li><li lang="bs">Bosanski</li><li lang="sk">Slovenčina</li><li lang="he">עברית</li><li lang="da">Dansk</li><li lang="fi">Suomi</li><li lang="no">Norsk</li><li lang="sl">Slovenščina</li><li lang="lt">Lietuvių</li><li lang="lv">Latviešu</li><li lang="et">Eesti</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="tf-sec alt" id="more">
+    <div class="wrap">
+      <div class="tf-head">
+        <p class="tf-kicker">And the rest</p>
+        <h2>Everything else a budget needs</h2>
+      </div>
+      <ul class="tf-more">
+        <li><i class="tf-ui u-calendar"></i><h3>Subscriptions</h3><p>Every subscription with its monthly and yearly cost, a renewal calendar and a heads-up before it renews.</p></li>
+        <li><i class="tf-ui u-repeat"></i><h3>Recurring entries</h3><p>Rent, salary and bills repeat on their own, so you only enter them once.</p></li>
+        <li><i class="tf-ui u-bell"></i><h3>Reminders</h3><p>A daily nudge to log your spending, at the time you choose.</p></li>
+        <li><i class="tf-ui u-fingerprint"></i><h3>Fingerprint lock</h3><p>Lock the app on open, so a borrowed phone doesn't open your finances too.</p></li>
+        <li><i class="tf-ui u-cloud"></i><h3>Backup and shared budget</h3><p>Back up to your own Google Drive, or share one budget with a partner or family, synced in real time.</p></li>
+        <li><i class="tf-ui u-export"></i><h3>Export</h3><p>Your transactions as a PDF, a CSV file or an Excel sheet, whenever you want them.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="wrap screenshots" id="screenshots">
+    <div class="tf-head">
+      <p class="tf-kicker">Screenshots</p>
+      <h2>See the real thing</h2>
+    </div>
+    <div class="gallery phone pairs">
+      <h3>Phone</h3>
+      <div class="strip">
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-01.webp" alt="Overview with net worth, income, expenses and budget limits, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Overview</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-02.webp" alt="Subscriptions with their monthly total and renewal calendar, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Subscriptions</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-03.webp" alt="Transactions for the month grouped by day, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Transactions</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-04.webp" alt="Top expenses, net worth over time and subscription costs, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Top expenses and net worth</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-05.webp" alt="Statistics with income against expenses by month and spending by category, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Statistics</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-06.webp" alt="Settings with currency, language, accounts, export, fingerprint lock and reminders, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Settings and export</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-07.webp" alt="Backup, shared budget, theme, accent colour and text size, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Shared budget and appearance</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-08.webp" alt="Budget limits for food, coffee and fuel, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Budget limits</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-09.webp" alt="Spending history for the month grouped by category, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Spending history</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-10.webp" alt="Adding an expense with a category, date and account, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Add an expense</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tf-pair-11.webp" alt="Adding income with a category and account, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Add income</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="gallery tablet pairs">
+      <h3>Tablet</h3>
+      <div class="strip">
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-01.webp" alt="Overview on a tablet with net worth, income, expenses and budget limits, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Overview</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-02.webp" alt="Subscriptions on a tablet with their monthly total and renewal calendar, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Subscriptions</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-03.webp" alt="Transactions on a tablet grouped by day, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Transactions</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-04.webp" alt="Top expenses, net worth over time and subscription costs on a tablet, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Top expenses and net worth</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-05.webp" alt="Statistics on a tablet with income against expenses and spending by category, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Statistics</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-06.webp" alt="Settings on a tablet with currency, language, accounts, export and fingerprint lock, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Settings and export</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-07.webp" alt="Shared budget, theme and accent colour on a tablet, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Shared budget and appearance</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-08.webp" alt="Budget limits on a tablet for food, coffee and fuel, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Budget limits</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-09.webp" alt="Spending history on a tablet grouped by category, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Spending history</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-10.webp" alt="Adding an expense on a tablet with a category, date and account, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Add an expense</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../assets/apps/budget-tracker/tablet/tf-tab-11.webp" alt="Adding income on a tablet with a category and account, in the dark and light themes" loading="lazy"></div>
+          <figcaption>Add income</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <section class="tf-sec" id="pricing">
+    <div class="wrap tf-split">
+      <div class="tf-copy">
+        <p class="tf-kicker">How it's paid for</p>
+        <h2>Try it all, then decide</h2>
+        <p>Every feature is free for 21 days. After that, choose Premium by the month, by the year or once for life, whichever suits you. There are no ads at any point, in the trial or after it.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.ognje.budget" target="_blank" rel="noopener">
+            <span class="ico i-google-play" aria-hidden="true"></span>
+            <span><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </div>
+      <div class="tf-card tf-plans">
+        <div class="tf-plan first"><b>21 days free</b><span>Every feature, from the first day</span></div>
+        <div class="tf-plan"><b>Premium</b><span>Monthly, yearly, or once for life</span></div>
+        <div class="tf-plan"><b>No ads</b><span>Not in the trial, not after</span></div>
+        <p class="tf-small">Prices are shown in Google Play, in your currency.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tf-sec alt" id="data">
+    <div class="wrap">
+      <div class="tf-head">
+        <p class="tf-kicker">Your data</p>
+        <h2>It stays on your phone</h2>
+        <p>Your accounts and transactions live on your device. Two features use the cloud, and both are off until you turn them on.</p>
+      </div>
+      <ul class="tf-optins">
+        <li class="tf-card"><i class="tf-ui u-cloud"></i><div><h3>Google Drive backup</h3><p>Sign in with Google to back up to your own Drive, in a private app folder, and restore it on a new phone.</p></div><span class="tf-off"><i></i>Off until you turn it on</span></li>
+        <li class="tf-card"><i class="tf-ui u-share"></i><div><h3>Shared budget</h3><p>Share a budget with a partner or family. Everyone can add and edit transactions, synced in real time.</p></div><span class="tf-off"><i></i>Off until you turn it on</span></li>
+      </ul>
+      <div class="legal-links">
+        <a class="text-link" href="privacy.html">Privacy policy</a>
+        <a class="text-link" href="terms.html">Terms of use</a>
+        <a class="text-link" href="delete-account.html">Delete your data</a>
+        <a class="text-link" href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/topicdev-logo.png" width="150" height="150" alt="TopicDev">
+        <p>Carefully crafted apps for Windows, Android and Android TV.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Apps</h2>
+        <ul>
+          <li><a href="https://makimedia.org/" target="_blank" rel="noopener">Makimedia</a></li>
+          <li><a href="../reroll/">Reroll</a></li>
+          <li><a href="../md-editor/">MD Editor</a></li>
+          <li><a href="../topic-finance/" aria-current="page">Topic Finance</a></li>
+          <li><a href="../cpp-guide/">C++ Learning Guide</a></li>
+          <li><a href="../python-guide/">Python Learning Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Studio</h2>
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="https://play.google.com/store/apps/dev?id=6943416935116197981" target="_blank" rel="noopener">Google Play</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="../privacy.html">Website privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TopicDev</p>
+      <p>Currency rates by Frankfurter.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js?v=1"></script>
+<script src="../nav.js?v=1"></script>
+<script src="finance.js?v=3"></script>
+</body>
+</html>

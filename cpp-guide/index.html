@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C++ Learning Guide - learn C++ step by step | TopicDev</title>
+  <meta name="description" content="Learn C++ with interactive lessons, debugging challenges, algorithms, design patterns, cheat sheets and interview questions. Works offline, no account, no ads.">
+  <meta name="theme-color" content="#0A1220">
+  <link rel="canonical" href="https://topicdev.com/cpp-guide/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TopicDev">
+  <meta property="og:title" content="C++ Learning Guide">
+  <meta property="og:description" content="Learn C++ with interactive lessons, debugging challenges, algorithms and interview prep. No ads.">
+  <meta property="og:url" content="https://topicdev.com/cpp-guide/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/apps/cpp-guide/icon-256.png">
+  <link rel="stylesheet" href="../style.css?v=8">
+  <link rel="stylesheet" href="../guide-demo.css?v=1">
+  <link rel="stylesheet" href="../guide-qa.css?v=1">
+  <link rel="stylesheet" href="cpp.css?v=5">
+</head>
+<body class="app-cpp cp">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/topicdev-mark-76.png" width="38" height="38" alt="">
+      <span>TOPIC<span class="brand-dev">DEV</span></span>
+    </a>
+    <a class="app-crumb" href="./"><img src="../assets/apps/cpp-guide/icon-136.png" width="26" height="26" alt=""><span>C++ Guide</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="../index.html#apps">All apps</a>
+      <a href="../index.html#about">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="#get"><span class="ico i-download" aria-hidden="true"></span>Get the app</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="ico i-menu icon-open" aria-hidden="true"></span><span class="ico i-close icon-close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="cp-hero" id="get">
+    <svg class="cp-glyphs cp-anim" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <text style="--d: 0s; --x: 8%" x="60" y="560">{ }</text>
+      <text style="--d: -3s" x="250" y="600">::</text>
+      <text style="--d: -6s" x="430" y="580">&lt;T&gt;</text>
+      <text style="--d: -9s" x="640" y="620">-&gt;</text>
+      <text style="--d: -12s" x="820" y="590">;</text>
+      <text style="--d: -2s" x="1000" y="610">#include</text>
+      <text style="--d: -8s" x="140" y="630">&amp;&amp;</text>
+      <text style="--d: -14s" x="1120" y="560">[ ]</text>
+      <text style="--d: -5s" x="540" y="640">std::</text>
+      <text style="--d: -11s" x="930" y="650">0x2A</text>
+    </svg>
+    <div class="wrap">
+      <div>
+        <div class="cp-mark">
+          <img src="../assets/apps/cpp-guide/icon-256.png" width="56" height="56" alt="">
+          <span>C++ Learning Guide<small>// for Android</small></span>
+        </div>
+        <h1>Master the core of <em>high-performance code.</em></h1>
+        <p class="lead">Learn C++ from your first program onwards, with lessons that make you think and challenges that make you look closer. Then practise with algorithms, design patterns and the questions interviewers really ask.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.ognje.cpp" target="_blank" rel="noopener">
+            <span class="ico i-google-play" aria-hidden="true"></span>
+            <span><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <p class="meta">Free to start, with an optional one-time Pro upgrade. No ads, no subscription.</p>
+      </div>
+
+      <div class="cp-window" aria-label="A short C++ program and its output">
+        <div class="cp-winbar">
+          <span class="cp-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="cp-file">main.cpp</span>
+          <span class="cp-file dim">path.h</span>
+          <button type="button" class="cp-run">Run</button>
+        </div>
+        <div class="cp-editor">
+          <pre class="cp-gutter" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13</pre>
+          <pre class="cp-code" data-type>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; path{
+        "pointers", "classes", "templates"};
+
+    for (const auto&amp; topic : path)
+        std::cout &lt;&lt; "Learned " &lt;&lt; topic &lt;&lt; '\n';
+
+    return 0;
+}</pre>
+        </div>
+        <pre class="cp-term" aria-live="polite"></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-boot">
+    <div class="wrap">
+      <ul class="cp-bootlog">
+        <li><span class="tag">[ OK ]</span><strong>Free to start</strong><span>// Pro is a one-time purchase</span></li>
+        <li><span class="tag">[ OK ]</span><strong>No ads</strong><span>// and no subscription</span></li>
+        <li><span class="tag">[ OK ]</span><strong>Works offline</strong><span>// everything is in the app</span></li>
+        <li><span class="tag">[ OK ]</span><strong>No account</strong><span>// progress stays on your phone</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cp-try" id="try">
+    <div class="wrap">
+      <div class="cp-head cp-try-head">
+        <p class="cp-comment">// try a lesson, right here</p>
+        <h2>One lesson, <em>every kind of question</em></h2>
+        <p>This is how lessons work in the app: a short read, then one of each kind of question. Check your answer, and if it's wrong you get one more try before the explanation.</p>
+      </div>
+      <div class="gd cp-gd" id="cp-demo" aria-label="A sample lesson"></div>
+      <template id="cp-demo-end">
+        <div class="gd-end">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.ognje.cpp" target="_blank" rel="noopener">
+            <span class="ico i-google-play" aria-hidden="true"></span>
+            <span><small>Keep learning on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </template>
+      <script type="application/json" id="cp-demo-steps">
+[
+  {
+    "type": "lesson",
+    "title": "Vectors hold many values",
+    "content": "<p>A <b>std::vector</b> keeps several values of the same type, in order.</p><p>Each value has an <b>index</b>, and counting starts at 0, so <code>scores[0]</code> is the first value. <code>scores.size()</code> tells you how many values there are.</p>",
+    "code": "std::vector<int> scores{7, 9, 4};\nstd::cout << scores[0];   // prints 7"
+  },
+  {
+    "type": "question",
+    "title": "Indexes start at zero",
+    "question": "With <code>std::vector&lt;int&gt; scores{7, 9, 4};</code> what is <code>scores[1]</code>?",
+    "options": ["9", "7", "4", "undefined"],
+    "correctIndex": 0,
+    "explanation": "Index 0 is the first value, so index 1 is the second one: 9."
+  },
+  {
+    "type": "predict_output",
+    "title": "What does it print?",
+    "code": "int a = 7;\nint b = 2;\nstd::cout << a / b;",
+    "options": ["3", "3.5", "4", "an error"],
+    "correctIndex": 0,
+    "explanation": "Both values are int, so this is integer division: the .5 is dropped and 3 is printed."
+  },
+  {
+    "type": "fill_blank",
+    "title": "Count to three",
+    "template": "for (int i = 0; i ___ 3; ++i)\n    std::cout << i;",
+    "answer": "<",
+    "hint": "the loop should print 0, 1 and 2, then stop",
+    "explanation": "i < 3 is true for 0, 1 and 2, and false once i reaches 3."
+  },
+  {
+    "type": "bug_fix",
+    "title": "Spot the bug",
+    "lines": [
+      "std::vector<int> scores{7, 9, 4};",
+      "int total = 0;",
+      "for (std::size_t i = 0; i <= scores.size(); ++i)",
+      "    total += scores[i];",
+      "std::cout << total;"
+    ],
+    "errorLine": 2,
+    "explanation": "i <= scores.size() runs one step too far and reads past the end of the vector. Use < instead."
+  },
+  {
+    "type": "code_order",
+    "title": "Build a program",
+    "fragments": [
+      "    std::cout << \"Hello!\\n\";",
+      "#include <iostream>",
+      "}",
+      "int main() {"
+    ],
+    "correctOrder": [1, 3, 0, 2],
+    "explanation": "Include the header first, then open main, print, and close the brace."
+  },
+  {
+    "type": "word_bank",
+    "title": "Measure a name",
+    "template": "___ name = \"Ada\";\nstd::cout << name.___();",
+    "correctTokens": ["std::string", "size"],
+    "options": ["std::string", "size", "int", "count"],
+    "explanation": "name is a std::string, and size() returns how many characters it has: 3."
+  },
+  {
+    "type": "trace_table",
+    "title": "Follow the loop",
+    "code": "int total = 0;\nfor (int n : {2, 3})\n    total += n;",
+    "variables": ["n", "total"],
+    "rows": [
+      { "label": "after pass 1", "values": ["2", "2"] },
+      { "label": "after pass 2", "values": ["3", "5"] }
+    ],
+    "explanation": "On the first pass n is 2 and total becomes 2. On the second, n is 3 and total becomes 5."
+  },
+  {
+    "type": "compare_snippets",
+    "title": "Read without copying",
+    "prompt": "Which loop reads each name without copying it?",
+    "snippets": [
+      { "label": "A", "code": "for (std::string s : names)\n    std::cout << s;" },
+      { "label": "B", "code": "for (const std::string& s : names)\n    std::cout << s;" }
+    ],
+    "correctIndex": 1,
+    "explanation": "A copies every string into s. B uses a const reference, which reads the original without copying it."
+  },
+  {
+    "type": "match_pairs",
+    "title": "Match each type",
+    "pairs": [
+      { "left": "a whole number", "right": "int" },
+      { "left": "a decimal number", "right": "double" },
+      { "left": "a single character", "right": "char" },
+      { "left": "true or false", "right": "bool" }
+    ],
+    "explanation": "int holds whole numbers, double decimals, char one character and bool true or false."
+  }
+]
+      </script>
+    </div>
+  </section>
+
+  <section class="cp-qa alt" id="interview">
+    <div class="wrap">
+      <div class="cp-head">
+        <p class="cp-comment">// interview prep</p>
+        <h2>Walk into the interview <em>ready</em></h2>
+        <p>266 questions interviewers really ask, from junior to senior roles. Every one has a clear answer and a code example. Here are six from the app, try them:</p>
+      </div>
+      <div class="gq-wrap cp-gq">
+        <aside class="gq-stats">
+          <p class="gq-total"><strong>266</strong>interview questions</p>
+          <ul class="gq-bars">
+            <li class="is-junior"><span>Junior</span><i><b style="--p: 69%"></b></i><span>71</span></li>
+            <li class="is-medior"><span>Medior</span><i><b style="--p: 89%"></b></i><span>92</span></li>
+            <li class="is-senior"><span>Senior</span><i><b style="--p: 100%"></b></i><span>103</span></li>
+          </ul>
+          <h3>Topics</h3>
+          <ul class="gq-topics">
+            <li>Core C++</li>
+            <li>OOP</li>
+            <li>Memory management</li>
+            <li>Templates</li>
+            <li>Modern C++</li>
+            <li>STL</li>
+            <li>Concurrency</li>
+            <li>Exception safety</li>
+            <li>Initialization</li>
+            <li>Preprocessor</li>
+            <li>Metaprogramming</li>
+            <li>Performance</li>
+            <li>Architecture</li>
+            <li>Debugging</li>
+          </ul>
+          <ul class="gq-perks">
+            <li><span class="ico i-check" aria-hidden="true"></span><span>Filter by level and topic, or search for a question.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span>Mark answers as mastered and see your progress for every level.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span>Junior answers are free. <strong>Medior and senior answers come with Pro.</strong></span></li>
+          </ul>
+        </aside>
+        <div class="gq" id="cp-qa" aria-label="Sample interview questions"></div>
+      </div>
+      <script type="application/json" id="cp-qa-items">
+[
+  {
+    "level": "junior",
+    "topic": "Basics",
+    "q": "What is the difference between struct and class in C++?",
+    "a": "In C++, the only technical differences between a <b>struct</b> and a <b>class</b> are their <b>default access levels</b>. For a <b>struct</b>, members and base classes are <b>public</b> by default. For a <b>class</b>, they are <b>private</b> by default.<br><br>Beyond these defaults, they are functionally identical: both can have constructors, destructors, virtual functions, and use inheritance. Semantically, developers often use <b>structs</b> for simple data containers (Plain Old Data) and <b>classes</b> for complex objects where <b>encapsulation</b> and logic are required.",
+    "code": "struct Person {\n    std::string name; // Public by default\n};\n\nclass BankAccount {\n    double balance;     // Private by default\npublic:\n    void deposit(double amt) { balance += amt; }\n};"
+  },
+  {
+    "level": "junior",
+    "topic": "STL",
+    "q": "What is the difference between size() and capacity() in std::vector?",
+    "a": "This is a fundamental distinction between <b>how many items you have</b> and <b>how much space you've paid for</b>.<br><br><b>1. size():</b><br>This is the number of actual elements currently stored in the vector. It's what you care about when looping or checking if the vector is empty. When you <code>push_back</code>, the <code>size()</code> increases by 1.<br><br><b>2. capacity():</b><br>This is the total number of elements the vector <i>could</i> hold before it is forced to allocate more memory. Reallocating memory is expensive, so <code>std::vector</code> usually allocates more than it currently needs to provide room for future growth.<br><br><b>The Senior Insight:</b><br>If you know you're going to store 1,000 items, you should call <b><code>v.reserve(1000)</code></b> first. This sets the <code>capacity()</code> immediately, preventing the vector from reallocating (and copying data) five or six times as it grows. Note that <code>reserve()</code> changes capacity but <b>not</b> size; <code>resize()</code> changes both by actually constructing new elements.",
+    "code": "std::vector<int> v;\nv.push_back(1);\n\n// size() is 1, but capacity() might be 1, 2, or 4 (compiler dependent)\n\nv.reserve(100);\n// size() is STILL 1, but capacity() is now 100\n\nv.clear();\n// size() is 0, but capacity() is STILL 100 (memory isn't freed!)"
+  },
+  {
+    "level": "medior",
+    "topic": "Memory management",
+    "q": "What does 'ownership' mean in C++?",
+    "a": "Ownership is a conceptual framework for managing resources (like memory, file handles, or mutexes). The <b>Owner</b> of an object is the entity responsible for its <b>lifetime</b> and its eventual <b>destruction</b>.<br><br><b>1. Single Ownership (unique_ptr):</b><br>One entity 'owns' the object. When the owner goes out of scope, the object is destroyed. Ownership can be <i>moved</i> to a new owner, but it cannot be copied.<br><br><b>2. Shared Ownership (shared_ptr):</b><br>Multiple entities share responsibility for the object. The object is only destroyed when the <i>last</i> owner gives up its claim (the reference count hits zero).<br><br><b>3. Non-owning Reference (Raw Pointers/References):</b><br>A function or class 'borrows' the object to do some work but is <b>not</b> responsible for deleting it. If the owner destroys the object while a borrower is still using it, you get a 'Dangling Pointer' bug.<br><br><b>The Senior Insight:</b><br>Clear ownership is the secret to <b>Leak-Free C++</b>. In 'Legacy C++', ownership was often ambiguous (does this pointer mean I should delete it?). In 'Modern C++', the types themselves tell the story. If a function takes a <code>unique_ptr</code>, it is taking ownership. If it takes a <code>const T&amp;</code>, it is just borrowing. By making ownership explicit in your function signatures, you make your code 'self-documenting' and incredibly hard to break.",
+    "code": "// Owner: This function owns the memory\nvoid takeOwnership(std::unique_ptr<Widget> w) {\n    // w will be deleted when this function ends\n}\n\n// Borrower: This function just uses the object\nvoid borrowObject(Widget* w) {\n    // DO NOT delete w here! You don't own it.\n    if(w) w->draw();\n}"
+  },
+  {
+    "level": "medior",
+    "topic": "Basics",
+    "q": "What is inline? Does it guarantee inlining?",
+    "a": "In C++, the <b>inline</b> keyword is a suggestion to the compiler to integrate the function's code directly into the calling code, rather than performing a standard function call. This is primarily an <b>optimization</b> aimed at reducing the overhead of function calls (pushing/popping registers, jumping to addresses), which is especially beneficial for small, frequently called functions.<br><br><b>1. Does it guarantee inlining?</b><br>No. The <code>inline</code> keyword is only a <b>hint</b> or <b>request</b> to the compiler. Modern compilers are highly sophisticated and will often inline functions that aren't marked <code>inline</code>, or refuse to inline functions that are marked <code>inline</code> (e.g., if the function is too complex, contains loops, or is recursive).<br><br><b>2. The 'Linker' Role:</b><br>The most critical modern use of <code>inline</code> is actually related to the <b>One Definition Rule (ODR)</b>. Normally, defining a function in a header file included by multiple <code>.cpp</code> files would cause a 'multiple definition' error at link time. Marking a function <code>inline</code> tells the linker that multiple definitions are allowed across different translation units and that they should all be merged into one.<br><br><b>3. constexpr and inlining:</b><br>Functions marked with <code>constexpr</code> are <b>implicitly inline</b>. Similarly, functions defined directly inside a <b>class definition</b> are also implicitly inline.",
+    "code": "// --- Header file (MathUtils.h) ---\n\n// Without 'inline', including this in multiple files causes Linker Errors\ninline int square(int x) {\n    return x * x;\n}\n\nclass Player {\npublic:\n    // Implicitly inline because it's defined inside the class\n    int getHealth() { return m_health; }\n\nprivate:\n    int m_health = 100;\n};"
+  },
+  {
+    "level": "senior",
+    "topic": "Memory management",
+    "q": "What is the lifetime of a temporary bound to a const reference?",
+    "a": "In C++, a temporary object (an rvalue) normally dies at the end of the full expression in which it was created (the semicolon). However, if you bind a temporary object to a <b>local const reference</b>, its lifetime is <b>extended</b> to match the lifetime of the reference itself.<br><br><b>1. Lifetime Extension:</b><br>If you write <code>const std::string&amp; name = get_name();</code>, the temporary string returned by the function doesn't evaporate at the semicolon. The compiler 'keeps it alive' on the stack for as long as the <code>name</code> reference is in scope. This prevents <b>Dangling References</b>.<br><br><b>2. Why it matters:</b><br>This allows for massive optimizations. It lets you capture the result of a function without forcing a copy, even if that function returns by value. Without this rule, you would have to either copy the object into a local variable or risk reading garbage memory.<br><br><b>3. The Critical Exceptions:</b><br>There are two places where this rule <b>does not</b> apply:<ul><li><b>Function Parameters:</b> If you pass a temporary to a function taking a <code>const&amp;</code>, the temporary dies when the function returns.</li><li><b>Class Members:</b> If a class member is a <code>const&amp;</code> and you initialize it with a temporary in the constructor, the temporary dies at the end of the constructor, leaving your object with a dangling reference.</li></ul><b>The Senior Insight:</b><br>In C++11 and later, this same extension applies to <b>rvalue references</b> (<code>&amp;&amp;</code>). This is why move semantics can safely capture function results. However, always remember that you cannot extend a lifetime <i>twice</i>. If a function returns a reference to a temporary it created (a common bug), binding that reference to a local <code>const&amp;</code> won't help: the object is already dead before it reaches you.",
+    "code": "std::string getString() { return \"Hello\"; }\n\nint main() {\n    {\n        // The temporary \"Hello\" lives until the end of this block\n        const std::string& s = getString();\n        std::cout << s; // Safe to use\n    } // Temporary is destroyed HERE\n\n    return 0;\n}"
+  },
+  {
+    "level": "senior",
+    "topic": "Design",
+    "q": "What is the 'Rule of Zero' in modern C++?",
+    "a": "The <b>Rule of Zero</b> states that a class should not define any of the 'Big Five' special member functions if it can avoid it. Instead, it should rely on the compiler to generate them automatically by using resource-managing members like <code>std::unique_ptr</code>, <code>std::vector</code>, or <code>std::string</code>.<br><br><b>1. The Core Philosophy:</b><br>The Rule of Three/Five focuses on <i>how</i> to manually manage resources. The Rule of Zero focuses on <b>Single Responsibility</b>: your business logic class should not also be a memory management class. By using smart components, the compiler-generated defaults 'just work' and are automatically correct.<br><br><b>2. Why it wins:</b><ul><li><b>Maintenance:</b> If you add a new member, the compiler-generated copy/move functions automatically include it. If you had manual versions, you'd likely forget to update them, leading to partial copies.</li><li><b>Safety:</b> Smart pointers and containers handle the 'heavy lifting' of exception safety and cleanup, reducing the risk of leaks or double-frees.</li><li><b>Clarity:</b> The code is cleaner because it's not cluttered with boilerplate management logic.</li></ul><b>The Senior Insight:</b><br>The Rule of Zero doesn't mean you <i>never</i> write resource managers. It means you write <b>one</b> dedicated class to manage a resource (like a custom socket wrapper) and then use that wrapper in your higher-level classes. In modern C++, if you find yourself writing a destructor, you should ask: 'Can I replace this raw pointer/handle with a <code>unique_ptr</code> or a custom RAII wrapper?' Usually, the answer is yes.",
+    "code": "// RULE OF FIVE: Manual management (cluttered and error-prone)\nclass OldSchool {\n    char* name;\npublic:\n    ~OldSchool() { delete[] name; }\n    OldSchool(const OldSchool& other) { /* manual deep copy */ }\n    // ... plus move constructor, copy assign, move assign ...\n};\n\n// RULE OF ZERO: Modern (clean and safe)\nclass Modern {\n    std::string name; // Manages its own memory\n    std::vector<int> data; // Manages its own memory\n    // No destructor or copy/move logic needed!\n    // The compiler generates perfectly efficient ones for us.\n};"
+  }
+]
+      </script>
+    </div>
+  </section>
+
+  <section class="cp-path">
+    <div class="wrap">
+      <div class="cp-head">
+        <p class="cp-comment">// the learning path</p>
+        <h2>From <em>Hello, World!</em> to modern C++</h2>
+        <p>Short sections that build on each other, each with its own review. A few stops along the way:</p>
+      </div>
+      <div class="cp-circuit">
+        <svg class="cp-art cp-anim" viewBox="0 0 1000 210" role="img" aria-label="A signal running along a circuit and lighting up each stop: main, types, pointers, classes, STL and modern C++">
+          <path class="cp-trace-bg" d="M60 96H940"/>
+          <path class="cp-trace-lane" d="M60 96H940"/>
+          <g class="cp-pins">
+            <path d="M148 96V60H180M324 96V132H356M500 96V54M676 96V138H708M852 96V58H884"/>
+          </g>
+          <g class="cp-node n0"><rect x="34" y="70" width="52" height="52" rx="10"/><text x="60" y="102">{}</text></g>
+          <g class="cp-node n1"><rect x="210" y="70" width="52" height="52" rx="10"/><text x="236" y="102">int</text></g>
+          <g class="cp-node n2"><rect x="386" y="70" width="52" height="52" rx="10"/><text x="412" y="102">*p</text></g>
+          <g class="cp-node n3"><rect x="562" y="70" width="52" height="52" rx="10"/><text x="588" y="102">class</text></g>
+          <g class="cp-node n4"><rect x="738" y="70" width="52" height="52" rx="10"/><text x="764" y="102">STL</text></g>
+          <g class="cp-node n5"><rect x="914" y="70" width="52" height="52" rx="10"/><text x="940" y="102">20</text></g>
+          <circle class="cp-signal" cx="60" cy="96" r="7"/>
+          <text class="cp-label" x="60" y="152">main()</text>
+          <text class="cp-label" x="236" y="152">types</text>
+          <text class="cp-label" x="412" y="152">pointers</text>
+          <text class="cp-label" x="588" y="152">classes</text>
+          <text class="cp-label" x="764" y="152">templates</text>
+          <text class="cp-label" x="940" y="152">modern C++</text>
+        </svg>
+      </div>
+      <div class="cp-build">
+        <div class="cp-window">
+          <div class="cp-winbar">
+            <span class="cp-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="cp-file">terminal</span>
+          </div>
+          <ol class="cp-buildlog">
+            <li class="cmd"><span><b>$</b> build learning-path</span></li>
+            <li><span class="tag">[ ok ]</span>Anatomy of a C++ Program</li>
+            <li><span class="tag">[ ok ]</span>Variables, Types, and Constants</li>
+            <li><span class="tag">[ ok ]</span>Program Flow</li>
+            <li><span class="tag">[ ok ]</span>Functions</li>
+            <li><span class="tag">[ ok ]</span>Pointers and References</li>
+            <li><span class="tag">[ ok ]</span>OOP: Classes and Objects</li>
+            <li><span class="tag">[ ok ]</span>Inheritance and Polymorphism</li>
+            <li><span class="tag">[ ok ]</span>Smart Pointers</li>
+            <li><span class="tag">[ ok ]</span>The Standard Template Library</li>
+            <li><span class="tag">[ ok ]</span>Lambda Expressions and Templates</li>
+            <li><span class="tag">[ ok ]</span>Threading</li>
+            <li><span class="tag">[ ok ]</span>Modern C++</li>
+            <li class="done">Build finished. Next: algorithms, patterns and interview prep.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-learn alt">
+    <div class="wrap">
+      <div class="cp-head">
+        <p class="cp-comment">// how a lesson works</p>
+        <h2>Every lesson asks <em>something of you</em></h2>
+        <p>Read a little, then answer. These are the kinds of questions you'll meet.</p>
+      </div>
+      <div class="cp-lesson-art">
+        <svg class="cp-art cp-anim" viewBox="0 0 1000 260" role="img" aria-label="A magnifying glass finds the wrong line in some code, the line gets fixed and a check mark appears">
+          <rect class="cp-card" x="190" y="28" width="420" height="204" rx="14"/>
+          <circle class="cp-dot r" cx="214" cy="50" r="5"/><circle class="cp-dot y" cx="232" cy="50" r="5"/><circle class="cp-dot g" cx="250" cy="50" r="5"/>
+          <g class="cp-codelines">
+            <text x="214" y="92"><tspan class="kw">int</tspan> count = <tspan class="nu">0</tspan>;</text>
+            <text x="214" y="124"><tspan class="kw">for</tspan> (<tspan class="kw">int</tspan> i = <tspan class="nu">0</tspan>; i &lt; n; ++i)</text>
+            <text class="cp-bad" x="214" y="156"><tspan class="kw">if</tspan> (count = <tspan class="nu">10</tspan>)</text>
+            <text class="cp-good" x="214" y="156"><tspan class="kw">if</tspan> (count == <tspan class="nu">10</tspan>)</text>
+            <text x="238" y="188">alarm();</text>
+          </g>
+          <path class="cp-squiggle" d="M236 164q4-6 8 0t8 0 8 0 8 0 8 0 8 0 8 0 8 0 8 0 8 0 8 0"/>
+          <g class="cp-lens">
+            <circle cx="0" cy="0" r="34"/>
+            <path d="M24 24L50 50"/>
+          </g>
+          <g class="cp-ok">
+            <circle cx="736" cy="122" r="46"/>
+            <path d="M714 122l15 15 30-31"/>
+          </g>
+          <rect class="cp-bar-bg" x="660" y="196" width="152" height="10" rx="5"/>
+          <rect class="cp-bar" x="660" y="196" width="152" height="10" rx="5"/>
+          <g class="cp-ask">
+            <circle cx="154" cy="70" r="24"/>
+            <text x="154" y="79">?</text>
+          </g>
+          <path class="cp-spark" d="M880 60l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+          <path class="cp-spark late" d="M110 200l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+        </svg>
+      </div>
+      <div class="cp-types">
+        <article class="cp-type"><h3>predict_output<span>()</span></h3><p>Read the code and say what it prints.</p></article>
+        <article class="cp-type"><h3>find_the_bug<span>()</span></h3><p>One line is wrong. Which one, and why?</p></article>
+        <article class="cp-type"><h3>compare_snippets<span>()</span></h3><p>Two versions of the same code. Pick the right one.</p></article>
+        <article class="cp-type"><h3>fill_the_gaps<span>()</span></h3><p>Choose the right words to finish the code.</p></article>
+        <article class="cp-type"><h3>match_pairs<span>()</span></h3><p>Match each term to what it means.</p></article>
+        <article class="cp-type"><h3>order_the_lines<span>()</span></h3><p>Put scrambled lines back in the right order.</p></article>
+        <article class="cp-type"><h3>trace_the_table<span>()</span></h3><p>Follow the values through the code, step by step.</p></article>
+        <article class="cp-type"><h3>choose_the_answer<span>()</span></h3><p>A straight question with one clear answer.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-more">
+    <div class="wrap">
+      <div class="cp-head">
+        <p class="cp-comment">// beyond the lessons</p>
+        <h2>Everything else is <em>included</em></h2>
+      </div>
+      <div class="cp-shelf">
+        <svg class="cp-art cp-anim" viewBox="0 0 1000 250" role="img" aria-label="A shelf of header files, each one sliding out in turn: challenges, algorithms, patterns, cheat sheets, interview and progress">
+          <g class="cp-book" style="--d: 0s"><rect x="250" y="40" width="64" height="176" rx="6" fill="#FF4081"/><text transform="rotate(-90 282 128)" x="282" y="133">&lt;challenges&gt;</text></g>
+          <g class="cp-book" style="--d: 1.5s"><rect x="322" y="54" width="60" height="162" rx="6" fill="#7FDBFF"/><text transform="rotate(-90 352 135)" x="352" y="140">&lt;algorithms&gt;</text></g>
+          <g class="cp-book" style="--d: 3s"><rect x="390" y="34" width="62" height="182" rx="6" fill="#C792EA"/><text transform="rotate(-90 421 125)" x="421" y="130">&lt;patterns&gt;</text></g>
+          <g class="cp-book" style="--d: 4.5s"><rect x="460" y="62" width="58" height="154" rx="6" fill="#FFD700"/><text transform="rotate(-90 489 139)" x="489" y="144">&lt;cheatsheets&gt;</text></g>
+          <g class="cp-book" style="--d: 6s"><rect x="526" y="44" width="64" height="172" rx="6" fill="#64FFDA"/><text transform="rotate(-90 558 130)" x="558" y="135">&lt;interview&gt;</text></g>
+          <g class="cp-book" style="--d: 7.5s"><rect x="598" y="58" width="58" height="158" rx="6" fill="#F78C6C"/><text transform="rotate(-90 627 137)" x="627" y="142">&lt;progress&gt;</text></g>
+          <rect class="cp-lean" x="676" y="74" width="54" height="146" rx="6" transform="rotate(14 703 216)"/>
+          <rect class="cp-plank" x="200" y="216" width="600" height="14" rx="5"/>
+          <text class="cp-pp" x="236" y="132" text-anchor="end">#include</text>
+          <path class="cp-spark" d="M820 64l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+          <path class="cp-spark late" d="M170 150l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+        </svg>
+      </div>
+      <div class="cp-libs">
+        <article class="cp-lib">
+          <pre class="cp-code"><span class="kw">int</span> count = <span class="nu">0</span>;
+<span class="kw">if</span> <span class="squiggle">(count = <span class="nu">10</span>)</span>
+    <span class="fn">alarm</span>();   <span class="co">// always runs</span></pre>
+          <div>
+            <h3><span class="pp">#include</span> <span class="ty">&lt;challenges&gt;</span></h3>
+            <h4>Debugging challenges</h4>
+            <p>Junior, medior and senior challenges. Find the wrong line and learn the mistake before your compiler teaches it to you.</p>
+          </div>
+        </article>
+        <article class="cp-lib">
+          <pre class="cp-code" data-cpp>while (lo &lt;= hi) {
+    int mid = lo + (hi - lo) / 2;
+    if (v[mid] &lt; key) lo = mid + 1;
+    else hi = mid - 1;
+}</pre>
+          <div>
+            <h3><span class="pp">#include</span> <span class="ty">&lt;algorithms&gt;</span></h3>
+            <h4>Algorithms</h4>
+            <p>Searching, sorting and data structures, traced step by step so you see what each line does.</p>
+          </div>
+        </article>
+        <article class="cp-lib">
+          <pre class="cp-code" data-cpp>class Logger {
+public:
+    static Logger&amp; get() {
+        static Logger instance;
+        return instance;
+    }
+};</pre>
+          <div>
+            <h3><span class="pp">#include</span> <span class="ty">&lt;patterns&gt;</span></h3>
+            <h4>Design patterns</h4>
+            <p>The classic patterns, creational, structural and behavioural, with the problem each one solves and how it looks in C++.</p>
+          </div>
+        </article>
+        <article class="cp-lib">
+          <pre class="cp-code" data-cpp>std::sort(v.begin(), v.end());
+auto it = std::find(v.begin(), v.end(), 42);
+auto node = std::make_unique&lt;Node&gt;();</pre>
+          <div>
+            <h3><span class="pp">#include</span> <span class="ty">&lt;cheatsheets&gt;</span></h3>
+            <h4>Cheat sheets</h4>
+            <p>The syntax and the standard library you keep looking up, collected by topic and ready when you need it.</p>
+          </div>
+        </article>
+        <article class="cp-lib">
+          <pre class="cp-code" data-cpp>// Q: Pointer or reference?
+// A: A reference can't be null
+//    and can't be reseated.
+//    [ mark as mastered ]</pre>
+          <div>
+            <h3><span class="pp">#include</span> <span class="ty">&lt;interview&gt;</span></h3>
+            <h4>Interview Q&amp;A</h4>
+            <p>266 questions for junior, medior and senior roles, with answers you can mark as mastered. <a class="text-link" href="#interview">Try a few</a></p>
+          </div>
+        </article>
+        <article class="cp-lib">
+          <pre class="cp-code" data-cpp>streak.days += 1;
+section.progress = 100;
+badges.push_back("Pointers");</pre>
+          <div>
+            <h3><span class="pp">#include</span> <span class="ty">&lt;progress&gt;</span></h3>
+            <h4>Streaks and progress</h4>
+            <p>See how far you are in every section, keep your streak going and collect badges as you finish.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-inside alt">
+    <div class="wrap">
+      <div class="cp-head">
+        <p class="cp-comment">// inside the app</p>
+        <h2>Made for <em>your phone</em></h2>
+      </div>
+      <div class="cp-shot">
+        <div class="cp-winbar">
+          <span class="cp-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="cp-file">C++ Learning Guide</span>
+        </div>
+        <img src="../assets/apps/cpp-guide/cover.webp" width="1600" height="773" alt="The C++ Learning Guide: the learning path, algorithms, debugging challenges and interview questions" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-plan">
+    <div class="wrap cp-plan-grid">
+      <div>
+        <p class="cp-comment">// how it's paid for</p>
+        <h2>Start free, <em>pay once</em></h2>
+        <p>Start for free. Pro unlocks the full curriculum and everything else in the app, for a single payment that's yours to keep. There are no ads and no subscription.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.ognje.cpp" target="_blank" rel="noopener">
+            <span class="ico i-google-play" aria-hidden="true"></span>
+            <span><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </div>
+      <div class="cp-window">
+        <div class="cp-winbar">
+          <span class="cp-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="cp-file">plan.h</span>
+        </div>
+        <pre class="cp-code" data-cpp>struct Plan {
+    bool free_to_start = true;
+    bool pro_is_one_time = true;   // pay once, keep it
+    bool subscription = false;
+    int  ads = 0;
+};</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="cp-end alt">
+    <div class="wrap">
+      <div class="cp-next-app">
+        <div>
+          <p class="cp-comment">// learning Python too?</p>
+          <h2>The Python Learning Guide works the same way</h2>
+          <p>Its own lessons, challenges and interview questions, in the same style.</p>
+        </div>
+        <div class="buttons">
+          <a class="btn" href="../python-guide/">
+            <span class="ico i-arrow-right" aria-hidden="true"></span>
+            <span><small>See the</small><strong>Python Learning Guide</strong></span>
+          </a>
+        </div>
+      </div>
+      <div class="legal-links">
+        <a class="text-link" href="privacy.html">Privacy policy</a>
+        <a class="text-link" href="terms.html">Terms of use</a>
+        <a class="text-link" href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/topicdev-logo.png" width="150" height="150" alt="TopicDev">
+        <p>Carefully crafted apps for Windows, Android and Android TV.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Apps</h2>
+        <ul>
+          <li><a href="https://makimedia.org/" target="_blank" rel="noopener">Makimedia</a></li>
+          <li><a href="../reroll/">Reroll</a></li>
+          <li><a href="../md-editor/">MD Editor</a></li>
+          <li><a href="../topic-finance/">Topic Finance</a></li>
+          <li><a href="../cpp-guide/" aria-current="page">C++ Learning Guide</a></li>
+          <li><a href="../python-guide/">Python Learning Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Studio</h2>
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="https://play.google.com/store/apps/dev?id=6943416935116197981" target="_blank" rel="noopener">Google Play</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="../privacy.html">Website privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TopicDev</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../nav.js?v=1"></script>
+<script src="../guide-demo.js?v=2"></script>
+<script src="../guide-qa.js?v=1"></script>
+<script src="cpp.js?v=4"></script>
+</body>
+</html>
