@@ -549,25 +549,16 @@ body.cp {
   font-size: 15.5px;
 }
 
-.cp-shot {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+.screenshots .gallery.phone {
+  --ar: 1080 / 2196;
 }
 
-.cp-shot img {
-  width: 100%;
-  height: auto;
+.screenshots .gallery.tablet {
+  --ar: 1920 / 1373;
 }
 
-.cp-shot .cp-winbar {
-  border-bottom: 1px solid var(--line);
-}
-
-.cp-shot .cp-file {
-  transform: none;
-  background: none;
+.screenshots .gallery.tablet .thumb {
+  width: 96px;
 }
 
 .cp-plan-grid {
