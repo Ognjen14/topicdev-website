@@ -688,6 +688,18 @@ body.py {
   opacity: 0;
 }
 
+.py-tablet-sec {
+  padding: 24px 0 72px;
+}
+
+.py-tablet-sec .gallery.tablet {
+  --ar: 1920 / 1373;
+}
+
+.py-tablet-sec .gallery.tablet .thumb {
+  width: 96px;
+}
+
 .py-plan-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
